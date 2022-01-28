@@ -1,0 +1,1 @@
+/Library/Developer/CommandLineTools/usr/bin/c++ -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/Google_tests_run.dir/DMet/PointDistanceTests.cpp.o -o Google_tests_run  -Wl,-rpath,/Users/jacklewis/Documents/work/year3/DMet/build ../libDMet.dylib ../lib/libgtest_maind.a ../lib/libgtestd.a 

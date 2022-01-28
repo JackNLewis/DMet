@@ -1,0 +1,5 @@
+if(EXISTS "/Users/jacklewis/Documents/work/year3/DMet/build/test/Google_tests_run[1]_tests.cmake")
+  include("/Users/jacklewis/Documents/work/year3/DMet/build/test/Google_tests_run[1]_tests.cmake")
+else()
+  add_test(Google_tests_run_NOT_BUILT Google_tests_run_NOT_BUILT)
+endif()
