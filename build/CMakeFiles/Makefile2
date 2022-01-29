@@ -65,15 +65,18 @@ CMAKE_BINARY_DIR = /Users/jacklewis/Documents/work/year3/DMet/build
 # The main recursive "all" target.
 all: CMakeFiles/DMet.dir/all
 all: test/all
+all: docs/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
 preinstall: test/preinstall
+preinstall: docs/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
 clean: CMakeFiles/DMet.dir/clean
 clean: test/clean
+clean: docs/clean
 .PHONY : clean
 
 #=============================================================================
@@ -126,6 +129,23 @@ _deps/googletest-build/googletest/preinstall:
 _deps/googletest-build/googletest/clean: _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/clean
 _deps/googletest-build/googletest/clean: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/clean
 .PHONY : _deps/googletest-build/googletest/clean
+
+#=============================================================================
+# Directory level rules for directory docs
+
+# Recursive "all" directory target.
+docs/all: docs/CMakeFiles/doc_doxygen.dir/all
+docs/all: docs/CMakeFiles/Sphinx.dir/all
+.PHONY : docs/all
+
+# Recursive "preinstall" directory target.
+docs/preinstall:
+.PHONY : docs/preinstall
+
+# Recursive "clean" directory target.
+docs/clean: docs/CMakeFiles/doc_doxygen.dir/clean
+docs/clean: docs/CMakeFiles/Sphinx.dir/clean
+.PHONY : docs/clean
 
 #=============================================================================
 # Directory level rules for directory test
@@ -205,7 +225,7 @@ test/CMakeFiles/Google_tests_run.dir/clean:
 _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/depend
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/jacklewis/Documents/work/year3/DMet/build/CMakeFiles --progress-num=8,9 "Built target gmock"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/jacklewis/Documents/work/year3/DMet/build/CMakeFiles --progress-num=10,11 "Built target gmock"
 .PHONY : _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/all
 
 # Build rule for subdir invocation for target.
@@ -232,7 +252,7 @@ _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/all: _deps/googletes
 _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/depend
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/jacklewis/Documents/work/year3/DMet/build/CMakeFiles --progress-num=10,11 "Built target gmock_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/jacklewis/Documents/work/year3/DMet/build/CMakeFiles --progress-num=12,13 "Built target gmock_main"
 .PHONY : _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/all
 
 # Build rule for subdir invocation for target.
@@ -258,7 +278,7 @@ _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/clean:
 _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/depend
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/jacklewis/Documents/work/year3/DMet/build/CMakeFiles --progress-num=14,15 "Built target gtest_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/jacklewis/Documents/work/year3/DMet/build/CMakeFiles --progress-num=16,17 "Built target gtest_main"
 .PHONY : _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/all
 
 # Build rule for subdir invocation for target.
@@ -284,7 +304,7 @@ _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/clean:
 _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all:
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest.dir/depend
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/jacklewis/Documents/work/year3/DMet/build/CMakeFiles --progress-num=12,13 "Built target gtest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/jacklewis/Documents/work/year3/DMet/build/CMakeFiles --progress-num=14,15 "Built target gtest"
 .PHONY : _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
 
 # Build rule for subdir invocation for target.
@@ -302,6 +322,58 @@ gtest: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/rule
 _deps/googletest-build/googletest/CMakeFiles/gtest.dir/clean:
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest.dir/clean
 .PHONY : _deps/googletest-build/googletest/CMakeFiles/gtest.dir/clean
+
+#=============================================================================
+# Target rules for target docs/CMakeFiles/doc_doxygen.dir
+
+# All Build rule for target.
+docs/CMakeFiles/doc_doxygen.dir/all:
+	$(MAKE) $(MAKESILENT) -f docs/CMakeFiles/doc_doxygen.dir/build.make docs/CMakeFiles/doc_doxygen.dir/depend
+	$(MAKE) $(MAKESILENT) -f docs/CMakeFiles/doc_doxygen.dir/build.make docs/CMakeFiles/doc_doxygen.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/jacklewis/Documents/work/year3/DMet/build/CMakeFiles --progress-num=9 "Built target doc_doxygen"
+.PHONY : docs/CMakeFiles/doc_doxygen.dir/all
+
+# Build rule for subdir invocation for target.
+docs/CMakeFiles/doc_doxygen.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jacklewis/Documents/work/year3/DMet/build/CMakeFiles 1
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 docs/CMakeFiles/doc_doxygen.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jacklewis/Documents/work/year3/DMet/build/CMakeFiles 0
+.PHONY : docs/CMakeFiles/doc_doxygen.dir/rule
+
+# Convenience name for target.
+doc_doxygen: docs/CMakeFiles/doc_doxygen.dir/rule
+.PHONY : doc_doxygen
+
+# clean rule for target.
+docs/CMakeFiles/doc_doxygen.dir/clean:
+	$(MAKE) $(MAKESILENT) -f docs/CMakeFiles/doc_doxygen.dir/build.make docs/CMakeFiles/doc_doxygen.dir/clean
+.PHONY : docs/CMakeFiles/doc_doxygen.dir/clean
+
+#=============================================================================
+# Target rules for target docs/CMakeFiles/Sphinx.dir
+
+# All Build rule for target.
+docs/CMakeFiles/Sphinx.dir/all:
+	$(MAKE) $(MAKESILENT) -f docs/CMakeFiles/Sphinx.dir/build.make docs/CMakeFiles/Sphinx.dir/depend
+	$(MAKE) $(MAKESILENT) -f docs/CMakeFiles/Sphinx.dir/build.make docs/CMakeFiles/Sphinx.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/jacklewis/Documents/work/year3/DMet/build/CMakeFiles --progress-num=8 "Built target Sphinx"
+.PHONY : docs/CMakeFiles/Sphinx.dir/all
+
+# Build rule for subdir invocation for target.
+docs/CMakeFiles/Sphinx.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jacklewis/Documents/work/year3/DMet/build/CMakeFiles 1
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 docs/CMakeFiles/Sphinx.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jacklewis/Documents/work/year3/DMet/build/CMakeFiles 0
+.PHONY : docs/CMakeFiles/Sphinx.dir/rule
+
+# Convenience name for target.
+Sphinx: docs/CMakeFiles/Sphinx.dir/rule
+.PHONY : Sphinx
+
+# clean rule for target.
+docs/CMakeFiles/Sphinx.dir/clean:
+	$(MAKE) $(MAKESILENT) -f docs/CMakeFiles/Sphinx.dir/build.make docs/CMakeFiles/Sphinx.dir/clean
+.PHONY : docs/CMakeFiles/Sphinx.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

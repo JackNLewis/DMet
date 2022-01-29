@@ -22,9 +22,7 @@ public:
     EqWidthBin();
     vector<vector<double>> setRanges(vector<vector<double>>& data);
     void generateBins(int arity);
-
     vector<vector<vector<double>>> cartesian(vector<vector<vector<double>>>& vec1, vector<vector<double>>& vec2);
-//    void assignBins(vector<vector<double>> data);
 
 };
 

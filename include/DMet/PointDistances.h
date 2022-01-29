@@ -4,8 +4,11 @@
 
 #pragma once
 #include <gmp.h>
+
+/*!
+ * Outer namespace of library
+ */
 namespace DMet{
-    int add(int a, int b);
     double getEuclidean(double vector1[], double vector2[], int size1, int size2);
     double getMinkowski(double vector1[], double vector2[], int size1, int size2, double pvalue);
     double getManhattan(double vector1[], double vector2[], int size1, int size2);

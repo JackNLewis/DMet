@@ -239,6 +239,32 @@ gtest/fast:
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest.dir/build
 .PHONY : gtest/fast
 
+#=============================================================================
+# Target rules for targets named doc_doxygen
+
+# Build rule for target.
+doc_doxygen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 doc_doxygen
+.PHONY : doc_doxygen
+
+# fast build rule for target.
+doc_doxygen/fast:
+	$(MAKE) $(MAKESILENT) -f docs/CMakeFiles/doc_doxygen.dir/build.make docs/CMakeFiles/doc_doxygen.dir/build
+.PHONY : doc_doxygen/fast
+
+#=============================================================================
+# Target rules for targets named Sphinx
+
+# Build rule for target.
+Sphinx: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Sphinx
+.PHONY : Sphinx
+
+# fast build rule for target.
+Sphinx/fast:
+	$(MAKE) $(MAKESILENT) -f docs/CMakeFiles/Sphinx.dir/build.make docs/CMakeFiles/Sphinx.dir/build
+.PHONY : Sphinx/fast
+
 src/DMet/DistribDistances.o: src/DMet/DistribDistances.cpp.o
 .PHONY : src/DMet/DistribDistances.o
 
@@ -347,6 +373,8 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
+	@echo "... Sphinx"
+	@echo "... doc_doxygen"
 	@echo "... DMet"
 	@echo "... Google_tests_run"
 	@echo "... gmock"

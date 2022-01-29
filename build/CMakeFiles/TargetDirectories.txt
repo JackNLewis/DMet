@@ -34,3 +34,11 @@
 /Users/jacklewis/Documents/work/year3/DMet/build/_deps/googletest-build/googletest/CMakeFiles/install.dir
 /Users/jacklewis/Documents/work/year3/DMet/build/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir
 /Users/jacklewis/Documents/work/year3/DMet/build/_deps/googletest-build/googletest/CMakeFiles/gtest.dir
+/Users/jacklewis/Documents/work/year3/DMet/build/docs/CMakeFiles/install/local.dir
+/Users/jacklewis/Documents/work/year3/DMet/build/docs/CMakeFiles/install/strip.dir
+/Users/jacklewis/Documents/work/year3/DMet/build/docs/CMakeFiles/install.dir
+/Users/jacklewis/Documents/work/year3/DMet/build/docs/CMakeFiles/doc_doxygen.dir
+/Users/jacklewis/Documents/work/year3/DMet/build/docs/CMakeFiles/list_install_components.dir
+/Users/jacklewis/Documents/work/year3/DMet/build/docs/CMakeFiles/Sphinx.dir
+/Users/jacklewis/Documents/work/year3/DMet/build/docs/CMakeFiles/rebuild_cache.dir
+/Users/jacklewis/Documents/work/year3/DMet/build/docs/CMakeFiles/edit_cache.dir
