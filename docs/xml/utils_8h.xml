@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="utils_8h" kind="file" language="C++">
+    <compoundname>utils.h</compoundname>
+    <includedby refid="_distrib_distances_8cpp" local="yes">/Users/jacklewis/Documents/work/year3/DMet/src/DMet/DistribDistances.cpp</includedby>
+    <innernamespace refid="namespace_d_met">DMet</innernamespace>
+    <innernamespace refid="namespace_d_met_1_1_utils">DMet::Utils</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Created<sp/>by<sp/>jack<sp/>lewis<sp/>on<sp/>22/11/2021.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_d_met" kindref="compound">DMet</ref>{<sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">Utils{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isPDF(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>arr[],<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>size1);</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>containsZero(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>arr[],<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>size1);</highlight></codeline>
+<codeline lineno="10"><highlight class="normal">}}</highlight></codeline>
+    </programlisting>
+    <location file="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/utils.h"/>
+  </compounddef>
+</doxygen>

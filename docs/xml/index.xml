@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.2" xml:lang="en-US">
+  <compound refid="struct_eq_width_bin_1_1_bin" kind="struct"><name>EqWidthBin::Bin</name>
+    <member refid="struct_eq_width_bin_1_1_bin_1a4543723853af4270ca6d6e8e99333345" kind="variable"><name>index</name></member>
+    <member refid="struct_eq_width_bin_1_1_bin_1af556f1ba6869a356e557197da77bad54" kind="variable"><name>range</name></member>
+    <member refid="struct_eq_width_bin_1_1_bin_1ac5f0b37b4f3250ee4c58d223cf0d83da" kind="variable"><name>values</name></member>
+  </compound>
+  <compound refid="class_eq_width_bin" kind="class"><name>EqWidthBin</name>
+    <member refid="class_eq_width_bin_1a7a3cacd6b154c050ee0da9ec91e1f2ec" kind="variable"><name>ranges</name></member>
+    <member refid="class_eq_width_bin_1ad6e65d9dab944720396bbced063efd0f" kind="variable"><name>bins</name></member>
+    <member refid="class_eq_width_bin_1a7274be831c2765dcd6e3ef7f4c1f60bc" kind="function"><name>EqWidthBin</name></member>
+    <member refid="class_eq_width_bin_1a75d639eb3a9c24d0a4eccf88bdda4317" kind="function"><name>setRanges</name></member>
+    <member refid="class_eq_width_bin_1aaed58aa728594360aec88348b72e5cd8" kind="function"><name>generateBins</name></member>
+    <member refid="class_eq_width_bin_1abefe4df3bbd73eaa926c776d1c04dba4" kind="function"><name>cartesian</name></member>
+  </compound>
+  <compound refid="namespace_d_met" kind="namespace"><name>DMet</name>
+    <member refid="namespace_d_met_1a6ec1c495ec55fef8246396dae912c388" kind="function"><name>getEuclidean</name></member>
+    <member refid="namespace_d_met_1a3dd769310bed3578980dfd0e77b151aa" kind="function"><name>getMinkowski</name></member>
+    <member refid="namespace_d_met_1a8be89964b283f82d4436fc3070507518" kind="function"><name>getManhattan</name></member>
+    <member refid="namespace_d_met_1aea3e67f06335f6872265655b55c7f38d" kind="function"><name>getChebyshev</name></member>
+    <member refid="namespace_d_met_1afa6eb1a6b4b0a8fd4ad51fbfdd124f67" kind="function"><name>testGMP</name></member>
+    <member refid="namespace_d_met_1ad68a59f4bd762235797bab94d706cbd0" kind="function"><name>getMinkowski</name></member>
+  </compound>
+  <compound refid="namespace_d_met_1_1_distrib" kind="namespace"><name>DMet::Distrib</name>
+    <member refid="_distrib_distance_8h_1aad03846730f939b48546f868a052dad5" kind="function"><name>KLDiv</name></member>
+  </compound>
+  <compound refid="namespace_d_met_1_1_utils" kind="namespace"><name>DMet::Utils</name>
+    <member refid="utils_8h_1a3bd654eb8aec1b363474eac983f14e28" kind="function"><name>isPDF</name></member>
+    <member refid="utils_8h_1a0cccf2dffbd1084767b05663b99cb300" kind="function"><name>containsZero</name></member>
+  </compound>
+  <compound refid="_distrib_distance_8h" kind="file"><name>DistribDistance.h</name>
+  </compound>
+  <compound refid="_eq_width_bin_8h" kind="file"><name>EqWidthBin.h</name>
+  </compound>
+  <compound refid="_point_distances_8h" kind="file"><name>PointDistances.h</name>
+  </compound>
+  <compound refid="utils_8h" kind="file"><name>utils.h</name>
+  </compound>
+  <compound refid="_distrib_distances_8cpp" kind="file"><name>DistribDistances.cpp</name>
+  </compound>
+  <compound refid="_eq_width_bin_8cpp" kind="file"><name>EqWidthBin.cpp</name>
+  </compound>
+  <compound refid="_point_distances_8cpp" kind="file"><name>PointDistances.cpp</name>
+  </compound>
+  <compound refid="utils_8cpp" kind="file"><name>utils.cpp</name>
+  </compound>
+  <compound refid="dir_9b59cf6179fe908cc491d3aa265d5a6a" kind="dir"><name>/Users/jacklewis/Documents/work/year3/DMet/include/DMet</name>
+  </compound>
+  <compound refid="dir_4b8de973c18cbb0637e3a0b46711ff1c" kind="dir"><name>/Users/jacklewis/Documents/work/year3/DMet/src/DMet</name>
+  </compound>
+  <compound refid="dir_d44c64559bbebec7f509842c48db8b23" kind="dir"><name>/Users/jacklewis/Documents/work/year3/DMet/include</name>
+  </compound>
+  <compound refid="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir"><name>/Users/jacklewis/Documents/work/year3/DMet/src</name>
+  </compound>
+</doxygenindex>

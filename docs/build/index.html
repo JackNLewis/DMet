@@ -39,6 +39,7 @@
               <div class="local-toc"><ul>
 <li><a class="reference internal" href="#">Welcome to DMet’s documentation!</a></li>
 <li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
+<li><a class="reference internal" href="#docs">Docs</a></li>
 </ul>
 </div>
         </div>
@@ -77,6 +78,149 @@
 <li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
 <li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
 </ul>
+</section>
+<section id="docs">
+<h1>Docs<a class="headerlink" href="#docs" title="Permalink to this headline"></a></h1>
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv44DMet">
+<span id="_CPPv34DMet"></span><span id="_CPPv24DMet"></span><span id="DMet"></span><span class="target" id="namespace_d_met"></span><span class="k"><span class="pre">namespace</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">DMet</span></span></span><a class="headerlink" href="#_CPPv44DMet" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Outer namespace of library </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-functions">Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4DMet12getEuclideanEA_dA_dii">
+<span id="_CPPv3N4DMet12getEuclideanEA_dA_dii"></span><span id="_CPPv2N4DMet12getEuclideanEA_dA_dii"></span><span id="DMet::getEuclidean__doubleA.doubleA.i.i"></span><span class="target" id="namespace_d_met_1a6ec1c495ec55fef8246396dae912c388"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getEuclidean</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">vector1</span></span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">]</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">vector2</span></span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">]</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">size1</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">size2</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4DMet12getEuclideanEA_dA_dii" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Function that computes the Euclidean distance. Uses the implementation of Minkowski distance with a p value set as 2</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>vector1</strong> – </p></li>
+<li><p><strong>vector2</strong> – </p></li>
+<li><p><strong>size1</strong> – size of vector1 </p></li>
+<li><p><strong>size2</strong> – size of vector2 </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>floating point result </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4DMet12getMinkowskiEA_dA_diid">
+<span id="_CPPv3N4DMet12getMinkowskiEA_dA_diid"></span><span id="_CPPv2N4DMet12getMinkowskiEA_dA_diid"></span><span id="DMet::getMinkowski__doubleA.doubleA.i.i.double"></span><span class="target" id="namespace_d_met_1a3dd769310bed3578980dfd0e77b151aa"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getMinkowski</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">vector1</span></span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">]</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">vector2</span></span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">]</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">size1</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">size2</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">pvalue</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4DMet12getMinkowskiEA_dA_diid" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Function that computes the distance between vector 1 and vector 2 Uses Minkowski distance (∑(Xi−Yi)^p)^1/p</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>vector1</strong> – </p></li>
+<li><p><strong>vector2</strong> – </p></li>
+<li><p><strong>size1</strong> – size of vector1 </p></li>
+<li><p><strong>size2</strong> – size of vector2 </p></li>
+<li><p><strong>pvalue</strong> – pvalue </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>floating point result </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4DMet12getManhattanEA_dA_dii">
+<span id="_CPPv3N4DMet12getManhattanEA_dA_dii"></span><span id="_CPPv2N4DMet12getManhattanEA_dA_dii"></span><span id="DMet::getManhattan__doubleA.doubleA.i.i"></span><span class="target" id="namespace_d_met_1a8be89964b283f82d4436fc3070507518"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getManhattan</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">vector1</span></span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">]</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">vector2</span></span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">]</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">size1</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">size2</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4DMet12getManhattanEA_dA_dii" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Function that computes the Manhattan distance. Uses the implementation of Minkowski distance with a p value set as 1 </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>vector1</strong> – </p></li>
+<li><p><strong>vector2</strong> – </p></li>
+<li><p><strong>size1</strong> – size of vector1 </p></li>
+<li><p><strong>size2</strong> – size of vector2 </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>floating point result </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4DMet12getChebyshevEA_dA_dii">
+<span id="_CPPv3N4DMet12getChebyshevEA_dA_dii"></span><span id="_CPPv2N4DMet12getChebyshevEA_dA_dii"></span><span id="DMet::getChebyshev__doubleA.doubleA.i.i"></span><span class="target" id="namespace_d_met_1aea3e67f06335f6872265655b55c7f38d"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getChebyshev</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">vector1</span></span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">]</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">vector2</span></span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">]</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">size1</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">size2</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4DMet12getChebyshevEA_dA_dii" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Function that computes the Chebeshev distance. Uses a different implimentation than minkowski</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>vector1</strong> – </p></li>
+<li><p><strong>vector2</strong> – </p></li>
+<li><p><strong>vector1</strong> – </p></li>
+<li><p><strong>vector2</strong> – </p></li>
+<li><p><strong>size1</strong> – size of vector1 </p></li>
+<li><p><strong>size2</strong> – size of vector2 </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>floating point result </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4DMet7testGMPEv">
+<span id="_CPPv3N4DMet7testGMPEv"></span><span id="_CPPv2N4DMet7testGMPEv"></span><span id="DMet::testGMP"></span><span class="target" id="namespace_d_met_1afa6eb1a6b4b0a8fd4ad51fbfdd124f67"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">testGMP</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4DMet7testGMPEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4DMet12getMinkowskiEP5mpf_tPdPdiiml">
+<span id="_CPPv3N4DMet12getMinkowskiEP5mpf_tPdPdiiml"></span><span id="_CPPv2N4DMet12getMinkowskiEP5mpf_tPdPdiiml"></span><span id="DMet::getMinkowski__mpf_tP.doubleP.doubleP.i.i.unsigned-l.l"></span><span class="target" id="namespace_d_met_1ad68a59f4bd762235797bab94d706cbd0"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getMinkowski</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">mpf_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">res</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">vector1</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">vector2</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">size1</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">size2</span></span>, <span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">pvalue</span></span>, <span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">precision</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4DMet12getMinkowskiEP5mpf_tPdPdiiml" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N4DMet7DistribE">
+<span id="_CPPv3N4DMet7DistribE"></span><span id="_CPPv2N4DMet7DistribE"></span><span id="DMet::Distrib"></span><span class="target" id="namespace_d_met_1_1_distrib"></span><span class="k"><span class="pre">namespace</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Distrib</span></span></span><a class="headerlink" href="#_CPPv4N4DMet7DistribE" title="Permalink to this definition"></a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-functions">Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4DMet7Distrib5KLDivEA_dA_dii">
+<span id="_CPPv3N4DMet7Distrib5KLDivEA_dA_dii"></span><span id="_CPPv2N4DMet7Distrib5KLDivEA_dA_dii"></span><span id="DMet::Distrib::KLDiv__doubleA.doubleA.i.i"></span><span class="target" id="_distrib_distance_8h_1aad03846730f939b48546f868a052dad5"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">KLDiv</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">vector1</span></span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">]</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">vector2</span></span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">]</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">size1</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">size2</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4DMet7Distrib5KLDivEA_dA_dii" title="Permalink to this definition"></a><br /></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> – - this is the probability distribution x </p></li>
+<li><p><strong>y</strong> – - this is the probability distribution y </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>the KL distance between the two distributions </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N4DMet5UtilsE">
+<span id="_CPPv3N4DMet5UtilsE"></span><span id="_CPPv2N4DMet5UtilsE"></span><span id="DMet::Utils"></span><span class="target" id="namespace_d_met_1_1_utils"></span><span class="k"><span class="pre">namespace</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Utils</span></span></span><a class="headerlink" href="#_CPPv4N4DMet5UtilsE" title="Permalink to this definition"></a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-functions">Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4DMet5Utils5isPDFEA_di">
+<span id="_CPPv3N4DMet5Utils5isPDFEA_di"></span><span id="_CPPv2N4DMet5Utils5isPDFEA_di"></span><span id="DMet::Utils::isPDF__doubleA.i"></span><span class="target" id="utils_8h_1a3bd654eb8aec1b363474eac983f14e28"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isPDF</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">arr</span></span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">]</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">size1</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4DMet5Utils5isPDFEA_di" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4DMet5Utils12containsZeroEA_di">
+<span id="_CPPv3N4DMet5Utils12containsZeroEA_di"></span><span id="_CPPv2N4DMet5Utils12containsZeroEA_di"></span><span id="DMet::Utils::containsZero__doubleA.i"></span><span class="target" id="utils_8h_1a0cccf2dffbd1084767b05663b99cb300"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">containsZero</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">arr</span></span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">]</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">size1</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4DMet5Utils12containsZeroEA_di" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</dd></dl>
+
 </section>
 
 

@@ -28,8 +28,12 @@ author = 'Jack Lewis'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
+    "breathe"
 ]
+# Breathe Configuration
 
+breathe_projects = { "DMet_docs": "../xml" }
+breathe_default_project = "DMet_docs"
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
 

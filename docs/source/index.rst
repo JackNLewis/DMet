@@ -18,3 +18,8 @@ Indices and tables
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
+
+Docs
+=====
+.. doxygennamespace:: DMet
+   :project: DMet_docs
