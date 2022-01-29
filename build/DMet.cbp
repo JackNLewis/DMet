@@ -385,6 +385,9 @@
 		<Unit filename="/Users/jacklewis/Documents/work/year3/DMet/src/DMet/DistribDistances.cpp">
 			<Option target="DMet"/>
 		</Unit>
+		<Unit filename="/Users/jacklewis/Documents/work/year3/DMet/src/DMet/EqWidthBin.cpp">
+			<Option target="DMet"/>
+		</Unit>
 		<Unit filename="/Users/jacklewis/Documents/work/year3/DMet/src/DMet/PointDistances.cpp">
 			<Option target="DMet"/>
 		</Unit>

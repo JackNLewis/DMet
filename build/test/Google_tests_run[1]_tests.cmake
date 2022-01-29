@@ -1,3 +1,5 @@
+add_test( Binning.BinningTests /Users/jacklewis/Documents/work/year3/DMet/build/test/Google_tests_run [==[--gtest_filter=Binning.BinningTests]==] --gtest_also_run_disabled_tests)
+set_tests_properties( Binning.BinningTests PROPERTIES WORKING_DIRECTORY /Users/jacklewis/Documents/work/year3/DMet/build/test SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
 add_test( GMPTest.BasicTest /Users/jacklewis/Documents/work/year3/DMet/build/test/Google_tests_run [==[--gtest_filter=GMPTest.BasicTest]==] --gtest_also_run_disabled_tests)
 set_tests_properties( GMPTest.BasicTest PROPERTIES WORKING_DIRECTORY /Users/jacklewis/Documents/work/year3/DMet/build/test SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
 add_test( MinkowskiTests.GeneralTests /Users/jacklewis/Documents/work/year3/DMet/build/test/Google_tests_run [==[--gtest_filter=MinkowskiTests.GeneralTests]==] --gtest_also_run_disabled_tests)
@@ -16,4 +18,4 @@ add_test( EuclideanTests.EpsilonDistance /Users/jacklewis/Documents/work/year3/D
 set_tests_properties( EuclideanTests.EpsilonDistance PROPERTIES WORKING_DIRECTORY /Users/jacklewis/Documents/work/year3/DMet/build/test SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
 add_test( ChebyshevTests.WorkingPoints /Users/jacklewis/Documents/work/year3/DMet/build/test/Google_tests_run [==[--gtest_filter=ChebyshevTests.WorkingPoints]==] --gtest_also_run_disabled_tests)
 set_tests_properties( ChebyshevTests.WorkingPoints PROPERTIES WORKING_DIRECTORY /Users/jacklewis/Documents/work/year3/DMet/build/test SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
-set( Google_tests_run_TESTS GMPTest.BasicTest MinkowskiTests.GeneralTests MinkowskiTests.WorkingPoints MinkowskiTests.Oveflow MinkowskiTests.SamePoints EuclideanTests.WorkingPoints EuclideanTests.SamePoints EuclideanTests.EpsilonDistance ChebyshevTests.WorkingPoints)
+set( Google_tests_run_TESTS Binning.BinningTests GMPTest.BasicTest MinkowskiTests.GeneralTests MinkowskiTests.WorkingPoints MinkowskiTests.Oveflow MinkowskiTests.SamePoints EuclideanTests.WorkingPoints EuclideanTests.SamePoints EuclideanTests.EpsilonDistance ChebyshevTests.WorkingPoints)

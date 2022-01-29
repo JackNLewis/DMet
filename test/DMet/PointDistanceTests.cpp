@@ -4,6 +4,7 @@
 
 #include "gtest/gtest.h"
 #include "DMet/PointDistances.h"
+#include "DMet/EqWidthBin.h"
 #include <fstream>
 #include <vector>
 #include <gmp.h>
@@ -15,19 +16,19 @@ using std::endl;
 
 
 //================== KL DIV TESTS ===================//
-//
-//TEST(Binning, BinningTests) {
-//    EqWidthBin bin = EqWidthBin();
-//    vector<vector<double>> vect
-//            {
-//                    {1, 5, 3,4},
-//                    {4, 1, 6,5},
-//                    {9, 6, 12,8},
-//                    {0,0,0,0}
-//            };
-//    bin.setRanges(vect);
-//    bin.generateBins(3);
-//}
+
+TEST(Binning, BinningTests) {
+    EqWidthBin bin = EqWidthBin();
+    vector<vector<double>> vect
+            {
+                    {1, 5, 3,4},
+                    {4, 1, 6,5},
+                    {9, 6, 12,8},
+                    {0,0,0,0}
+            };
+    bin.setRanges(vect);
+    bin.generateBins(3);
+}
 
 
 TEST(GMPTest, BasicTest) {

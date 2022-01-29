@@ -3,14 +3,22 @@ project(DMet)
 
 set(CMAKE_CXX_STANDARD 14)
 
+#make the dmet library
+set(SOURCES
+        src/DMet/DistribDistances.cpp
+        src/DMet/PointDistances.cpp
+        src/DMet/utils.cpp
+        src/DMet/EqWidthBin.cpp
+        )
+
 include_directories(include/)
-add_library(DMet SHARED src/DMet/DistribDistances.cpp src/DMet/PointDistances.cpp src/DMet/utils.cpp)
+add_library(DMet SHARED ${SOURCES})
 
 
-##include gmp headers and mpfr
+#include gmp headers and mpfr
 include_directories("/usr/local/include/")
 target_link_libraries(DMet PUBLIC "/usr/local/Cellar/gmp/6.2.1_1/lib/libgmp.a")
 target_link_libraries(DMet PUBLIC "/usr/local/Cellar/mpfr/4.1.0/lib/libmpfr.a")
 
-
+#Add test subdirectory
 add_subdirectory(test)

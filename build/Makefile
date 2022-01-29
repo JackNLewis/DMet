@@ -263,6 +263,30 @@ src/DMet/DistribDistances.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/DMet.dir/build.make CMakeFiles/DMet.dir/src/DMet/DistribDistances.cpp.s
 .PHONY : src/DMet/DistribDistances.cpp.s
 
+src/DMet/EqWidthBin.o: src/DMet/EqWidthBin.cpp.o
+.PHONY : src/DMet/EqWidthBin.o
+
+# target to build an object file
+src/DMet/EqWidthBin.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DMet.dir/build.make CMakeFiles/DMet.dir/src/DMet/EqWidthBin.cpp.o
+.PHONY : src/DMet/EqWidthBin.cpp.o
+
+src/DMet/EqWidthBin.i: src/DMet/EqWidthBin.cpp.i
+.PHONY : src/DMet/EqWidthBin.i
+
+# target to preprocess a source file
+src/DMet/EqWidthBin.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DMet.dir/build.make CMakeFiles/DMet.dir/src/DMet/EqWidthBin.cpp.i
+.PHONY : src/DMet/EqWidthBin.cpp.i
+
+src/DMet/EqWidthBin.s: src/DMet/EqWidthBin.cpp.s
+.PHONY : src/DMet/EqWidthBin.s
+
+# target to generate assembly for a file
+src/DMet/EqWidthBin.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DMet.dir/build.make CMakeFiles/DMet.dir/src/DMet/EqWidthBin.cpp.s
+.PHONY : src/DMet/EqWidthBin.cpp.s
+
 src/DMet/PointDistances.o: src/DMet/PointDistances.cpp.o
 .PHONY : src/DMet/PointDistances.o
 
@@ -332,6 +356,9 @@ help:
 	@echo "... src/DMet/DistribDistances.o"
 	@echo "... src/DMet/DistribDistances.i"
 	@echo "... src/DMet/DistribDistances.s"
+	@echo "... src/DMet/EqWidthBin.o"
+	@echo "... src/DMet/EqWidthBin.i"
+	@echo "... src/DMet/EqWidthBin.s"
 	@echo "... src/DMet/PointDistances.o"
 	@echo "... src/DMet/PointDistances.i"
 	@echo "... src/DMet/PointDistances.s"

@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/DMet.dir/src/DMet/DistribDistances.cpp.o"
+  "CMakeFiles/DMet.dir/src/DMet/EqWidthBin.cpp.o"
   "CMakeFiles/DMet.dir/src/DMet/PointDistances.cpp.o"
   "CMakeFiles/DMet.dir/src/DMet/utils.cpp.o"
   "libDMet.dylib"

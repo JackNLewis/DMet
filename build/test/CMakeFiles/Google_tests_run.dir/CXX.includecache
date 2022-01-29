@@ -6,6 +6,12 @@
 
 #IncludeRegexTransform: 
 
+../include/DMet/EqWidthBin.h
+fstream
+-
+vector
+-
+
 ../include/DMet/PointDistances.h
 gmp.h
 -
@@ -15,6 +21,8 @@ gtest/gtest.h
 /Users/jacklewis/Documents/work/year3/DMet/test/DMet/gtest/gtest.h
 DMet/PointDistances.h
 /Users/jacklewis/Documents/work/year3/DMet/test/DMet/DMet/PointDistances.h
+DMet/EqWidthBin.h
+/Users/jacklewis/Documents/work/year3/DMet/test/DMet/DMet/EqWidthBin.h
 fstream
 -
 vector
