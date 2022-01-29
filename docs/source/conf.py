@@ -36,7 +36,7 @@ import os, subprocess
 
 #check if runnign on read the docs
 read_the_docs_build = os.environ.get('READTHEDOCS', None) == 'True'
-breathe_projects = {'DemoProj': os.path.join(os.getcwd(),"../xml")}
+breathe_projects = {'DMet_docs': os.path.join(os.getcwd(),"../xml")}
 
 if read_the_docs_build:
     subprocess.call('cd ../ ; doxygen', shell=True)
