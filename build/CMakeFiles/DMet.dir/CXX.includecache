@@ -6,3 +6,37 @@
 
 #IncludeRegexTransform: 
 
+../include/DMet/PointDistances.h
+gmp.h
+-
+
+/Users/jacklewis/Documents/work/year3/DMet/src/DMet/PointDistances.cpp
+iostream
+-
+cmath
+-
+DMet/PointDistances.h
+/Users/jacklewis/Documents/work/year3/DMet/src/DMet/DMet/PointDistances.h
+limits
+-
+mpfr.h
+-
+gmp.h
+-
+
+/usr/local/include/gmp.h
+iosfwd
+-
+cstdio
+-
+stddef.h
+-
+limits.h
+-
+
+/usr/local/include/mpfr.h
+gmp.h
+-
+mini-gmp.h
+-
+

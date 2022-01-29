@@ -10,7 +10,7 @@ namespace DMet{
     double getMinkowski(double vector1[], double vector2[], int size1, int size2, double pvalue);
     double getManhattan(double vector1[], double vector2[], int size1, int size2);
     double getChebyshev(double vector1[], double vector2[], int size1, int size2);
-    double testGMP();
+    void testGMP();
 
     void
     getMinkowski(mpf_t *res, double *vector1, double *vector2, int size1, int size2, unsigned long pvalue, long precision);

@@ -19,6 +19,10 @@ fstream
 -
 vector
 -
+gmp.h
+-
+mpfr.h
+-
 
 /usr/local/include/gmp.h
 iosfwd
@@ -28,6 +32,12 @@ cstdio
 stddef.h
 -
 limits.h
+-
+
+/usr/local/include/mpfr.h
+gmp.h
+-
+mini-gmp.h
 -
 
 _deps/googletest-src/googletest/include/gtest/gtest-death-test.h

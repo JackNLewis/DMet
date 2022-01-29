@@ -90,6 +90,8 @@ test/Google_tests_run: test/CMakeFiles/Google_tests_run.dir/DMet/PointDistanceTe
 test/Google_tests_run: test/CMakeFiles/Google_tests_run.dir/build.make
 test/Google_tests_run: libDMet.dylib
 test/Google_tests_run: lib/libgtest_maind.a
+test/Google_tests_run: /usr/local/Cellar/gmp/6.2.1_1/lib/libgmp.a
+test/Google_tests_run: /usr/local/Cellar/mpfr/4.1.0/lib/libmpfr.a
 test/Google_tests_run: lib/libgtestd.a
 test/Google_tests_run: test/CMakeFiles/Google_tests_run.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/jacklewis/Documents/work/year3/DMet/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable Google_tests_run"

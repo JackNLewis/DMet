@@ -118,6 +118,8 @@ libDMet.dylib: CMakeFiles/DMet.dir/src/DMet/DistribDistances.cpp.o
 libDMet.dylib: CMakeFiles/DMet.dir/src/DMet/PointDistances.cpp.o
 libDMet.dylib: CMakeFiles/DMet.dir/src/DMet/utils.cpp.o
 libDMet.dylib: CMakeFiles/DMet.dir/build.make
+libDMet.dylib: /usr/local/Cellar/gmp/6.2.1_1/lib/libgmp.a
+libDMet.dylib: /usr/local/Cellar/mpfr/4.1.0/lib/libmpfr.a
 libDMet.dylib: CMakeFiles/DMet.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/jacklewis/Documents/work/year3/DMet/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX shared library libDMet.dylib"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/DMet.dir/link.txt --verbose=$(VERBOSE)
