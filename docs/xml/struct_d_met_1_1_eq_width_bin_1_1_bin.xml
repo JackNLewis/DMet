@@ -14,7 +14,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/EqWidthBin.h" line="17" column="17" bodyfile="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/EqWidthBin.h" bodystart="17" bodyend="-1"/>
+        <location file="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/EqWidthBin.h" line="18" column="17" bodyfile="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/EqWidthBin.h" bodystart="18" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_d_met_1_1_eq_width_bin_1_1_bin_1ac776059b3066ede32475282dea99d62c" prot="public" static="no" mutable="no">
         <type>vector&lt; vector&lt; double &gt; &gt;</type>
@@ -27,7 +27,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/EqWidthBin.h" line="18" column="20" bodyfile="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/EqWidthBin.h" bodystart="18" bodyend="-1"/>
+        <location file="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/EqWidthBin.h" line="19" column="20" bodyfile="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/EqWidthBin.h" bodystart="19" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_d_met_1_1_eq_width_bin_1_1_bin_1a61c6ca4bacb356c0ee9a974805459339" prot="public" static="no" mutable="no">
         <type>vector&lt; vector&lt; double &gt; &gt;</type>
@@ -40,14 +40,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/EqWidthBin.h" line="19" column="20" bodyfile="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/EqWidthBin.h" bodystart="19" bodyend="-1"/>
+        <location file="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/EqWidthBin.h" line="20" column="20" bodyfile="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/EqWidthBin.h" bodystart="20" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/EqWidthBin.h" line="16" column="9" bodyfile="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/EqWidthBin.h" bodystart="16" bodyend="20"/>
+    <location file="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/EqWidthBin.h" line="17" column="9" bodyfile="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/EqWidthBin.h" bodystart="17" bodyend="21"/>
     <listofallmembers>
       <member refid="struct_d_met_1_1_eq_width_bin_1_1_bin_1ae6c7183a4e4c04dadf3b255b1d5c045b" prot="public" virt="non-virtual"><scope>DMet::EqWidthBin::Bin</scope><name>index</name></member>
       <member refid="struct_d_met_1_1_eq_width_bin_1_1_bin_1ac776059b3066ede32475282dea99d62c" prot="public" virt="non-virtual"><scope>DMet::EqWidthBin::Bin</scope><name>range</name></member>

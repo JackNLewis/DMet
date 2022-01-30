@@ -8,7 +8,6 @@
   <compound refid="class_d_met_1_1_eq_width_bin" kind="class"><name>DMet::EqWidthBin</name>
     <member refid="class_d_met_1_1_eq_width_bin_1aee6c178d022a087b6ff080bc5a3bcec7" kind="variable"><name>ranges</name></member>
     <member refid="class_d_met_1_1_eq_width_bin_1a50199d3bf8f96fb4d06d9094c6552e06" kind="variable"><name>bins</name></member>
-    <member refid="class_d_met_1_1_eq_width_bin_1a2ff5584a3fd37ba9f6e54a19ac19c134" kind="function"><name>EqWidthBin</name></member>
     <member refid="class_d_met_1_1_eq_width_bin_1a12ebeed1b30aea531e747fd27ca65c51" kind="function"><name>setRanges</name></member>
     <member refid="class_d_met_1_1_eq_width_bin_1a45600ba094f008cfe20d477626d37147" kind="function"><name>generateBins</name></member>
     <member refid="class_d_met_1_1_eq_width_bin_1aaf2dc2eca6b3f818e3a6be7d0864dc80" kind="function"><name>cartesian</name></member>

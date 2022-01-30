@@ -71,8 +71,68 @@
 <h1>Binning<a class="headerlink" href="#binning" title="Permalink to this headline"></a></h1>
 <dl class="cpp class">
 <dt class="sig sig-object cpp" id="_CPPv4N4DMet10EqWidthBinE">
-<span id="_CPPv3N4DMet10EqWidthBinE"></span><span id="_CPPv2N4DMet10EqWidthBinE"></span><span id="DMet::EqWidthBin"></span><span class="target" id="class_d_met_1_1_eq_width_bin"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">EqWidthBin</span></span></span><a class="headerlink" href="#_CPPv4N4DMet10EqWidthBinE" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N4DMet10EqWidthBinE"></span><span id="_CPPv2N4DMet10EqWidthBinE"></span><span id="DMet::EqWidthBin"></span><span class="target" id="class_d_met_1_1_eq_width_bin"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">DMet</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">EqWidthBin</span></span></span><a class="headerlink" href="#_CPPv4N4DMet10EqWidthBinE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Class for equal width binning </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4DMet10EqWidthBin9setRangesER6vectorI6vectorIdEE">
+<span id="_CPPv3N4DMet10EqWidthBin9setRangesER6vectorI6vectorIdEE"></span><span id="_CPPv2N4DMet10EqWidthBin9setRangesER6vectorI6vectorIdEE"></span><span id="DMet::EqWidthBin::setRanges__vector:vector:double::R"></span><span class="target" id="class_d_met_1_1_eq_width_bin_1a12ebeed1b30aea531e747fd27ca65c51"></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setRanges</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">data</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4DMet10EqWidthBin9setRangesER6vectorI6vectorIdEE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Method to set the ranges for every dimension given data </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>data</strong> – </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4DMet10EqWidthBin12generateBinsEi">
+<span id="_CPPv3N4DMet10EqWidthBin12generateBinsEi"></span><span id="_CPPv2N4DMet10EqWidthBin12generateBinsEi"></span><span id="DMet::EqWidthBin::generateBins__i"></span><span class="target" id="class_d_met_1_1_eq_width_bin_1a45600ba094f008cfe20d477626d37147"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">generateBins</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">arity</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4DMet10EqWidthBin12generateBinsEi" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Generates the bins from the ranges for each dimension then creates the cartesian product of these bins</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>arity</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4DMet10EqWidthBin9cartesianER6vectorI6vectorI6vectorIdEEER6vectorI6vectorIdEE">
+<span id="_CPPv3N4DMet10EqWidthBin9cartesianER6vectorI6vectorI6vectorIdEEER6vectorI6vectorIdEE"></span><span id="_CPPv2N4DMet10EqWidthBin9cartesianER6vectorI6vectorI6vectorIdEEER6vectorI6vectorIdEE"></span><span id="DMet::EqWidthBin::cartesian__vector:vector:vector:double:::R.vector:vector:double::R"></span><span class="target" id="class_d_met_1_1_eq_width_bin_1aaf2dc2eca6b3f818e3a6be7d0864dc80"></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">cartesian</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">vec1</span></span>, <span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">vec2</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4DMet10EqWidthBin9cartesianER6vectorI6vectorI6vectorIdEEER6vectorI6vectorIdEE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Generates the cartesian product of two lists of vectors</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>vec1</strong> – </p></li>
+<li><p><strong>vec2</strong> – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N4DMet10EqWidthBin6rangesE">
+<span id="_CPPv3N4DMet10EqWidthBin6rangesE"></span><span id="_CPPv2N4DMet10EqWidthBin6rangesE"></span><span id="DMet::EqWidthBin::ranges__vector:vector:double::"></span><span class="target" id="class_d_met_1_1_eq_width_bin_1aee6c178d022a087b6ff080bc5a3bcec7"></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ranges</span></span></span><a class="headerlink" href="#_CPPv4N4DMet10EqWidthBin6rangesE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Stores the ranges of each dimension </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N4DMet10EqWidthBin4binsE">
+<span id="_CPPv3N4DMet10EqWidthBin4binsE"></span><span id="_CPPv2N4DMet10EqWidthBin4binsE"></span><span id="DMet::EqWidthBin::bins__vector:vector:vector:double:::"></span><span class="target" id="class_d_met_1_1_eq_width_bin_1a50199d3bf8f96fb4d06d9094c6552e06"></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bins</span></span></span><a class="headerlink" href="#_CPPv4N4DMet10EqWidthBin4binsE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Stores the different vector of bins </p>
+</dd></dl>
+
+</div>
 </dd></dl>
 
 </section>

@@ -9,8 +9,6 @@ using std::cout;
 using std::endl;
 using std::flush;
 
-DMet::EqWidthBin::EqWidthBin() {}
-
 
 
 vector<vector<double>> DMet::EqWidthBin::setRanges(vector<vector<double>>& data) {
