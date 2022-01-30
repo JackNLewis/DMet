@@ -47,11 +47,11 @@
 <codeline lineno="9"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>std::endl;</highlight></codeline>
 <codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>std::flush;</highlight></codeline>
 <codeline lineno="11"><highlight class="normal"></highlight></codeline>
-<codeline lineno="12"><highlight class="normal">EqWidthBin::EqWidthBin()<sp/>{}</highlight></codeline>
+<codeline lineno="12"><highlight class="normal">DMet::EqWidthBin::EqWidthBin()<sp/>{}</highlight></codeline>
 <codeline lineno="13"><highlight class="normal"></highlight></codeline>
 <codeline lineno="14"><highlight class="normal"></highlight></codeline>
 <codeline lineno="15"><highlight class="normal"></highlight></codeline>
-<codeline lineno="16"><highlight class="normal">vector&lt;vector&lt;double&gt;&gt;<sp/>EqWidthBin::setRanges(vector&lt;vector&lt;double&gt;&gt;&amp;<sp/>data)<sp/>{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal">vector&lt;vector&lt;double&gt;&gt;<sp/>DMet::EqWidthBin::setRanges(vector&lt;vector&lt;double&gt;&gt;&amp;<sp/>data)<sp/>{</highlight></codeline>
 <codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>columns<sp/>=<sp/>data[0].size();</highlight></codeline>
 <codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>rows<sp/>=<sp/>data.size();</highlight></codeline>
 <codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>insert<sp/>bounds<sp/>-ininity<sp/>and<sp/>+infinity<sp/>for<sp/>all<sp/>dimensions</highlight><highlight class="normal"></highlight></codeline>
@@ -78,7 +78,7 @@
 <codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>data;</highlight></codeline>
 <codeline lineno="41"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="42"><highlight class="normal"></highlight></codeline>
-<codeline lineno="43"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>EqWidthBin::generateBins(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>arity)<sp/>{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>DMet::EqWidthBin::generateBins(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>arity)<sp/>{</highlight></codeline>
 <codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;vector&lt;vector&lt;double&gt;&gt;&gt;<sp/>res;</highlight></codeline>
 <codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//start<sp/>from<sp/>last<sp/>columns<sp/>create<sp/>and<sp/>array<sp/>and<sp/>do<sp/>cartesian<sp/>of<sp/>that<sp/>with<sp/>res;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i=0;i&lt;ranges.size();i++){</highlight></codeline>
@@ -119,7 +119,7 @@
 <codeline lineno="81"><highlight class="normal"></highlight></codeline>
 <codeline lineno="82"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="83"><highlight class="normal"></highlight></codeline>
-<codeline lineno="84"><highlight class="normal">vector&lt;vector&lt;vector&lt;double&gt;&gt;&gt;<sp/>EqWidthBin::cartesian(vector&lt;vector&lt;vector&lt;double&gt;&gt;&gt;&amp;<sp/>vec1,<sp/>vector&lt;vector&lt;double&gt;&gt;&amp;<sp/>vec2){</highlight></codeline>
+<codeline lineno="84"><highlight class="normal">vector&lt;vector&lt;vector&lt;double&gt;&gt;&gt;<sp/>DMet::EqWidthBin::cartesian(vector&lt;vector&lt;vector&lt;double&gt;&gt;&gt;&amp;<sp/>vec1,<sp/>vector&lt;vector&lt;double&gt;&gt;&amp;<sp/>vec2){</highlight></codeline>
 <codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//no<sp/>dimesnions<sp/>yet</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(vec1.size()<sp/>==<sp/>0){</highlight></codeline>
 <codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>v2<sp/>:<sp/>vec2){</highlight></codeline>

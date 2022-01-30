@@ -9,7 +9,7 @@
 #include <mpfr.h>
 #include <gmp.h>
 
-void DMet::testGMP() {
+void DMet::PointDistances::testGMP() {
     mpf_t x, y, result;
     mpf_init_set_d(x,7123134);
     mpf_init_set_d(y,2353134);
@@ -27,7 +27,7 @@ void DMet::testGMP() {
     mpf_clear(result);
 }
 
-void DMet::getMinkowski(mpf_t *res, double vector1[], double vector2[], int size1, int size2, unsigned long pvalue,long precision){
+void DMet::PointDistances::getMinkowski(mpf_t *res, double vector1[], double vector2[], int size1, int size2, unsigned long pvalue,long precision){
     mpfr_t sum;
     mpfr_init2(sum,precision);
     mpfr_set_d(sum,0,GMP_RNDN);
@@ -60,7 +60,7 @@ void DMet::getMinkowski(mpf_t *res, double vector1[], double vector2[], int size
  * @param pvalue pvalue
  * @return floating point result
  */
-double DMet::getMinkowski(double vector1[], double vector2[], int size1, int size2, double pvalue){
+double DMet::PointDistances::getMinkowski(double vector1[], double vector2[], int size1, int size2, double pvalue){
     if(vector1 == nullptr || vector2 == nullptr){
         std::cout << "Array cannot be NULL" << std::endl;
         return -1;
@@ -91,7 +91,7 @@ double DMet::getMinkowski(double vector1[], double vector2[], int size1, int siz
  * @param size2 size of vector2
  * @return floating point result
  */
-double DMet::getEuclidean(double vector1[], double vector2[], int size1, int size2){
+double DMet::PointDistances::getEuclidean(double vector1[], double vector2[], int size1, int size2){
     return getMinkowski(vector1, vector2, size1,size2,2);
 }
 
@@ -104,7 +104,7 @@ double DMet::getEuclidean(double vector1[], double vector2[], int size1, int siz
  * @param size2 size of vector2
  * @return floating point result
  */
-double DMet::getManhattan(double vector1[], double vector2[], int size1, int size2){
+double DMet::PointDistances::getManhattan(double vector1[], double vector2[], int size1, int size2){
     return getMinkowski(vector1, vector2, size1,size2,1);
 }
 
@@ -120,7 +120,7 @@ double DMet::getManhattan(double vector1[], double vector2[], int size1, int siz
  * @param size2 size of vector2
  * @return floating point result
  */
-double DMet::getChebyshev(double vector1[], double vector2[], int size1, int size2) {
+double DMet::PointDistances::getChebyshev(double vector1[], double vector2[], int size1, int size2) {
     if(vector1 == NULL || vector2 == NULL){
         std::cout << "Array cannot be NULL" << std::endl;
         return -1;

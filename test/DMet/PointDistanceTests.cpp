@@ -10,15 +10,14 @@
 #include <gmp.h>
 #include <mpfr.h>
 
-//using namespace DMet::Utils;
+
 using std::cout;
 using std::endl;
-
 
 //================== KL DIV TESTS ===================//
 
 TEST(Binning, BinningTests) {
-    EqWidthBin bin = EqWidthBin();
+    DMet::EqWidthBin bin = DMet::EqWidthBin();
     vector<vector<double>> vect
             {
                     {1, 5, 3,4},
@@ -37,8 +36,8 @@ TEST(GMPTest, BasicTest) {
 
     int size1 = sizeof(v1)/sizeof(v1[0]);
     int size2 = sizeof(v2)/sizeof(v2[0]);
-    DMet::getMinkowski(NULL,v1,v2,size1,size2,2,8);
-    DMet::getMinkowski(NULL,v2,v1,size1,size2,2,8);
+    DMet::PointDistances::getMinkowski(NULL,v1,v2,size1,size2,2,8);
+    DMet::PointDistances::getMinkowski(NULL,v2,v1,size1,size2,2,8);
 }
 
 //================== MINKOWSKI TESTS ===================//
@@ -74,8 +73,8 @@ TEST(MinkowskiTests, GeneralTests) {
         int size2 = sizeof(arr2)/sizeof(arr2[0]);
 
 
-        EXPECT_FLOAT_EQ(pval5,DMet::getMinkowski(arr1,arr2,size1,size2,5));
-        EXPECT_FLOAT_EQ(pval10,DMet::getMinkowski(arr1,arr2,size1,size2,10));
+        EXPECT_FLOAT_EQ(pval5,DMet::PointDistances::getMinkowski(arr1,arr2,size1,size2,5));
+        EXPECT_FLOAT_EQ(pval10,DMet::PointDistances::getMinkowski(arr1,arr2,size1,size2,10));
     }
 
 }
@@ -88,7 +87,7 @@ TEST(MinkowskiTests, WorkingPoints) {
     int size1 = sizeof(arr1) / sizeof(arr1[0]);
     int size2 = sizeof(arr2) / sizeof(arr2[0]);
     for(int i=0;i<sizeof(res) / sizeof(res[0]);i++){
-        EXPECT_FLOAT_EQ(res[i], DMet::getMinkowski(arr1, arr2, size1, size2,pVals[i]));
+        EXPECT_FLOAT_EQ(res[i], DMet::PointDistances::getMinkowski(arr1, arr2, size1, size2,pVals[i]));
     }
 }
 
@@ -98,7 +97,7 @@ TEST(MinkowskiTests, Oveflow) {
     double arr2[] = {1.0f,0.0f,0.0f};
     int size1 = sizeof(arr1) / sizeof(arr1[0]);
     int size2 = sizeof(arr2) / sizeof(arr2[0]);
-    EXPECT_FLOAT_EQ(HUGE_VAL,DMet::getMinkowski(arr1,arr2,size1,size2,2));
+    EXPECT_FLOAT_EQ(HUGE_VAL,DMet::PointDistances::getMinkowski(arr1,arr2,size1,size2,2));
 
 }
 
@@ -109,12 +108,12 @@ TEST(MinkowskiTests, SamePoints) {
     int size1 = sizeof(arr1) / sizeof(arr1[0]);
     int size2 = sizeof(arr2) / sizeof(arr2[0]);
     for(int i=0;i<1;i++){
-        EXPECT_FLOAT_EQ(0,DMet::getMinkowski(arr1,arr2,size1,size2,pVals[i]));
+        EXPECT_FLOAT_EQ(0,DMet::PointDistances::getMinkowski(arr1,arr2,size1,size2,pVals[i]));
     }
 
     double arr3[] = {1.50625103e+308,1.34702226e+308,1.38046575e+307};
     for(int i=0;i<1;i++){
-        EXPECT_FLOAT_EQ(0,DMet::getMinkowski(arr3,arr3,size1,size2,pVals[i]));
+        EXPECT_FLOAT_EQ(0,DMet::PointDistances::getMinkowski(arr3,arr3,size1,size2,pVals[i]));
     }
 }
 
@@ -124,7 +123,7 @@ TEST(EuclideanTests, WorkingPoints) {
     double arr2[] = {0.0f,1.0f,0.0f};
     int size1 = sizeof(arr1) / sizeof(arr1[0]);
     int size2 = sizeof(arr2) / sizeof(arr2[0]);
-    EXPECT_FLOAT_EQ(1.4142135623730951, DMet::getEuclidean(arr1, arr2, size1, size2));
+    EXPECT_FLOAT_EQ(1.4142135623730951, DMet::PointDistances::getEuclidean(arr1, arr2, size1, size2));
 }
 
 TEST(EuclideanTests, SamePoints) {
@@ -133,7 +132,7 @@ TEST(EuclideanTests, SamePoints) {
     double arr2[] = {1.0f, 2.0f, 3.0f, 4.0f};
     int size1 = sizeof(arr1) / sizeof(arr1[0]);
     int size2 = sizeof(arr2) / sizeof(arr2[0]);
-    EXPECT_FLOAT_EQ(0, DMet::getEuclidean(arr1, arr2, size1, size2));
+    EXPECT_FLOAT_EQ(0, DMet::PointDistances::getEuclidean(arr1, arr2, size1, size2));
 }
 
 TEST(EuclideanTests, EpsilonDistance) {
@@ -142,7 +141,7 @@ TEST(EuclideanTests, EpsilonDistance) {
     double arr2[] = {1.0,1.0,1.0+std::numeric_limits<float>::epsilon()};
     int size1 = sizeof(arr1) / sizeof(arr1[0]);
     int size2 = sizeof(arr2) / sizeof(arr2[0]);
-    EXPECT_DOUBLE_EQ(std::numeric_limits<float>::epsilon(), DMet::getEuclidean(arr1, arr2, size1, size2));
+    EXPECT_DOUBLE_EQ(std::numeric_limits<float>::epsilon(), DMet::PointDistances::getEuclidean(arr1, arr2, size1, size2));
 }
 
 //================== Chebyshev TESTS ===================//
@@ -152,9 +151,9 @@ TEST(ChebyshevTests, WorkingPoints) {
     double arr2[] = {1.0,0.0,1.0};
     int size1 = sizeof(arr1) / sizeof(arr1[0]);
     int size2 = sizeof(arr2) / sizeof(arr2[0]);
-    EXPECT_DOUBLE_EQ(1.0, DMet::getChebyshev(arr1, arr2, size1, size2));
+    EXPECT_DOUBLE_EQ(1.0, DMet::PointDistances::getChebyshev(arr1, arr2, size1, size2));
 
     double arr3[] = {8.0,0.0,1.0};
     double arr4[] = {0.0,0.0,1.0};
-    EXPECT_DOUBLE_EQ(8.0, DMet::getChebyshev(arr3, arr4, size1, size2));
+    EXPECT_DOUBLE_EQ(8.0, DMet::PointDistances::getChebyshev(arr3, arr4, size1, size2));
 }

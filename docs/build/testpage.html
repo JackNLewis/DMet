@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Point Distances &mdash; DMet  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Welcome to DMet’s documentation!" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> DMet
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Point Distances</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">DMet</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Point Distances</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/testpage.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="point-distances">
+<h1>Point Distances<a class="headerlink" href="#point-distances" title="Permalink to this headline"></a></h1>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4DMet14PointDistances12getEuclideanEA_dA_dii">
+<span id="_CPPv3N4DMet14PointDistances12getEuclideanEA_dA_dii"></span><span id="_CPPv2N4DMet14PointDistances12getEuclideanEA_dA_dii"></span><span id="DMet::PointDistances::getEuclidean__doubleA.doubleA.i.i"></span><span class="target" id="namespace_d_met_1_1_point_distances_1a74255868a01d9f15064191e78852d15c"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">DMet</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">PointDistances</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">getEuclidean</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">vector1</span></span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">]</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">vector2</span></span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">]</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">size1</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">size2</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4DMet14PointDistances12getEuclideanEA_dA_dii" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Function that computes the Euclidean distance. Uses the implementation of Minkowski distance with a p value set as 2</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>vector1</strong> – </p></li>
+<li><p><strong>vector2</strong> – </p></li>
+<li><p><strong>size1</strong> – size of vector1 </p></li>
+<li><p><strong>size2</strong> – size of vector2 </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>floating point result </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4DMet14PointDistances12getMinkowskiEA_dA_diid">
+<span id="_CPPv3N4DMet14PointDistances12getMinkowskiEA_dA_diid"></span><span id="_CPPv2N4DMet14PointDistances12getMinkowskiEA_dA_diid"></span><span id="DMet::PointDistances::getMinkowski__doubleA.doubleA.i.i.double"></span><span class="target" id="namespace_d_met_1_1_point_distances_1a11fd80c8f3b133621b38293ccfc49144"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">DMet</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">PointDistances</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">getMinkowski</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">vector1</span></span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">]</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">vector2</span></span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">]</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">size1</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">size2</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">pvalue</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4DMet14PointDistances12getMinkowskiEA_dA_diid" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Function that computes the distance between vector 1 and vector 2 Uses Minkowski distance (∑(Xi−Yi)^p)^1/p</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>vector1</strong> – </p></li>
+<li><p><strong>vector2</strong> – </p></li>
+<li><p><strong>size1</strong> – size of vector1 </p></li>
+<li><p><strong>size2</strong> – size of vector2 </p></li>
+<li><p><strong>pvalue</strong> – pvalue </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>floating point result </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4DMet14PointDistances12getManhattanEA_dA_dii">
+<span id="_CPPv3N4DMet14PointDistances12getManhattanEA_dA_dii"></span><span id="_CPPv2N4DMet14PointDistances12getManhattanEA_dA_dii"></span><span id="DMet::PointDistances::getManhattan__doubleA.doubleA.i.i"></span><span class="target" id="namespace_d_met_1_1_point_distances_1a9129033239d646bf417cbc0b3af62b37"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">DMet</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">PointDistances</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">getManhattan</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">vector1</span></span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">]</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">vector2</span></span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">]</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">size1</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">size2</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4DMet14PointDistances12getManhattanEA_dA_dii" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Function that computes the Manhattan distance. Uses the implementation of Minkowski distance with a p value set as 1 </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>vector1</strong> – </p></li>
+<li><p><strong>vector2</strong> – </p></li>
+<li><p><strong>size1</strong> – size of vector1 </p></li>
+<li><p><strong>size2</strong> – size of vector2 </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>floating point result </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4DMet14PointDistances12getChebyshevEA_dA_dii">
+<span id="_CPPv3N4DMet14PointDistances12getChebyshevEA_dA_dii"></span><span id="_CPPv2N4DMet14PointDistances12getChebyshevEA_dA_dii"></span><span id="DMet::PointDistances::getChebyshev__doubleA.doubleA.i.i"></span><span class="target" id="namespace_d_met_1_1_point_distances_1aaec225a5c6e8664413d48cef7bf8b940"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">DMet</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">PointDistances</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">getChebyshev</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">vector1</span></span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">]</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">vector2</span></span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">]</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">size1</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">size2</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4DMet14PointDistances12getChebyshevEA_dA_dii" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Function that computes the Chebeshev distance. Uses a different implimentation than minkowski</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>vector1</strong> – </p></li>
+<li><p><strong>vector2</strong> – </p></li>
+<li><p><strong>vector1</strong> – </p></li>
+<li><p><strong>vector2</strong> – </p></li>
+<li><p><strong>size1</strong> – size of vector1 </p></li>
+<li><p><strong>size2</strong> – size of vector2 </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>floating point result </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4DMet14PointDistances7testGMPEv">
+<span id="_CPPv3N4DMet14PointDistances7testGMPEv"></span><span id="_CPPv2N4DMet14PointDistances7testGMPEv"></span><span id="DMet::PointDistances::testGMP"></span><span class="target" id="namespace_d_met_1_1_point_distances_1a8a5b31b8a8cde64851acf89394feb8a9"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">DMet</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">PointDistances</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">testGMP</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4DMet14PointDistances7testGMPEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4DMet14PointDistances12getMinkowskiEP5mpf_tPdPdiiml">
+<span id="_CPPv3N4DMet14PointDistances12getMinkowskiEP5mpf_tPdPdiiml"></span><span id="_CPPv2N4DMet14PointDistances12getMinkowskiEP5mpf_tPdPdiiml"></span><span id="DMet::PointDistances::getMinkowski__mpf_tP.doubleP.doubleP.i.i.unsigned-l.l"></span><span class="target" id="namespace_d_met_1_1_point_distances_1a6a339ade0f0cdf1bf58d221f0dcbd08c"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">DMet</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">PointDistances</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">getMinkowski</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">mpf_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">res</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">vector1</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">vector2</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">size1</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">size2</span></span>, <span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">pvalue</span></span>, <span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">precision</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4DMet14PointDistances12getMinkowskiEP5mpf_tPdPdiiml" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Welcome to DMet’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Jack Lewis.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

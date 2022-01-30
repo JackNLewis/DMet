@@ -10,16 +10,10 @@ Welcome to DMet's documentation!
    :maxdepth: 2
    :caption: Contents:
 
+   pointdocs
+   distribdocs
+   binningdocs
 
 
-Indices and tables
-==================
 
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
 
-Docs
-=====
-.. doxygennamespace:: DMet
-   :project: DMet_docs

@@ -1,0 +1,367 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="namespace_d_met_1_1_point_distances" kind="namespace" language="C++">
+    <compoundname>DMet::PointDistances</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespace_d_met_1_1_point_distances_1a74255868a01d9f15064191e78852d15c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double DMet::PointDistances::getEuclidean</definition>
+        <argsstring>(double vector1[], double vector2[], int size1, int size2)</argsstring>
+        <name>getEuclidean</name>
+        <param>
+          <type>double</type>
+          <declname>vector1</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>vector2</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>size1</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>size2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Function that computes the Euclidean distance. Uses the implementation of Minkowski distance with a p value set as 2</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>vector1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>vector2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>size of vector1 </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>size of vector2 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>floating point result </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/PointDistances.h" line="16" column="12" bodyfile="/Users/jacklewis/Documents/work/year3/DMet/src/DMet/PointDistances.cpp" bodystart="94" bodyend="96" declfile="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/PointDistances.h" declline="16" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_d_met_1_1_point_distances_1a11fd80c8f3b133621b38293ccfc49144" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double DMet::PointDistances::getMinkowski</definition>
+        <argsstring>(double vector1[], double vector2[], int size1, int size2, double pvalue)</argsstring>
+        <name>getMinkowski</name>
+        <param>
+          <type>double</type>
+          <declname>vector1</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>vector2</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>size1</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>size2</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>pvalue</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Function that computes the distance between vector 1 and vector 2 Uses Minkowski distance (∑(Xi−Yi)^p)^1/p</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>vector1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>vector2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>size of vector1 </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>size of vector2 </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pvalue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pvalue </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>floating point result </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/PointDistances.h" line="17" column="12" bodyfile="/Users/jacklewis/Documents/work/year3/DMet/src/DMet/PointDistances.cpp" bodystart="63" bodyend="82" declfile="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/PointDistances.h" declline="17" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_d_met_1_1_point_distances_1a9129033239d646bf417cbc0b3af62b37" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double DMet::PointDistances::getManhattan</definition>
+        <argsstring>(double vector1[], double vector2[], int size1, int size2)</argsstring>
+        <name>getManhattan</name>
+        <param>
+          <type>double</type>
+          <declname>vector1</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>vector2</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>size1</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>size2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Function that computes the Manhattan distance. Uses the implementation of Minkowski distance with a p value set as 1 <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>vector1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>vector2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>size of vector1 </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>size of vector2 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>floating point result </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/PointDistances.h" line="18" column="12" bodyfile="/Users/jacklewis/Documents/work/year3/DMet/src/DMet/PointDistances.cpp" bodystart="107" bodyend="109" declfile="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/PointDistances.h" declline="18" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_d_met_1_1_point_distances_1aaec225a5c6e8664413d48cef7bf8b940" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double DMet::PointDistances::getChebyshev</definition>
+        <argsstring>(double vector1[], double vector2[], int size1, int size2)</argsstring>
+        <name>getChebyshev</name>
+        <param>
+          <type>double</type>
+          <declname>vector1</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>vector2</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>size1</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>size2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Function that computes the Chebeshev distance. Uses a different implimentation than minkowski</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>vector1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>vector2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>vector1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>vector2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>size of vector1 </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>size of vector2 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>floating point result </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/PointDistances.h" line="19" column="12" bodyfile="/Users/jacklewis/Documents/work/year3/DMet/src/DMet/PointDistances.cpp" bodystart="123" bodyend="143" declfile="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/PointDistances.h" declline="19" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_d_met_1_1_point_distances_1a8a5b31b8a8cde64851acf89394feb8a9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DMet::PointDistances::testGMP</definition>
+        <argsstring>()</argsstring>
+        <name>testGMP</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/PointDistances.h" line="20" column="10" bodyfile="/Users/jacklewis/Documents/work/year3/DMet/src/DMet/PointDistances.cpp" bodystart="12" bodyend="28" declfile="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/PointDistances.h" declline="20" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_d_met_1_1_point_distances_1a6a339ade0f0cdf1bf58d221f0dcbd08c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DMet::PointDistances::getMinkowski</definition>
+        <argsstring>(mpf_t *res, double *vector1, double *vector2, int size1, int size2, unsigned long pvalue, long precision)</argsstring>
+        <name>getMinkowski</name>
+        <param>
+          <type>mpf_t *</type>
+          <declname>res</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>vector1</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>vector2</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>size1</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>size2</declname>
+        </param>
+        <param>
+          <type>unsigned long</type>
+          <declname>pvalue</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>precision</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/PointDistances.h" line="23" column="5" declfile="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/PointDistances.h" declline="23" declcolumn="5"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>namespace for functions to compute point distances </para>
+    </detaileddescription>
+    <location file="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/PointDistances.h" line="15" column="5"/>
+  </compounddef>
+</doxygen>

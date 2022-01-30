@@ -9,11 +9,11 @@ using std::cout;
 using std::endl;
 using std::flush;
 
-EqWidthBin::EqWidthBin() {}
+DMet::EqWidthBin::EqWidthBin() {}
 
 
 
-vector<vector<double>> EqWidthBin::setRanges(vector<vector<double>>& data) {
+vector<vector<double>> DMet::EqWidthBin::setRanges(vector<vector<double>>& data) {
     int columns = data[0].size();
     int rows = data.size();
     // insert bounds -ininity and +infinity for all dimensions
@@ -40,7 +40,7 @@ vector<vector<double>> EqWidthBin::setRanges(vector<vector<double>>& data) {
     return data;
 }
 
-void EqWidthBin::generateBins(int arity) {
+void DMet::EqWidthBin::generateBins(int arity) {
     vector<vector<vector<double>>> res;
     //start from last columns create and array and do cartesian of that with res;
     for(int i=0;i<ranges.size();i++){
@@ -81,7 +81,7 @@ void EqWidthBin::generateBins(int arity) {
 
 }
 
-vector<vector<vector<double>>> EqWidthBin::cartesian(vector<vector<vector<double>>>& vec1, vector<vector<double>>& vec2){
+vector<vector<vector<double>>> DMet::EqWidthBin::cartesian(vector<vector<vector<double>>>& vec1, vector<vector<double>>& vec2){
     //no dimesnions yet
     if(vec1.size() == 0){
         for(auto v2 : vec2){
