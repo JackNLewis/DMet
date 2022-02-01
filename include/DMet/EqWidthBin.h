@@ -15,10 +15,18 @@ namespace DMet {
      */
     class EqWidthBin {
         public:
+
+        /*!
+         * Structure for a bin
+         */
         struct Bin {
+            /** Contains the vector of ranges for each dimension **/
             vector<vector<double>> range;
+
+            /** Contains a list of the raw values for each dimension **/
             vector<vector<double>> values;
 
+            /** override operator << in order to print the bin on screen **/
             friend std::ostream& operator<< (std::ostream& out, const Bin &point);
         };
 

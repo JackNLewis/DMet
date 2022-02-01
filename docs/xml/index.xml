@@ -1,15 +1,19 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.2" xml:lang="en-US">
   <compound refid="struct_d_met_1_1_eq_width_bin_1_1_bin" kind="struct"><name>DMet::EqWidthBin::Bin</name>
-    <member refid="struct_d_met_1_1_eq_width_bin_1_1_bin_1ae6c7183a4e4c04dadf3b255b1d5c045b" kind="variable"><name>index</name></member>
     <member refid="struct_d_met_1_1_eq_width_bin_1_1_bin_1ac776059b3066ede32475282dea99d62c" kind="variable"><name>range</name></member>
     <member refid="struct_d_met_1_1_eq_width_bin_1_1_bin_1a61c6ca4bacb356c0ee9a974805459339" kind="variable"><name>values</name></member>
+    <member refid="struct_d_met_1_1_eq_width_bin_1_1_bin_1a5d77c71aa104532e0ff910bb2be9320c" kind="friend"><name>operator&lt;&lt;</name></member>
   </compound>
   <compound refid="class_d_met_1_1_eq_width_bin" kind="class"><name>DMet::EqWidthBin</name>
     <member refid="class_d_met_1_1_eq_width_bin_1aee6c178d022a087b6ff080bc5a3bcec7" kind="variable"><name>ranges</name></member>
-    <member refid="class_d_met_1_1_eq_width_bin_1a50199d3bf8f96fb4d06d9094c6552e06" kind="variable"><name>bins</name></member>
+    <member refid="class_d_met_1_1_eq_width_bin_1a1704cfef7cffaff6356616bdb8593283" kind="variable"><name>bins</name></member>
     <member refid="class_d_met_1_1_eq_width_bin_1a12ebeed1b30aea531e747fd27ca65c51" kind="function"><name>setRanges</name></member>
     <member refid="class_d_met_1_1_eq_width_bin_1a45600ba094f008cfe20d477626d37147" kind="function"><name>generateBins</name></member>
+    <member refid="class_d_met_1_1_eq_width_bin_1a33124a9c9f1ce41f3e5f539378cb666b" kind="function"><name>assignBins</name></member>
+    <member refid="class_d_met_1_1_eq_width_bin_1a5f4b5b24cfc83ca7f86837bac89367b9" kind="function"><name>assignPoint</name></member>
+    <member refid="class_d_met_1_1_eq_width_bin_1aa30b3de1214365b166dc14bf7520d3c6" kind="function"><name>clearBins</name></member>
+    <member refid="class_d_met_1_1_eq_width_bin_1a67f63578d2c378887b76ea4a1e09aff8" kind="function"><name>getPDF</name></member>
     <member refid="class_d_met_1_1_eq_width_bin_1aaf2dc2eca6b3f818e3a6be7d0864dc80" kind="function"><name>cartesian</name></member>
   </compound>
   <compound refid="namespace_d_met" kind="namespace"><name>DMet</name>

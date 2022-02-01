@@ -300,7 +300,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/PointDistances.h" line="19" column="12" bodyfile="/Users/jacklewis/Documents/work/year3/DMet/src/DMet/PointDistances.cpp" bodystart="123" bodyend="143" declfile="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/PointDistances.h" declline="19" declcolumn="12"/>
+        <location file="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/PointDistances.h" line="19" column="12" bodyfile="/Users/jacklewis/Documents/work/year3/DMet/src/DMet/PointDistances.cpp" bodystart="124" bodyend="144" declfile="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/PointDistances.h" declline="19" declcolumn="12"/>
       </memberdef>
       <memberdef kind="function" id="namespace_d_met_1_1_point_distances_1a8a5b31b8a8cde64851acf89394feb8a9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
