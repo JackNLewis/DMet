@@ -5,6 +5,7 @@
 #pragma once
 #include <fstream>
 #include <vector>
+#include <ostream>
 
 using std::vector;
 
@@ -13,14 +14,14 @@ namespace DMet {
      * Class for equal width binning
      */
     class EqWidthBin {
-
+        public:
         struct Bin {
-            int index;
             vector<vector<double>> range;
             vector<vector<double>> values;
+
+            friend std::ostream& operator<< (std::ostream& out, const Bin &point);
         };
 
-    public:
         /**
          * Stores the ranges of each dimension
          */
@@ -29,7 +30,7 @@ namespace DMet {
         /**
          * Stores the different vector of bins
          */
-        vector<vector<vector<double>>> bins;
+        vector<Bin> bins;
 
         /*!
          * Method to set the ranges for every dimension given data
@@ -45,6 +46,31 @@ namespace DMet {
          */
         void generateBins(int arity);
 
+
+        /*!
+         * Assign the values from parameter data to the bins that have been generated.
+         * Throws an error if the bins have not been generated.
+         *
+         * @param data
+         */
+        void assignBins(vector<vector<double>>& data);
+
+        /*!
+         * Assingns a single point to its correct bin
+         * @param point
+         */
+        void assignPoint(vector<double>& point);
+
+        /*!
+         * Clears all of the values in the bins so each bin is empty
+         */
+        void clearBins();
+
+        /*!
+         * Returns the probability density function of the binned values
+         * @return
+         */
+        vector<double> getPDF();
         /*!
          * Generates the cartesian product of two lists of vectors
          *
@@ -52,6 +78,7 @@ namespace DMet {
          * @param vec2
          * @return
          */
+         //Move to utility
         vector<vector<vector<double>>> cartesian(vector<vector<vector<double>>> &vec1, vector<vector<double>> &vec2);
 
     };

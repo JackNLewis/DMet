@@ -11,6 +11,8 @@ fstream
 -
 vector
 -
+ostream
+-
 
 ../include/DMet/PointDistances.h
 gmp.h

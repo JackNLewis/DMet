@@ -120,6 +120,7 @@ double DMet::PointDistances::getManhattan(double vector1[], double vector2[], in
  * @param size2 size of vector2
  * @return floating point result
  */
+ //Test for infinite values
 double DMet::PointDistances::getChebyshev(double vector1[], double vector2[], int size1, int size2) {
     if(vector1 == NULL || vector2 == NULL){
         std::cout << "Array cannot be NULL" << std::endl;

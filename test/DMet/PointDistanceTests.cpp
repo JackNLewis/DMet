@@ -20,13 +20,36 @@ TEST(Binning, BinningTests) {
     DMet::EqWidthBin bin = DMet::EqWidthBin();
     vector<vector<double>> vect
             {
-                    {1, 5, 3,4},
-                    {4, 1, 6,5},
-                    {9, 6, 12,8},
-                    {0,0,0,0}
+                    {1, 5, 3},
+                    {4, 1, 6},
+                    {9, 6, 12},
+                    {0,0,0}
             };
     bin.setRanges(vect);
     bin.generateBins(3);
+    bin.assignBins(vect);
+
+    cout << "[" << std::flush;
+    for(double d: bin.getPDF()){
+        cout << d << "," <<std::flush;
+    }
+    cout << "]"<< endl;
+
+    bin.clearBins();
+    vector<vector<double>> vect2
+            {
+                    {1, 5, 3},
+                    {4, 1, 6},
+                    {9, 6, 12},
+                    {0,4,0}
+            };
+    bin.assignBins(vect2);
+    cout << "[" << std::flush;
+    for(double d: bin.getPDF()){
+        cout << d << "," <<std::flush;
+    }
+    cout << "]" << endl;
+
 }
 
 

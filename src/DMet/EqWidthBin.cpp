@@ -11,7 +11,7 @@ using std::flush;
 
 
 
-vector<vector<double>> DMet::EqWidthBin::setRanges(vector<vector<double>>& data) {
+vector<vector<double>> DMet::EqWidthBin::setRanges(vector<vector<double>> &data) {
     int columns = data[0].size();
     int rows = data.size();
     // insert bounds -ininity and +infinity for all dimensions
@@ -31,52 +31,61 @@ vector<vector<double>> DMet::EqWidthBin::setRanges(vector<vector<double>>& data)
             }
         }
     }
-
-//    for(vector<double> row : ranges){
-//        cout << "Min: " << row[0] << " Max: " << row[1] <<  endl;
-//    }
     return data;
 }
 
 void DMet::EqWidthBin::generateBins(int arity) {
-    vector<vector<vector<double>>> res;
-    //start from last columns create and array and do cartesian of that with res;
+    // vectors where each dimension is binned
+    vector<vector<vector<double>>> binnedDims;
+
     for(int i=0;i<ranges.size();i++){
         //get range
-        vector<vector<double>> binRanges;
+        vector<vector<double>> singleBinnedDim;
         double diff = ranges[i][1] - ranges[i][0];
         double width = diff/arity;
         for(int j=0;j<arity;j++){
             vector<double> t{ranges[i][0] + j*width, ranges[i][0] + (j+1)*width};
-            binRanges.push_back(t);
+            singleBinnedDim.push_back(t);
         }
-        res.push_back(binRanges);
+        binnedDims.push_back(singleBinnedDim);
     }
 
-    for(int i=res.size() ; i>0;i--){
-        cout << "Dim: " << i << ": "<< flush;
-        for(auto dimR: res[i-1]){
-            cout <<  "[" << dimR[0] <<"," << dimR[1] << "] "<< flush;
+
+    // vectors which holds the cartesian product of all the binned dimensions
+    vector<vector<vector<double>>> cartesianRanges;
+
+    //starting from last dimension do cartesion onto a binnedDims
+    for(int i= binnedDims.size() - 1; i >= 0; i--){
+        cartesian(cartesianRanges, binnedDims[i]);
+    }
+
+    //assign the ranges the bin struct
+    for(auto a : cartesianRanges){
+        struct Bin bin;
+        bin.range = a;
+        bins.push_back(bin);
+    }
+}
+
+void DMet::EqWidthBin::assignBins(vector<vector<double>> &data){
+    for(auto point: data){
+        assignPoint(point);
+    }
+}
+
+void DMet::EqWidthBin::assignPoint(vector<double> &point) {
+    for(Bin &bin : bins){
+        int dimensions = bin.range.size();
+        bool addToBin = true;
+        for(int i=0; i<dimensions;i++){
+            vector<double> dimRange = bin.range[i];
+            bool inRange = (point[i] >= dimRange[0] && point[i] < dimRange[1]);
+            addToBin = addToBin && inRange;
         }
-        cout << endl;
-    }
-
-    vector<vector<vector<double>>> binRanges;
-    //starting from last dimension do cartesion onto a res
-    for(int i=res.size()-1;i>=0;i--){
-        cartesian(binRanges,res[i]);
-    }
-
-    for(auto a : binRanges){
-        //for each vector of ranges
-        for(auto dims : a){
-            cout << "[" << dims[0] <<"," << dims[1] << "]" << std::flush;
+        if(addToBin){
+            bin.values.push_back(point);
         }
-        cout<<endl;
-
-        //assign the bins the range
     }
-
 }
 
 vector<vector<vector<double>>> DMet::EqWidthBin::cartesian(vector<vector<vector<double>>>& vec1, vector<vector<double>>& vec2){
@@ -105,4 +114,35 @@ vector<vector<vector<double>>> DMet::EqWidthBin::cartesian(vector<vector<vector<
         }
     }
     return vec1;
+}
+
+std::ostream &DMet::operator<<(std::ostream &out, const DMet::EqWidthBin::Bin &bin) {
+    //print all the ranges of the bin
+
+    for(auto r : bin.range){
+        out << "[" << r[0] << "," << r[1] << "]" << std::flush;
+    }
+    out << ": " << bin.values.size() << endl;
+    return out;
+}
+
+void DMet::EqWidthBin::clearBins() {
+    for(auto &bin : bins){
+        bin.values.clear();
+    }
+}
+
+vector<double> DMet::EqWidthBin::getPDF() {
+    vector<double> pdf;
+    int count = 0;
+    for(auto &bin : bins){
+        pdf.push_back(bin.values.size());
+        count+=bin.values.size();
+    }
+
+    for(double &d : pdf){
+        d /= count;
+    }
+
+    return pdf;
 }

@@ -11,6 +11,8 @@ fstream
 -
 vector
 -
+ostream
+-
 
 /Users/jacklewis/Documents/work/year3/DMet/src/DMet/EqWidthBin.cpp
 DMet/EqWidthBin.h
