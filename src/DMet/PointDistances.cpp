@@ -85,10 +85,6 @@ namespace DMet { namespace PointDistances{
          *
          * @param vector1
          * @param vector2
-         * @param vector1
-         * @param vector2
-         * @param size1 size of vector1
-         * @param size2 size of vector2
          * @return floating point result
          */
          //Test for infinite values
@@ -98,41 +94,21 @@ namespace DMet { namespace PointDistances{
                 return;
             }
 
-            double max = 0;
-            for(int i=0;i<vector1.size();i++){
-                double temp = std::abs(vector1[i] - vector2[i]);
-                max = (temp > max) ? temp : max;
+            mpfr_t max,x ,y;
+            mpfr_init_set_d(max,0,GMP_RNDN);
+            mpfr_inits(x,y,NULL);
 
+            for(int i=0;i<vector1.size();i++){
+                mpfr_set_d(x,vector1[i],GMP_RNDN);
+                mpfr_set_d(y,vector2[i],GMP_RNDN);
+                mpfr_sub(y,x,y,GMP_RNDN);
+                mpfr_abs(y,y,GMP_RNDD);
+                if(mpfr_cmp(y,max)>0){
+                    mpfr_set(max,y,GMP_RNDN);
+                }
             }
-            std::cout << "Chebyshev distance: " << max << std::endl;
+            mpfr_printf("Result %.64Re \n", max);
+            mpfr_set(res,max,GMP_RNDN);
+            mpfr_clears(x,y,max,NULL);
         }
 } }
-
-
-
-
-//double DMet::PointDistances::getMinkowski(double vector1[], double vector2[], int size1, int size2, double pvalue){
-//    if(vector1 == nullptr || vector2 == nullptr){
-//        std::cout << "Array cannot be NULL" << std::endl;
-//        return -1;
-//    }
-//    if(size1 != size2){
-//        std::cout << "Array sizes not compatable" << std:: endl;
-//        return -1;
-//    }
-//    if(pvalue == 0){
-//        //throw exception
-//    }
-//    //if overflow return infinty
-//    double sum = 0;
-//    for(int i=0; i<size1;i++){
-//        sum += pow(std::abs((vector1[i] - vector2[i])) ,pvalue);
-//    }
-//    double res = pow(sum, float(1.0f/pvalue));
-//    return res;
-//}
-//
-
-
-//
-//
