@@ -4,6 +4,8 @@
 
 #pragma once
 #include <gmp.h>
+#include <mpfr.h>
+
 
 /*!
  * Outer namespace of library
@@ -13,14 +15,11 @@ namespace DMet{
      * namespace for functions to compute point distances
      */
     namespace PointDistances{
-    double getEuclidean(double vector1[], double vector2[], int size1, int size2);
-    double getMinkowski(double vector1[], double vector2[], int size1, int size2, double pvalue);
-    double getManhattan(double vector1[], double vector2[], int size1, int size2);
-    double getChebyshev(double vector1[], double vector2[], int size1, int size2);
-    void testGMP();
 
-    void
-    getMinkowski(mpf_t *res, double *vector1, double *vector2, int size1, int size2, unsigned long pvalue, long precision);
+        void getMinkowski(mpfr_t &res, std::vector<double> &vector1, std::vector<double> &vector2, double pvalue);
+        void getManhattan(mpfr_t &res, std::vector<double> &vector1, std::vector<double> &vector2);
+        void getEuclidean(mpfr_t &res, std::vector<double> &vector1, std::vector<double> &vector2);
+        void getChebyshev(mpfr_t &res, std::vector<double> &vector1, std::vector<double> &vector2);
 }}
 
 

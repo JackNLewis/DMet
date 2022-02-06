@@ -15,6 +15,8 @@ enable_testing()
 add_executable(
         Google_tests_run
         DMet/PointDistanceTests.cpp
+        DMet/MinkowskiTests.cpp
+        DMet/ChebyshevTests.cpp
 )
 
 target_link_libraries(Google_tests_run DMet)

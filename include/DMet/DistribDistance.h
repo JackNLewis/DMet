@@ -7,7 +7,7 @@
 
 namespace DMet { namespace Distrib{
 
-    double KLDiv(double vector1[], double vector2[], int size1, int size2);
+    double KLDiv(std::vector<double> &v1, std::vector<double> &v2);
 
 } }
 

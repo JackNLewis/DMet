@@ -7,15 +7,19 @@
 #include <utility>
 #include <cmath>
 
+using std::vector;
+using std::cout;
+using std::endl;
+
 namespace DMet{ namespace Utils{
 
-    bool isPDF(double arr[], int size1){
+    bool isPDF(vector<double> &v){
         double sum = 0;
-        for(int i=0;i<size1;i++){
-            if(arr[i] <0 ){
+        for(int i=0;i<v.size();i++){
+            if(v[i] < 0 ){
                 return false;
             }
-            sum += arr[i];
+            sum += v[i];
         }
         if(abs(1.0 - sum) < 0.01){
             return true;
@@ -25,13 +29,14 @@ namespace DMet{ namespace Utils{
     }
 
 
-    bool containsZero(double arr[], int size1){
-        for(int i=0;i<size1;i++){
-            if(arr[i] == 0){
-                return false;
+    bool containsZero(std::vector<double> &v){
+        for(double i : v){
+            cout << i <<endl;
+            if(i == 0){
+                return true;
             }
         }
-        return true;
+        return false;
     }
 
 }}

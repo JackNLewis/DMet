@@ -175,6 +175,54 @@ Google_tests_run/fast:
 	cd /Users/jacklewis/Documents/work/year3/DMet/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/Google_tests_run.dir/build.make test/CMakeFiles/Google_tests_run.dir/build
 .PHONY : Google_tests_run/fast
 
+DMet/ChebyshevTests.o: DMet/ChebyshevTests.cpp.o
+.PHONY : DMet/ChebyshevTests.o
+
+# target to build an object file
+DMet/ChebyshevTests.cpp.o:
+	cd /Users/jacklewis/Documents/work/year3/DMet/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/Google_tests_run.dir/build.make test/CMakeFiles/Google_tests_run.dir/DMet/ChebyshevTests.cpp.o
+.PHONY : DMet/ChebyshevTests.cpp.o
+
+DMet/ChebyshevTests.i: DMet/ChebyshevTests.cpp.i
+.PHONY : DMet/ChebyshevTests.i
+
+# target to preprocess a source file
+DMet/ChebyshevTests.cpp.i:
+	cd /Users/jacklewis/Documents/work/year3/DMet/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/Google_tests_run.dir/build.make test/CMakeFiles/Google_tests_run.dir/DMet/ChebyshevTests.cpp.i
+.PHONY : DMet/ChebyshevTests.cpp.i
+
+DMet/ChebyshevTests.s: DMet/ChebyshevTests.cpp.s
+.PHONY : DMet/ChebyshevTests.s
+
+# target to generate assembly for a file
+DMet/ChebyshevTests.cpp.s:
+	cd /Users/jacklewis/Documents/work/year3/DMet/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/Google_tests_run.dir/build.make test/CMakeFiles/Google_tests_run.dir/DMet/ChebyshevTests.cpp.s
+.PHONY : DMet/ChebyshevTests.cpp.s
+
+DMet/MinkowskiTests.o: DMet/MinkowskiTests.cpp.o
+.PHONY : DMet/MinkowskiTests.o
+
+# target to build an object file
+DMet/MinkowskiTests.cpp.o:
+	cd /Users/jacklewis/Documents/work/year3/DMet/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/Google_tests_run.dir/build.make test/CMakeFiles/Google_tests_run.dir/DMet/MinkowskiTests.cpp.o
+.PHONY : DMet/MinkowskiTests.cpp.o
+
+DMet/MinkowskiTests.i: DMet/MinkowskiTests.cpp.i
+.PHONY : DMet/MinkowskiTests.i
+
+# target to preprocess a source file
+DMet/MinkowskiTests.cpp.i:
+	cd /Users/jacklewis/Documents/work/year3/DMet/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/Google_tests_run.dir/build.make test/CMakeFiles/Google_tests_run.dir/DMet/MinkowskiTests.cpp.i
+.PHONY : DMet/MinkowskiTests.cpp.i
+
+DMet/MinkowskiTests.s: DMet/MinkowskiTests.cpp.s
+.PHONY : DMet/MinkowskiTests.s
+
+# target to generate assembly for a file
+DMet/MinkowskiTests.cpp.s:
+	cd /Users/jacklewis/Documents/work/year3/DMet/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/Google_tests_run.dir/build.make test/CMakeFiles/Google_tests_run.dir/DMet/MinkowskiTests.cpp.s
+.PHONY : DMet/MinkowskiTests.cpp.s
+
 DMet/PointDistanceTests.o: DMet/PointDistanceTests.cpp.o
 .PHONY : DMet/PointDistanceTests.o
 
@@ -212,6 +260,12 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... Google_tests_run"
+	@echo "... DMet/ChebyshevTests.o"
+	@echo "... DMet/ChebyshevTests.i"
+	@echo "... DMet/ChebyshevTests.s"
+	@echo "... DMet/MinkowskiTests.o"
+	@echo "... DMet/MinkowskiTests.i"
+	@echo "... DMet/MinkowskiTests.s"
 	@echo "... DMet/PointDistanceTests.o"
 	@echo "... DMet/PointDistanceTests.i"
 	@echo "... DMet/PointDistanceTests.s"

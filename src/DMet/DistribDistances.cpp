@@ -6,6 +6,9 @@
 #include "DMet/DistribDistance.h"
 #include "DMet/utils.h"
 
+using std::cout;
+using std::endl;
+using std::vector;
 namespace DMet { namespace Distrib{
 
     /*!
@@ -14,41 +17,35 @@ namespace DMet { namespace Distrib{
      * @param y  - this is the probability distribution y
      * @return the KL distance between the two distributions
      */
-    double KLDiv(double vector1[], double vector2[], int size1, int size2){
+    double KLDiv(vector<double> &v1, vector<double> &v2){
         //test both add to 1
-        if(size1 != size2){
-            std::cout << "Input vectors are incompattable sizes" << std::endl;
+        if(v1.size() != v2.size()){
+            cout << "Input vectors are incompattable sizes" << endl;
             return -1;
         }
-        std::cout << size1 << std::endl;
-        if(!DMet::Utils::isPDF(vector1,size1) || !DMet::Utils::isPDF(vector2,size2)){
-            std::cout << "Input arrays not a PDF" << std::endl;
+        if(!DMet::Utils::isPDF(v1) || !DMet::Utils::isPDF(v2)){
+            cout << "Input arrays not a PDF" << endl;
             return -1;
         }
-        if(DMet::Utils::containsZero(vector2,size2)){
-            std::cout << "Array 2 contains zero value" << std::endl;
+        if(DMet::Utils::containsZero(v2)){
+            cout << "Array 2 contains zero value" << endl;
             return -1;
         }
 
         double sum = 0;
-        double prob1 = 0;
-        double prob2 = 0;
 
-        for(int i=0; i<size1; i++){
-            double res = vector1[i] * log(vector1[i] / vector2[i]);
-            std::cout << "loop " << i << " " << res << std::endl;
-            sum += vector1[i] * log(vector1[i] / vector2[i]);
-            prob1 += vector1[i];
-            prob2 += vector2[i];
-        }
-        float epsilon = 0.001;
-        if(prob1 < 1.0 - epsilon || prob1 > 1.0 + epsilon || prob2 < 1.0 - epsilon || prob2 > 1.0 + epsilon){
-            std::cout << "Input is not a probability distribution" << std::endl;
-            return -1;
+        for(int i=0; i<v1.size(); i++){
+            if(v2[i] == 0){
+                continue;
+            }
+            double res = v1[i] * log(v1[i] / v2[i]);
+            cout << "pos " << i << ": " << res << endl;
+            sum += res;
+
         }
 
         //for all in size
-        std::cout << "Distance: " << sum <<  std::endl;
+        cout << "Distance: " << sum <<  endl;
         return sum;
     }
 

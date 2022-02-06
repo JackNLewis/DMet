@@ -5,6 +5,6 @@
 #pragma once
 
 namespace DMet{ namespace Utils{
-    bool isPDF(double arr[], int size1);
-    bool containsZero(double arr[], int size1);
+    bool isPDF(std::vector<double> &v);
+    bool containsZero(std::vector<double> &v);
 }}

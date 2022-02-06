@@ -6,17 +6,41 @@
 
 #IncludeRegexTransform: 
 
-../include/DMet/EqWidthBin.h
-fstream
+../include/DMet/PointDistances.h
+gmp.h
+-
+mpfr.h
+-
+
+/Users/jacklewis/Documents/work/year3/DMet/src/DMet/PointDistances.cpp
+iostream
+-
+cmath
+-
+DMet/PointDistances.h
+/Users/jacklewis/Documents/work/year3/DMet/src/DMet/DMet/PointDistances.h
+limits
+-
+mpfr.h
+-
+gmp.h
 -
 vector
 -
-ostream
+
+/usr/local/include/gmp.h
+iosfwd
+-
+cstdio
+-
+stddef.h
+-
+limits.h
 -
 
-/Users/jacklewis/Documents/work/year3/DMet/src/DMet/EqWidthBin.cpp
-DMet/EqWidthBin.h
-/Users/jacklewis/Documents/work/year3/DMet/src/DMet/DMet/EqWidthBin.h
-iostream
+/usr/local/include/mpfr.h
+gmp.h
+-
+mini-gmp.h
 -
 
