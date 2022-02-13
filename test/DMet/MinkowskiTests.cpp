@@ -12,7 +12,7 @@
 using std::cout;
 using std::endl;
 using std::vector;
-
+using DMet::PointDistances::getMinkowski;
 
 
 TEST(MinkowskiTests, WorkingInRange) {
@@ -45,9 +45,9 @@ TEST(MinkowskiTests, WorkingInRange) {
         }
         mpfr_t res;
         mpfr_init(res);
-        DMet::PointDistances::getMinkowski(res,v1,v2,5);
+        getMinkowski(res,v1,v2,5);
         double p5 = mpfr_get_d(res,GMP_RNDN);
-        DMet::PointDistances::getMinkowski(res,v1,v2,10);
+        getMinkowski(res,v1,v2,10);
         double p10 = mpfr_get_d(res,GMP_RNDN);
         mpfr_clear(res);
         EXPECT_FLOAT_EQ(pval5, p5);
@@ -57,13 +57,13 @@ TEST(MinkowskiTests, WorkingInRange) {
 }
 
 TEST(MinkowskiTests, SamePoints) {
-    double pVals[] = {1.0f,10.0f,100.0f};
-    vector<double> v1 {1.0f, 0.0f, 0.0f};
-    vector<double> v2 {1.0f,0.0f,0.0f};
+    double pVals[] = {1.0,10.0,100.0};
+    vector<double> v1 {1.0, 0.0, 0.0};
+    vector<double> v2 {1.0,0.0,0.0};
     for(int i=0;i<1;i++){
         mpfr_t res;
         mpfr_init(res);
-        DMet::PointDistances::getMinkowski(res,v1,v2,pVals[i]);
+        getMinkowski(res,v1,v2,pVals[i]);
         double resCheck = mpfr_get_d(res,GMP_RNDN);
 
         EXPECT_FLOAT_EQ(0,resCheck);
@@ -74,12 +74,67 @@ TEST(MinkowskiTests, SamePoints) {
     for(int i=0;i<1;i++){
         mpfr_t res;
         mpfr_init(res);
-        DMet::PointDistances::getMinkowski(res,v3,v3,pVals[i]);
+        getMinkowski(res,v3,v3,pVals[i]);
         double resCheck = mpfr_get_d(res,GMP_RNDN);
         EXPECT_FLOAT_EQ(0,resCheck);
         mpfr_clear(res);
     }
 }
+
+
+TEST(MinkowskiTests, IncompatableSizes) {
+
+    vector<double> v1 {1.0, 0.0, 0.0};
+    vector<double> v2 {1.0,0.0};
+
+    vector<double> v3 {1.50625103e+308};
+    mpfr_t res;
+    mpfr_init(res);
+
+    EXPECT_THROW(getMinkowski(res,v1,v2,2),std::invalid_argument);
+
+    EXPECT_THROW(getMinkowski(res,v3,v1,2),std::invalid_argument);
+
+    mpfr_clear(res);
+
+}
+
+TEST(MinkowskiTests, SingleInfinite) {
+
+    vector<double> v1 {1.0, std::numeric_limits<double>::infinity(),3.0};
+    vector<double> v2 {1.0,0,0};
+
+    mpfr_t res;
+    mpfr_init(res);
+
+    getMinkowski(res,v1,v2,2);
+    double resCheck1 = mpfr_get_d(res,GMP_RNDN);
+
+    getMinkowski(res,v2,v1,2);
+    double resCheck2 = mpfr_get_d(res,GMP_RNDN);
+    EXPECT_FLOAT_EQ(std::numeric_limits<double>::infinity(),resCheck1);
+    EXPECT_FLOAT_EQ(std::numeric_limits<double>::infinity(),resCheck2);
+    mpfr_clear(res);
+}
+
+TEST(MinkowskiTests, InfintePval) {
+
+    vector<double> v1 {1.0, 1.0,50.0};
+    vector<double> v2 {1.0,0,0};
+
+    mpfr_t res;
+    mpfr_init(res);
+
+    getMinkowski(res,v1,v2,std::numeric_limits<double>::infinity());
+    double resCheck1 = mpfr_get_d(res,GMP_RNDN);
+
+    EXPECT_FLOAT_EQ(50,resCheck1);
+    mpfr_clear(res);
+}
+
+
+
+
 
 //TEST(MinkowskiTests, WorkingPoints) {
 //    double pVals[] = {1.0f,2.0f};

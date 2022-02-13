@@ -3,28 +3,18 @@
   <compounddef id="namespace_d_met_1_1_distrib" kind="namespace" language="C++">
     <compoundname>DMet::Distrib</compoundname>
       <sectiondef kind="func">
-      <memberdef kind="function" id="_distrib_distance_8h_1aad03846730f939b48546f868a052dad5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="_distrib_distances_8cpp_1a887584a4f487b5e06c9879546519ed38" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>double</type>
         <definition>double DMet::Distrib::KLDiv</definition>
-        <argsstring>(double vector1[], double vector2[], int size1, int size2)</argsstring>
+        <argsstring>(vector&lt; double &gt; &amp;v1, vector&lt; double &gt; &amp;v2)</argsstring>
         <name>KLDiv</name>
         <param>
-          <type>double</type>
-          <declname>vector1</declname>
-          <array>[]</array>
+          <type>vector&lt; double &gt; &amp;</type>
+          <declname>v1</declname>
         </param>
         <param>
-          <type>double</type>
-          <declname>vector2</declname>
-          <array>[]</array>
-        </param>
-        <param>
-          <type>int</type>
-          <declname>size1</declname>
-        </param>
-        <param>
-          <type>int</type>
-          <declname>size2</declname>
+          <type>vector&lt; double &gt; &amp;</type>
+          <declname>v2</declname>
         </param>
         <briefdescription>
         </briefdescription>
@@ -52,13 +42,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/jacklewis/Documents/work/year3/DMet/src/DMet/DistribDistances.cpp" line="17" column="12" bodyfile="/Users/jacklewis/Documents/work/year3/DMet/src/DMet/DistribDistances.cpp" bodystart="17" bodyend="53" declfile="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/DistribDistance.h" declline="10" declcolumn="12"/>
+        <location file="/Users/jacklewis/Documents/work/year3/DMet/src/DMet/DistribDistances.cpp" line="20" column="12" bodyfile="/Users/jacklewis/Documents/work/year3/DMet/src/DMet/DistribDistances.cpp" bodystart="20" bodyend="50"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/DistribDistance.h" line="8" column="14"/>
+    <location file="/Users/jacklewis/Documents/work/year3/DMet/src/DMet/DistribDistances.cpp" line="12" column="14"/>
   </compounddef>
 </doxygen>

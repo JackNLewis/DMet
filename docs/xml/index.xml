@@ -1,45 +1,19 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.2" xml:lang="en-US">
-  <compound refid="struct_d_met_1_1_eq_width_bin_1_1_bin" kind="struct"><name>DMet::EqWidthBin::Bin</name>
-    <member refid="struct_d_met_1_1_eq_width_bin_1_1_bin_1ac776059b3066ede32475282dea99d62c" kind="variable"><name>range</name></member>
-    <member refid="struct_d_met_1_1_eq_width_bin_1_1_bin_1a61c6ca4bacb356c0ee9a974805459339" kind="variable"><name>values</name></member>
-    <member refid="struct_d_met_1_1_eq_width_bin_1_1_bin_1a5d77c71aa104532e0ff910bb2be9320c" kind="friend"><name>operator&lt;&lt;</name></member>
-  </compound>
-  <compound refid="class_d_met_1_1_eq_width_bin" kind="class"><name>DMet::EqWidthBin</name>
-    <member refid="class_d_met_1_1_eq_width_bin_1aee6c178d022a087b6ff080bc5a3bcec7" kind="variable"><name>ranges</name></member>
-    <member refid="class_d_met_1_1_eq_width_bin_1a1704cfef7cffaff6356616bdb8593283" kind="variable"><name>bins</name></member>
-    <member refid="class_d_met_1_1_eq_width_bin_1a12ebeed1b30aea531e747fd27ca65c51" kind="function"><name>setRanges</name></member>
-    <member refid="class_d_met_1_1_eq_width_bin_1a45600ba094f008cfe20d477626d37147" kind="function"><name>generateBins</name></member>
-    <member refid="class_d_met_1_1_eq_width_bin_1a33124a9c9f1ce41f3e5f539378cb666b" kind="function"><name>assignBins</name></member>
-    <member refid="class_d_met_1_1_eq_width_bin_1a5f4b5b24cfc83ca7f86837bac89367b9" kind="function"><name>assignPoint</name></member>
-    <member refid="class_d_met_1_1_eq_width_bin_1aa30b3de1214365b166dc14bf7520d3c6" kind="function"><name>clearBins</name></member>
-    <member refid="class_d_met_1_1_eq_width_bin_1a67f63578d2c378887b76ea4a1e09aff8" kind="function"><name>getPDF</name></member>
-    <member refid="class_d_met_1_1_eq_width_bin_1aaf2dc2eca6b3f818e3a6be7d0864dc80" kind="function"><name>cartesian</name></member>
-  </compound>
   <compound refid="namespace_d_met" kind="namespace"><name>DMet</name>
   </compound>
   <compound refid="namespace_d_met_1_1_distrib" kind="namespace"><name>DMet::Distrib</name>
-    <member refid="_distrib_distance_8h_1aad03846730f939b48546f868a052dad5" kind="function"><name>KLDiv</name></member>
+    <member refid="_distrib_distances_8cpp_1a887584a4f487b5e06c9879546519ed38" kind="function"><name>KLDiv</name></member>
   </compound>
   <compound refid="namespace_d_met_1_1_point_distances" kind="namespace"><name>DMet::PointDistances</name>
-    <member refid="namespace_d_met_1_1_point_distances_1a74255868a01d9f15064191e78852d15c" kind="function"><name>getEuclidean</name></member>
-    <member refid="namespace_d_met_1_1_point_distances_1a11fd80c8f3b133621b38293ccfc49144" kind="function"><name>getMinkowski</name></member>
-    <member refid="namespace_d_met_1_1_point_distances_1a9129033239d646bf417cbc0b3af62b37" kind="function"><name>getManhattan</name></member>
-    <member refid="namespace_d_met_1_1_point_distances_1aaec225a5c6e8664413d48cef7bf8b940" kind="function"><name>getChebyshev</name></member>
-    <member refid="namespace_d_met_1_1_point_distances_1a8a5b31b8a8cde64851acf89394feb8a9" kind="function"><name>testGMP</name></member>
-    <member refid="namespace_d_met_1_1_point_distances_1a6a339ade0f0cdf1bf58d221f0dcbd08c" kind="function"><name>getMinkowski</name></member>
+    <member refid="_point_distances_8cpp_1a57dc766ab02da35a2fca9bedabf044aa" kind="function"><name>getMinkowski</name></member>
+    <member refid="_point_distances_8cpp_1a941ec37666c3e9c6164498e8a0c9ab1d" kind="function"><name>getEuclidean</name></member>
+    <member refid="_point_distances_8cpp_1ad2eefad0907dbb734ff7ca556df352ac" kind="function"><name>getManhattan</name></member>
+    <member refid="_point_distances_8cpp_1aa56b86ccff59a4b963feb50373605dc2" kind="function"><name>getChebyshev</name></member>
   </compound>
   <compound refid="namespace_d_met_1_1_utils" kind="namespace"><name>DMet::Utils</name>
-    <member refid="utils_8h_1a3bd654eb8aec1b363474eac983f14e28" kind="function"><name>isPDF</name></member>
-    <member refid="utils_8h_1a0cccf2dffbd1084767b05663b99cb300" kind="function"><name>containsZero</name></member>
-  </compound>
-  <compound refid="_distrib_distance_8h" kind="file"><name>DistribDistance.h</name>
-  </compound>
-  <compound refid="_eq_width_bin_8h" kind="file"><name>EqWidthBin.h</name>
-  </compound>
-  <compound refid="_point_distances_8h" kind="file"><name>PointDistances.h</name>
-  </compound>
-  <compound refid="utils_8h" kind="file"><name>utils.h</name>
+    <member refid="utils_8cpp_1ac2c0c2779188097446aaaaed8f10db09" kind="function"><name>isPDF</name></member>
+    <member refid="utils_8cpp_1a3b468643e312f9ce16b94ad92f0b3837" kind="function"><name>containsZero</name></member>
   </compound>
   <compound refid="_distrib_distances_8cpp" kind="file"><name>DistribDistances.cpp</name>
   </compound>
@@ -49,11 +23,7 @@
   </compound>
   <compound refid="utils_8cpp" kind="file"><name>utils.cpp</name>
   </compound>
-  <compound refid="dir_9b59cf6179fe908cc491d3aa265d5a6a" kind="dir"><name>/Users/jacklewis/Documents/work/year3/DMet/include/DMet</name>
-  </compound>
   <compound refid="dir_4b8de973c18cbb0637e3a0b46711ff1c" kind="dir"><name>/Users/jacklewis/Documents/work/year3/DMet/src/DMet</name>
-  </compound>
-  <compound refid="dir_d44c64559bbebec7f509842c48db8b23" kind="dir"><name>/Users/jacklewis/Documents/work/year3/DMet/include</name>
   </compound>
   <compound refid="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir"><name>/Users/jacklewis/Documents/work/year3/DMet/src</name>
   </compound>

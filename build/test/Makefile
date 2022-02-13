@@ -175,6 +175,30 @@ Google_tests_run/fast:
 	cd /Users/jacklewis/Documents/work/year3/DMet/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/Google_tests_run.dir/build.make test/CMakeFiles/Google_tests_run.dir/build
 .PHONY : Google_tests_run/fast
 
+DMet/BinningTests.o: DMet/BinningTests.cpp.o
+.PHONY : DMet/BinningTests.o
+
+# target to build an object file
+DMet/BinningTests.cpp.o:
+	cd /Users/jacklewis/Documents/work/year3/DMet/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/Google_tests_run.dir/build.make test/CMakeFiles/Google_tests_run.dir/DMet/BinningTests.cpp.o
+.PHONY : DMet/BinningTests.cpp.o
+
+DMet/BinningTests.i: DMet/BinningTests.cpp.i
+.PHONY : DMet/BinningTests.i
+
+# target to preprocess a source file
+DMet/BinningTests.cpp.i:
+	cd /Users/jacklewis/Documents/work/year3/DMet/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/Google_tests_run.dir/build.make test/CMakeFiles/Google_tests_run.dir/DMet/BinningTests.cpp.i
+.PHONY : DMet/BinningTests.cpp.i
+
+DMet/BinningTests.s: DMet/BinningTests.cpp.s
+.PHONY : DMet/BinningTests.s
+
+# target to generate assembly for a file
+DMet/BinningTests.cpp.s:
+	cd /Users/jacklewis/Documents/work/year3/DMet/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/Google_tests_run.dir/build.make test/CMakeFiles/Google_tests_run.dir/DMet/BinningTests.cpp.s
+.PHONY : DMet/BinningTests.cpp.s
+
 DMet/ChebyshevTests.o: DMet/ChebyshevTests.cpp.o
 .PHONY : DMet/ChebyshevTests.o
 
@@ -260,6 +284,9 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... Google_tests_run"
+	@echo "... DMet/BinningTests.o"
+	@echo "... DMet/BinningTests.i"
+	@echo "... DMet/BinningTests.s"
 	@echo "... DMet/ChebyshevTests.o"
 	@echo "... DMet/ChebyshevTests.i"
 	@echo "... DMet/ChebyshevTests.s"

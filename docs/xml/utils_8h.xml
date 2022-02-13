@@ -17,8 +17,8 @@
 <codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="6"><highlight class="normal"></highlight></codeline>
 <codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_d_met" kindref="compound">DMet</ref>{<sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">Utils{</highlight></codeline>
-<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isPDF(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>arr[],<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>size1);</highlight></codeline>
-<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>containsZero(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>arr[],<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>size1);</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isPDF(std::vector&lt;double&gt;<sp/>&amp;v);</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>containsZero(std::vector&lt;double&gt;<sp/>&amp;v);</highlight></codeline>
 <codeline lineno="10"><highlight class="normal">}}</highlight></codeline>
     </programlisting>
     <location file="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/utils.h"/>

@@ -414,6 +414,9 @@
 		<Unit filename="/Users/jacklewis/Documents/work/year3/DMet/src/DMet/utils.cpp">
 			<Option target="DMet"/>
 		</Unit>
+		<Unit filename="/Users/jacklewis/Documents/work/year3/DMet/test/DMet/BinningTests.cpp">
+			<Option target="Google_tests_run"/>
+		</Unit>
 		<Unit filename="/Users/jacklewis/Documents/work/year3/DMet/test/DMet/ChebyshevTests.cpp">
 			<Option target="Google_tests_run"/>
 		</Unit>

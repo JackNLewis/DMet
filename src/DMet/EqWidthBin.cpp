@@ -24,7 +24,10 @@ vector<vector<double>> DMet::EqWidthBin::setRanges(vector<vector<double>> &data)
     for(vector<double> row : data){
         for(int i=0; i<columns;i++){
             //if smaller than min bound of that dimension
-            if(row[i] < ranges[i][0]){
+            if(row[i] == std::numeric_limits<double>::infinity() || row[i] == -std::numeric_limits<double>::infinity()){
+                continue;
+            }
+            else if(row[i] < ranges[i][0]){
                 ranges[i][0] = row[i];
             }else if(row[i] > ranges[i][1]){
                 ranges[i][1] = row[i];
@@ -45,11 +48,16 @@ void DMet::EqWidthBin::generateBins(int arity) {
         double width = diff/arity;
         for(int j=0;j<arity;j++){
             vector<double> t{ranges[i][0] + j*width, ranges[i][0] + (j+1)*width};
+            if(j==0){
+                t[0] = -std::numeric_limits<double>::infinity();
+            }
+            if(j == arity-1){
+                t[1] = std::numeric_limits<double>::infinity();
+            }
             singleBinnedDim.push_back(t);
         }
         binnedDims.push_back(singleBinnedDim);
     }
-
 
     // vectors which holds the cartesian product of all the binned dimensions
     vector<vector<vector<double>>> cartesianRanges;
@@ -59,12 +67,23 @@ void DMet::EqWidthBin::generateBins(int arity) {
         cartesian(cartesianRanges, binnedDims[i]);
     }
 
+//    for(auto range : cartesianRanges){
+//        //set lower and upper bound of each dim to -inf and +inf
+//        for(auto dim : range){
+//            dim[0] = -std::numeric_limits<double>::infinity();
+//            dim[1] = std::numeric_limits<double>::infinity();
+//        }
+//    }
+
     //assign the ranges the bin struct
     for(auto a : cartesianRanges){
         struct Bin bin;
         bin.range = a;
         bins.push_back(bin);
     }
+
+
+
 }
 
 void DMet::EqWidthBin::assignBins(vector<vector<double>> &data){
@@ -79,7 +98,13 @@ void DMet::EqWidthBin::assignPoint(vector<double> &point) {
         bool addToBin = true;
         for(int i=0; i<dimensions;i++){
             vector<double> dimRange = bin.range[i];
-            bool inRange = (point[i] >= dimRange[0] && point[i] < dimRange[1]);
+            //if last bin allow to be equal to upper bound
+            bool inRange;
+            if(i == dimensions-1){
+                inRange = (point[i] >= dimRange[0] && point[i] <= dimRange[1]);
+            }else{
+                inRange = (point[i] >= dimRange[0] && point[i] < dimRange[1]);
+            }
             addToBin = addToBin && inRange;
         }
         if(addToBin){
@@ -118,11 +143,10 @@ vector<vector<vector<double>>> DMet::EqWidthBin::cartesian(vector<vector<vector<
 
 std::ostream &DMet::operator<<(std::ostream &out, const DMet::EqWidthBin::Bin &bin) {
     //print all the ranges of the bin
-
     for(auto r : bin.range){
         out << "[" << r[0] << "," << r[1] << "]" << std::flush;
     }
-    out << ": " << bin.values.size() << endl;
+    out << ": " << bin.values.size();
     return out;
 }
 

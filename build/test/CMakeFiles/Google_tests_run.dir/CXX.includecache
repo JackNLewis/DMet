@@ -6,22 +6,40 @@
 
 #IncludeRegexTransform: 
 
+../include/DMet/DistribDistance.h
+vector
+-
+
+../include/DMet/EqWidthBin.h
+fstream
+-
+vector
+-
+ostream
+-
+
 ../include/DMet/PointDistances.h
 gmp.h
 -
 mpfr.h
 -
 
-/Users/jacklewis/Documents/work/year3/DMet/test/DMet/ChebyshevTests.cpp
+/Users/jacklewis/Documents/work/year3/DMet/test/DMet/BinningTests.cpp
 gtest/gtest.h
 /Users/jacklewis/Documents/work/year3/DMet/test/DMet/gtest/gtest.h
+DMet/PointDistances.h
+/Users/jacklewis/Documents/work/year3/DMet/test/DMet/DMet/PointDistances.h
+DMet/EqWidthBin.h
+/Users/jacklewis/Documents/work/year3/DMet/test/DMet/DMet/EqWidthBin.h
+DMet/DistribDistance.h
+/Users/jacklewis/Documents/work/year3/DMet/test/DMet/DMet/DistribDistance.h
 fstream
 -
 vector
 -
-mpfr.h
+gmp.h
 -
-DMet/PointDistances.h
+mpfr.h
 -
 
 /usr/local/include/gmp.h

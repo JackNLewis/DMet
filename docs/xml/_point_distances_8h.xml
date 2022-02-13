@@ -3,6 +3,7 @@
   <compounddef id="_point_distances_8h" kind="file" language="C++">
     <compoundname>PointDistances.h</compoundname>
     <includes local="no">gmp.h</includes>
+    <includes local="no">mpfr.h</includes>
     <includedby refid="_point_distances_8cpp" local="yes">/Users/jacklewis/Documents/work/year3/DMet/src/DMet/PointDistances.cpp</includedby>
     <incdepgraph>
       <node id="1">
@@ -10,9 +11,14 @@
         <link refid="_point_distances_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
       </node>
       <node id="2">
         <label>gmp.h</label>
+      </node>
+      <node id="3">
+        <label>mpfr.h</label>
       </node>
     </incdepgraph>
     <innernamespace refid="namespace_d_met">DMet</innernamespace>
@@ -28,21 +34,20 @@
 <codeline lineno="4"><highlight class="normal"></highlight></codeline>
 <codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;gmp.h&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="7"><highlight class="normal"></highlight></codeline>
-<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_d_met" kindref="compound">DMet</ref>{</highlight></codeline>
-<codeline lineno="15" refid="namespace_d_met_1_1_point_distances" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">PointDistances{</highlight></codeline>
-<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="namespace_d_met_1_1_point_distances_1a74255868a01d9f15064191e78852d15c" kindref="member">getEuclidean</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>vector1[],<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>vector2[],<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>size1,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>size2);</highlight></codeline>
-<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="namespace_d_met_1_1_point_distances_1a11fd80c8f3b133621b38293ccfc49144" kindref="member">getMinkowski</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>vector1[],<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>vector2[],<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>size1,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>size2,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>pvalue);</highlight></codeline>
-<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="namespace_d_met_1_1_point_distances_1a9129033239d646bf417cbc0b3af62b37" kindref="member">getManhattan</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>vector1[],<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>vector2[],<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>size1,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>size2);</highlight></codeline>
-<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="namespace_d_met_1_1_point_distances_1aaec225a5c6e8664413d48cef7bf8b940" kindref="member">getChebyshev</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>vector1[],<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>vector2[],<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>size1,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>size2);</highlight></codeline>
-<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>testGMP();</highlight></codeline>
-<codeline lineno="21"><highlight class="normal"></highlight></codeline>
-<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespace_d_met_1_1_point_distances_1a11fd80c8f3b133621b38293ccfc49144" kindref="member">getMinkowski</ref>(mpf_t<sp/>*res,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>*vector1,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>*vector2,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>size1,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>size2,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>pvalue,<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>precision);</highlight></codeline>
-<codeline lineno="24"><highlight class="normal">}}</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;mpfr.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_d_met" kindref="compound">DMet</ref>{</highlight></codeline>
+<codeline lineno="17" refid="namespace_d_met_1_1_point_distances" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">PointDistances{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>getMinkowski(mpfr_t<sp/>&amp;res,<sp/>std::vector&lt;double&gt;<sp/>&amp;vector1,<sp/>std::vector&lt;double&gt;<sp/>&amp;vector2,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>pvalue);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>getManhattan(mpfr_t<sp/>&amp;res,<sp/>std::vector&lt;double&gt;<sp/>&amp;vector1,<sp/>std::vector&lt;double&gt;<sp/>&amp;vector2);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>getEuclidean(mpfr_t<sp/>&amp;res,<sp/>std::vector&lt;double&gt;<sp/>&amp;vector1,<sp/>std::vector&lt;double&gt;<sp/>&amp;vector2);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>getChebyshev(mpfr_t<sp/>&amp;res,<sp/>std::vector&lt;double&gt;<sp/>&amp;vector1,<sp/>std::vector&lt;double&gt;<sp/>&amp;vector2);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal">}}</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
 <codeline lineno="25"><highlight class="normal"></highlight></codeline>
 <codeline lineno="26"><highlight class="normal"></highlight></codeline>
-<codeline lineno="27"><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/PointDistances.h"/>
   </compounddef>

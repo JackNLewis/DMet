@@ -14,22 +14,31 @@
 namespace DMet { namespace PointDistances{
         using std::vector;
 
-
         /*!
-         * Function that computes the distance between vector 1 and vector 2
-         * Uses Minkowski distance
-         * uses precision 200
-         * (∑(Xi−Yi)^p)^1/p
-         *
-         * @param vector1
-         * @param vector2
-         * @param size1 size of vector1
-         * @param size2 size of vector2
-         * @param pvalue pvalue
-         * @return floating point result
-         */
+        * Function that computes the distance between vector 1 and vector 2
+        * Uses Minkowski distance
+        * uses precision 200
+        * (∑(Xi−Yi)^p)^1/p
+        *
+        * @param vector1
+        * @param vector2
+        * @param size1 size of vector1
+        * @param size2 size of vector2
+        * @param pvalue pvalue
+        * @return floating point result
+        */
         void getMinkowski(mpfr_t &res, vector<double> &vector1, vector<double> &vector2, double pvalue){
             long precision = 200;
+            //check arrays are compatible sizes
+            if(vector1.size() != vector2.size()){
+                throw std::invalid_argument("vector1 and vector2 are incompatible sizes");
+            }
+            //check pvalue is + or - infinity
+            if(pvalue == std::numeric_limits<double>::infinity()){
+                getChebyshev(res,vector1,vector2);
+                return;
+            }
+
             mpfr_t sum;
             mpfr_init2(sum,precision);
             mpfr_set_d(sum,0,GMP_RNDN);
@@ -37,6 +46,15 @@ namespace DMet { namespace PointDistances{
             mpfr_inits2(precision,x,y,NULL);
 
             for(int i=0; i<vector1.size(); i++){
+                if((vector1[i] == std::numeric_limits<double>::infinity())
+                && (vector2[i] == std::numeric_limits<double>::infinity())){
+                    continue;
+                }else if((vector1[i] == std::numeric_limits<double>::infinity())
+                         || (vector2[i] == std::numeric_limits<double>::infinity())){
+                    mpfr_set_d(res,std::numeric_limits<double>::infinity(),GMP_RNDN);
+                    mpfr_clears(x,y,p,sum,NULL);
+                    return;
+                }
                 mpfr_set_d(x,vector1[i],GMP_RNDN);
                 mpfr_set_d(y,vector2[i],GMP_RNDN);
                 mpfr_sub(y,x,y,GMP_RNDN);
@@ -44,12 +62,11 @@ namespace DMet { namespace PointDistances{
                 mpfr_abs(y,y,GMP_RNDD);
                 mpfr_pow(y,y,p,GMP_RNDN);
                 mpfr_add(sum,sum,y,GMP_RNDN);
-//                mpfr_printf("sum %.64Re \n", sum);
             }
 
             mpfr_clears(x,y,p,NULL);
             mpfr_rootn_ui(sum,sum,pvalue,GMP_RNDN);
-            mpfr_printf("Result %.64Re \n", sum);
+//            mpfr_printf("Result %.64Re \n", sum);
             mpfr_set(res,sum,GMP_RNDN);
             mpfr_clear(sum);
         }
@@ -107,7 +124,7 @@ namespace DMet { namespace PointDistances{
                     mpfr_set(max,y,GMP_RNDN);
                 }
             }
-            mpfr_printf("Result %.64Re \n", max);
+//            mpfr_printf("Result %.64Re \n", max);
             mpfr_set(res,max,GMP_RNDN);
             mpfr_clears(x,y,max,NULL);
         }
