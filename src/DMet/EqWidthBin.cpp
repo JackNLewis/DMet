@@ -86,6 +86,15 @@ void DMet::EqWidthBin::generateBins(int arity) {
 
 }
 
+/**
+ * assigns data points to correct bins if it falls in the bins range.
+ * It falls in the range if the point x is
+ *      lower bound <= x < upper bound
+ * if upper bound = inf then point is in range to make sure points with infinity are assigned
+ *      lower bound <= x <= upper bound
+
+ * @param data
+ */
 void DMet::EqWidthBin::assignBins(vector<vector<double>> &data){
     for(auto point: data){
         assignPoint(point);
@@ -98,13 +107,15 @@ void DMet::EqWidthBin::assignPoint(vector<double> &point) {
         bool addToBin = true;
         for(int i=0; i<dimensions;i++){
             vector<double> dimRange = bin.range[i];
-            //if last bin allow to be equal to upper bound
+            //if bin has upper bound infinity allow to be equal
             bool inRange;
-            if(i == dimensions-1){
+            if(dimRange[1] == std::numeric_limits<double>::infinity()){
                 inRange = (point[i] >= dimRange[0] && point[i] <= dimRange[1]);
             }else{
                 inRange = (point[i] >= dimRange[0] && point[i] < dimRange[1]);
             }
+
+
             addToBin = addToBin && inRange;
         }
         if(addToBin){

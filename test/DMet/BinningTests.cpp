@@ -24,12 +24,13 @@ TEST(Binning, BinningRanges){
                     {1, 5},
                     {4, 1},
                     {9, 6},
-                    {0,0},
-                    {std::numeric_limits<double>::infinity(),4}
+                    {0,0}
             };
     bin.setRanges(vect);
     bin.generateBins(3);
     bin.assignBins(vect);
+    vector<double> t{-std::numeric_limits<double>::infinity(),4};
+    bin.assignPoint(t);
 
     for(auto a : bin.bins){
         cout << a << endl;
