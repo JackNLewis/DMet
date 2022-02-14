@@ -14,4 +14,6 @@ add_test( Binning.BinningRanges /Users/jacklewis/Documents/work/year3/DMet/build
 set_tests_properties( Binning.BinningRanges PROPERTIES WORKING_DIRECTORY /Users/jacklewis/Documents/work/year3/DMet/build/test SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
 add_test( Binning.BinningTests /Users/jacklewis/Documents/work/year3/DMet/build/test/Google_tests_run [==[--gtest_filter=Binning.BinningTests]==] --gtest_also_run_disabled_tests)
 set_tests_properties( Binning.BinningTests PROPERTIES WORKING_DIRECTORY /Users/jacklewis/Documents/work/year3/DMet/build/test SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
-set( Google_tests_run_TESTS MinkowskiTests.WorkingInRange MinkowskiTests.SamePoints MinkowskiTests.IncompatableSizes MinkowskiTests.SingleInfinite MinkowskiTests.InfintePval ChebyshevTests.WorkingPoints Binning.BinningRanges Binning.BinningTests)
+add_test( KLTests.WorkingPoints /Users/jacklewis/Documents/work/year3/DMet/build/test/Google_tests_run [==[--gtest_filter=KLTests.WorkingPoints]==] --gtest_also_run_disabled_tests)
+set_tests_properties( KLTests.WorkingPoints PROPERTIES WORKING_DIRECTORY /Users/jacklewis/Documents/work/year3/DMet/build/test SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
+set( Google_tests_run_TESTS MinkowskiTests.WorkingInRange MinkowskiTests.SamePoints MinkowskiTests.IncompatableSizes MinkowskiTests.SingleInfinite MinkowskiTests.InfintePval ChebyshevTests.WorkingPoints Binning.BinningRanges Binning.BinningTests KLTests.WorkingPoints)

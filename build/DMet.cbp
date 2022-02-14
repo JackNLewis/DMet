@@ -420,6 +420,12 @@
 		<Unit filename="/Users/jacklewis/Documents/work/year3/DMet/test/DMet/ChebyshevTests.cpp">
 			<Option target="Google_tests_run"/>
 		</Unit>
+		<Unit filename="/Users/jacklewis/Documents/work/year3/DMet/test/DMet/JennsonShannonTests.cpp">
+			<Option target="Google_tests_run"/>
+		</Unit>
+		<Unit filename="/Users/jacklewis/Documents/work/year3/DMet/test/DMet/KLDivTests.cpp">
+			<Option target="Google_tests_run"/>
+		</Unit>
 		<Unit filename="/Users/jacklewis/Documents/work/year3/DMet/test/DMet/MinkowskiTests.cpp">
 			<Option target="Google_tests_run"/>
 		</Unit>

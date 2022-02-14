@@ -18,6 +18,8 @@ add_executable(
         DMet/MinkowskiTests.cpp
         DMet/ChebyshevTests.cpp
         DMet/BinningTests.cpp
+        DMet/KLDivTests.cpp
+        DMet/JennsonShannonTests.cpp
 )
 
 target_link_libraries(Google_tests_run DMet)

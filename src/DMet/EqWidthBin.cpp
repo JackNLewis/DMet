@@ -4,6 +4,7 @@
 
 #include "DMet/EqWidthBin.h"
 #include <iostream>
+#include "DMet/utils.h"
 
 using std::cout;
 using std::endl;
@@ -64,16 +65,8 @@ void DMet::EqWidthBin::generateBins(int arity) {
 
     //starting from last dimension do cartesion onto a binnedDims
     for(int i= binnedDims.size() - 1; i >= 0; i--){
-        cartesian(cartesianRanges, binnedDims[i]);
+        DMet::Utils::cartesian(cartesianRanges, binnedDims[i]);
     }
-
-//    for(auto range : cartesianRanges){
-//        //set lower and upper bound of each dim to -inf and +inf
-//        for(auto dim : range){
-//            dim[0] = -std::numeric_limits<double>::infinity();
-//            dim[1] = std::numeric_limits<double>::infinity();
-//        }
-//    }
 
     //assign the ranges the bin struct
     for(auto a : cartesianRanges){
@@ -81,9 +74,6 @@ void DMet::EqWidthBin::generateBins(int arity) {
         bin.range = a;
         bins.push_back(bin);
     }
-
-
-
 }
 
 /**
@@ -124,33 +114,6 @@ void DMet::EqWidthBin::assignPoint(vector<double> &point) {
     }
 }
 
-vector<vector<vector<double>>> DMet::EqWidthBin::cartesian(vector<vector<vector<double>>>& vec1, vector<vector<double>>& vec2){
-    //no dimesnions yet
-    if(vec1.size() == 0){
-        for(auto v2 : vec2){
-            vector<vector<double>> t{v2};
-            vec1.push_back(t);
-        }
-    }
-    //else multiply vec1 vec2.size times to get every combination
-    else{
-        vector<vector<vector<double>>> copy(vec1);
-        int n = copy.size();
-        for(int i=0;i<vec2.size()-1;i++){
-            vec1.insert(vec1.end(),copy.begin(),copy.end());
-        }
-
-        int startPos = 0;
-        for(auto d : vec2){
-            //copy it n times into newly created vector res
-            for(int i=0;i<n;i++){
-                vec1[startPos+i].insert(vec1[startPos+i].begin(), d);
-            }
-            startPos+=n;
-        }
-    }
-    return vec1;
-}
 
 std::ostream &DMet::operator<<(std::ostream &out, const DMet::EqWidthBin::Bin &bin) {
     //print all the ranges of the bin

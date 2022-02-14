@@ -79,15 +79,6 @@ namespace DMet {
          * @return
          */
         vector<double> getPDF();
-        /*!
-         * Generates the cartesian product of two lists of vectors
-         *
-         * @param vec1
-         * @param vec2
-         * @return
-         */
-         //Move to utility
-        vector<vector<vector<double>>> cartesian(vector<vector<vector<double>>> &vec1, vector<vector<double>> &vec2);
 
     };
 }

@@ -6,17 +6,39 @@
 
 #IncludeRegexTransform: 
 
-../include/DMet/EqWidthBin.h
-fstream
--
+../include/DMet/DistribDistance.h
 vector
 -
-ostream
+
+../include/DMet/utils.h
+vector
 -
 
-/Users/jacklewis/Documents/work/year3/DMet/src/DMet/EqWidthBin.cpp
-DMet/EqWidthBin.h
-/Users/jacklewis/Documents/work/year3/DMet/src/DMet/DMet/EqWidthBin.h
+/Users/jacklewis/Documents/work/year3/DMet/src/DMet/DistribDistances.cpp
 iostream
+-
+math.h
+-
+mpfr.h
+-
+DMet/DistribDistance.h
+/Users/jacklewis/Documents/work/year3/DMet/src/DMet/DMet/DistribDistance.h
+DMet/utils.h
+/Users/jacklewis/Documents/work/year3/DMet/src/DMet/DMet/utils.h
+
+/usr/local/include/gmp.h
+iosfwd
+-
+cstdio
+-
+stddef.h
+-
+limits.h
+-
+
+/usr/local/include/mpfr.h
+gmp.h
+-
+mini-gmp.h
 -
 

@@ -223,6 +223,54 @@ DMet/ChebyshevTests.cpp.s:
 	cd /Users/jacklewis/Documents/work/year3/DMet/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/Google_tests_run.dir/build.make test/CMakeFiles/Google_tests_run.dir/DMet/ChebyshevTests.cpp.s
 .PHONY : DMet/ChebyshevTests.cpp.s
 
+DMet/JennsonShannonTests.o: DMet/JennsonShannonTests.cpp.o
+.PHONY : DMet/JennsonShannonTests.o
+
+# target to build an object file
+DMet/JennsonShannonTests.cpp.o:
+	cd /Users/jacklewis/Documents/work/year3/DMet/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/Google_tests_run.dir/build.make test/CMakeFiles/Google_tests_run.dir/DMet/JennsonShannonTests.cpp.o
+.PHONY : DMet/JennsonShannonTests.cpp.o
+
+DMet/JennsonShannonTests.i: DMet/JennsonShannonTests.cpp.i
+.PHONY : DMet/JennsonShannonTests.i
+
+# target to preprocess a source file
+DMet/JennsonShannonTests.cpp.i:
+	cd /Users/jacklewis/Documents/work/year3/DMet/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/Google_tests_run.dir/build.make test/CMakeFiles/Google_tests_run.dir/DMet/JennsonShannonTests.cpp.i
+.PHONY : DMet/JennsonShannonTests.cpp.i
+
+DMet/JennsonShannonTests.s: DMet/JennsonShannonTests.cpp.s
+.PHONY : DMet/JennsonShannonTests.s
+
+# target to generate assembly for a file
+DMet/JennsonShannonTests.cpp.s:
+	cd /Users/jacklewis/Documents/work/year3/DMet/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/Google_tests_run.dir/build.make test/CMakeFiles/Google_tests_run.dir/DMet/JennsonShannonTests.cpp.s
+.PHONY : DMet/JennsonShannonTests.cpp.s
+
+DMet/KLDivTests.o: DMet/KLDivTests.cpp.o
+.PHONY : DMet/KLDivTests.o
+
+# target to build an object file
+DMet/KLDivTests.cpp.o:
+	cd /Users/jacklewis/Documents/work/year3/DMet/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/Google_tests_run.dir/build.make test/CMakeFiles/Google_tests_run.dir/DMet/KLDivTests.cpp.o
+.PHONY : DMet/KLDivTests.cpp.o
+
+DMet/KLDivTests.i: DMet/KLDivTests.cpp.i
+.PHONY : DMet/KLDivTests.i
+
+# target to preprocess a source file
+DMet/KLDivTests.cpp.i:
+	cd /Users/jacklewis/Documents/work/year3/DMet/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/Google_tests_run.dir/build.make test/CMakeFiles/Google_tests_run.dir/DMet/KLDivTests.cpp.i
+.PHONY : DMet/KLDivTests.cpp.i
+
+DMet/KLDivTests.s: DMet/KLDivTests.cpp.s
+.PHONY : DMet/KLDivTests.s
+
+# target to generate assembly for a file
+DMet/KLDivTests.cpp.s:
+	cd /Users/jacklewis/Documents/work/year3/DMet/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/Google_tests_run.dir/build.make test/CMakeFiles/Google_tests_run.dir/DMet/KLDivTests.cpp.s
+.PHONY : DMet/KLDivTests.cpp.s
+
 DMet/MinkowskiTests.o: DMet/MinkowskiTests.cpp.o
 .PHONY : DMet/MinkowskiTests.o
 
@@ -290,6 +338,12 @@ help:
 	@echo "... DMet/ChebyshevTests.o"
 	@echo "... DMet/ChebyshevTests.i"
 	@echo "... DMet/ChebyshevTests.s"
+	@echo "... DMet/JennsonShannonTests.o"
+	@echo "... DMet/JennsonShannonTests.i"
+	@echo "... DMet/JennsonShannonTests.s"
+	@echo "... DMet/KLDivTests.o"
+	@echo "... DMet/KLDivTests.i"
+	@echo "... DMet/KLDivTests.s"
 	@echo "... DMet/MinkowskiTests.o"
 	@echo "... DMet/MinkowskiTests.i"
 	@echo "... DMet/MinkowskiTests.s"

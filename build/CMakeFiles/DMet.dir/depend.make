@@ -4,9 +4,12 @@
 CMakeFiles/DMet.dir/src/DMet/DistribDistances.cpp.o: \
  ../include/DMet/DistribDistance.h \
  ../include/DMet/utils.h \
- ../src/DMet/DistribDistances.cpp
+ ../src/DMet/DistribDistances.cpp \
+ /usr/local/include/gmp.h \
+ /usr/local/include/mpfr.h
 CMakeFiles/DMet.dir/src/DMet/EqWidthBin.cpp.o: \
  ../include/DMet/EqWidthBin.h \
+ ../include/DMet/utils.h \
  ../src/DMet/EqWidthBin.cpp
 CMakeFiles/DMet.dir/src/DMet/PointDistances.cpp.o: \
  ../include/DMet/PointDistances.h \
