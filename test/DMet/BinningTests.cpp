@@ -32,9 +32,9 @@ TEST(Binning, BinningRanges){
     vector<double> t{-std::numeric_limits<double>::infinity(),4};
     bin.assignPoint(t);
 
-    for(auto a : bin.bins){
-        cout << a << endl;
-    }
+//    for(auto a : bin.bins){
+//        cout << a << endl;
+//    }
 }
 
 

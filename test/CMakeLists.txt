@@ -20,6 +20,7 @@ add_executable(
         DMet/BinningTests.cpp
         DMet/KLDivTests.cpp
         DMet/JennsonShannonTests.cpp
+        DMet/EuclideanTests.cpp
 )
 
 target_link_libraries(Google_tests_run DMet)

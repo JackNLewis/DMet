@@ -28,6 +28,7 @@ TEST(MinkowskiTests, WorkingInRange) {
         //split line
         vector<double> v1;
         vector<double> v2;
+
         int index = 0;
         double pval5;
         double pval10;

@@ -223,6 +223,30 @@ DMet/ChebyshevTests.cpp.s:
 	cd /Users/jacklewis/Documents/work/year3/DMet/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/Google_tests_run.dir/build.make test/CMakeFiles/Google_tests_run.dir/DMet/ChebyshevTests.cpp.s
 .PHONY : DMet/ChebyshevTests.cpp.s
 
+DMet/EuclideanTests.o: DMet/EuclideanTests.cpp.o
+.PHONY : DMet/EuclideanTests.o
+
+# target to build an object file
+DMet/EuclideanTests.cpp.o:
+	cd /Users/jacklewis/Documents/work/year3/DMet/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/Google_tests_run.dir/build.make test/CMakeFiles/Google_tests_run.dir/DMet/EuclideanTests.cpp.o
+.PHONY : DMet/EuclideanTests.cpp.o
+
+DMet/EuclideanTests.i: DMet/EuclideanTests.cpp.i
+.PHONY : DMet/EuclideanTests.i
+
+# target to preprocess a source file
+DMet/EuclideanTests.cpp.i:
+	cd /Users/jacklewis/Documents/work/year3/DMet/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/Google_tests_run.dir/build.make test/CMakeFiles/Google_tests_run.dir/DMet/EuclideanTests.cpp.i
+.PHONY : DMet/EuclideanTests.cpp.i
+
+DMet/EuclideanTests.s: DMet/EuclideanTests.cpp.s
+.PHONY : DMet/EuclideanTests.s
+
+# target to generate assembly for a file
+DMet/EuclideanTests.cpp.s:
+	cd /Users/jacklewis/Documents/work/year3/DMet/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/Google_tests_run.dir/build.make test/CMakeFiles/Google_tests_run.dir/DMet/EuclideanTests.cpp.s
+.PHONY : DMet/EuclideanTests.cpp.s
+
 DMet/JennsonShannonTests.o: DMet/JennsonShannonTests.cpp.o
 .PHONY : DMet/JennsonShannonTests.o
 
@@ -338,6 +362,9 @@ help:
 	@echo "... DMet/ChebyshevTests.o"
 	@echo "... DMet/ChebyshevTests.i"
 	@echo "... DMet/ChebyshevTests.s"
+	@echo "... DMet/EuclideanTests.o"
+	@echo "... DMet/EuclideanTests.i"
+	@echo "... DMet/EuclideanTests.s"
 	@echo "... DMet/JennsonShannonTests.o"
 	@echo "... DMet/JennsonShannonTests.i"
 	@echo "... DMet/JennsonShannonTests.s"
