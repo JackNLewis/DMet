@@ -81,7 +81,6 @@ TEST(MinkowskiTests, SamePoints) {
     }
 }
 
-
 TEST(MinkowskiTests, IncompatableSizes) {
 
     vector<double> v1 {1.0, 0.0, 0.0};

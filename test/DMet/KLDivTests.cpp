@@ -27,3 +27,26 @@ TEST(KLTests, WorkingPoints) {
 
     EXPECT_DOUBLE_EQ(1.8042153244626113, res1);
 }
+
+
+TEST(KLTests, Binning){
+    vector<vector<double>> v1
+            {
+                    {1, 5},
+                    {4, 1},
+                    {9, 6},
+                    {0,0}
+            };
+
+    vector<vector<double>> v2
+            {
+                    {0, 2},
+                    {7, 12},
+                    {3, 18},
+                    {9,9}
+            };
+    mpfr_t res;
+    mpfr_init(res);
+    DMet::Distrib::KLDiv(res,v1,v2);
+    mpfr_clear(res);
+}

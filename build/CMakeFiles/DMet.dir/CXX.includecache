@@ -10,6 +10,14 @@
 vector
 -
 
+../include/DMet/EqWidthBin.h
+fstream
+-
+vector
+-
+ostream
+-
+
 ../include/DMet/utils.h
 vector
 -
@@ -17,9 +25,9 @@ vector
 /Users/jacklewis/Documents/work/year3/DMet/src/DMet/DistribDistances.cpp
 iostream
 -
-math.h
--
 mpfr.h
+-
+DMet/EqWidthBin.h
 -
 DMet/DistribDistance.h
 /Users/jacklewis/Documents/work/year3/DMet/src/DMet/DMet/DistribDistance.h

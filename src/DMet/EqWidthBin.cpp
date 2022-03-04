@@ -14,7 +14,6 @@ using std::flush;
 
 vector<vector<double>> DMet::EqWidthBin::setRanges(vector<vector<double>> &data) {
     int columns = data[0].size();
-    int rows = data.size();
     // insert bounds -ininity and +infinity for all dimensions
     for(int i=0; i< columns;i++){
         vector<double> r{std::numeric_limits<double>::infinity(), -std::numeric_limits<double>::infinity()};
@@ -144,3 +143,11 @@ vector<double> DMet::EqWidthBin::getPDF() {
 
     return pdf;
 }
+
+void DMet::EqWidthBin::printBins(const DMet::EqWidthBin &bin) {
+    for(auto b : bin.bins){
+        cout << b << endl;
+    }
+}
+
+

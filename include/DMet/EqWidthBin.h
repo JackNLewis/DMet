@@ -80,6 +80,7 @@ namespace DMet {
          */
         vector<double> getPDF();
 
+        void printBins(const DMet::EqWidthBin &bin);
     };
 }
 

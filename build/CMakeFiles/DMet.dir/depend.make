@@ -3,6 +3,7 @@
 
 CMakeFiles/DMet.dir/src/DMet/DistribDistances.cpp.o: \
  ../include/DMet/DistribDistance.h \
+ ../include/DMet/EqWidthBin.h \
  ../include/DMet/utils.h \
  ../src/DMet/DistribDistances.cpp \
  /usr/local/include/gmp.h \
