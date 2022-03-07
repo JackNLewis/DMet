@@ -14,15 +14,16 @@ enable_testing()
 
 add_executable(
         Google_tests_run
-        DMet/PointDistanceTests.cpp
         DMet/MinkowskiTests.cpp
         DMet/ChebyshevTests.cpp
-        DMet/BinningTests.cpp
-        DMet/KLDivTests.cpp
-        DMet/JennsonShannonTests.cpp
+        DMet/ChebyshevStrTests.cpp
         DMet/EuclideanTests.cpp
         DMet/EuclideanStrTests.cpp
         DMet/ManhattanTests.cpp
+        Dmet/ManhattanStrTests.cpp
+        DMet/BinningTests.cpp
+        DMet/KLDivTests.cpp
+        DMet/JennsonShannonTests.cpp
 )
 
 target_link_libraries(Google_tests_run DMet)

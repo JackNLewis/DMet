@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/jacklewis/Documents/work/year3/DMet/test/DMet/BinningTests.cpp" "/Users/jacklewis/Documents/work/year3/DMet/build/test/CMakeFiles/Google_tests_run.dir/DMet/BinningTests.cpp.o"
+  "/Users/jacklewis/Documents/work/year3/DMet/test/DMet/ChebyshevStrTests.cpp" "/Users/jacklewis/Documents/work/year3/DMet/build/test/CMakeFiles/Google_tests_run.dir/DMet/ChebyshevStrTests.cpp.o"
   "/Users/jacklewis/Documents/work/year3/DMet/test/DMet/ChebyshevTests.cpp" "/Users/jacklewis/Documents/work/year3/DMet/build/test/CMakeFiles/Google_tests_run.dir/DMet/ChebyshevTests.cpp.o"
   "/Users/jacklewis/Documents/work/year3/DMet/test/DMet/EuclideanStrTests.cpp" "/Users/jacklewis/Documents/work/year3/DMet/build/test/CMakeFiles/Google_tests_run.dir/DMet/EuclideanStrTests.cpp.o"
   "/Users/jacklewis/Documents/work/year3/DMet/test/DMet/EuclideanTests.cpp" "/Users/jacklewis/Documents/work/year3/DMet/build/test/CMakeFiles/Google_tests_run.dir/DMet/EuclideanTests.cpp.o"
@@ -16,7 +17,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/jacklewis/Documents/work/year3/DMet/test/DMet/KLDivTests.cpp" "/Users/jacklewis/Documents/work/year3/DMet/build/test/CMakeFiles/Google_tests_run.dir/DMet/KLDivTests.cpp.o"
   "/Users/jacklewis/Documents/work/year3/DMet/test/DMet/ManhattanTests.cpp" "/Users/jacklewis/Documents/work/year3/DMet/build/test/CMakeFiles/Google_tests_run.dir/DMet/ManhattanTests.cpp.o"
   "/Users/jacklewis/Documents/work/year3/DMet/test/DMet/MinkowskiTests.cpp" "/Users/jacklewis/Documents/work/year3/DMet/build/test/CMakeFiles/Google_tests_run.dir/DMet/MinkowskiTests.cpp.o"
-  "/Users/jacklewis/Documents/work/year3/DMet/test/DMet/PointDistanceTests.cpp" "/Users/jacklewis/Documents/work/year3/DMet/build/test/CMakeFiles/Google_tests_run.dir/DMet/PointDistanceTests.cpp.o"
+  "/Users/jacklewis/Documents/work/year3/DMet/test/Dmet/ManhattanStrTests.cpp" "/Users/jacklewis/Documents/work/year3/DMet/build/test/CMakeFiles/Google_tests_run.dir/Dmet/ManhattanStrTests.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 

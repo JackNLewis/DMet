@@ -12,7 +12,7 @@ gmp.h
 mpfr.h
 -
 
-/Users/jacklewis/Documents/work/year3/DMet/test/DMet/ManhattanTests.cpp
+/Users/jacklewis/Documents/work/year3/DMet/test/DMet/ChebyshevStrTests.cpp
 gtest/gtest.h
 /Users/jacklewis/Documents/work/year3/DMet/test/DMet/gtest/gtest.h
 fstream

@@ -180,18 +180,21 @@ TEST(ManhattanTests, MultipleInfinite){
     mpfr_clear(res2);
 }
 
+/**
+ * Tests for values larger than max value of 64 bit floating point
+ */
 TEST(ManhattanTests, Overflow){
     double max = std::numeric_limits<double>::max();
-    vector<double> v1 {max,max};
+    vector<double> v1 {1.7e308,1.7e308};
     vector<double> v2 {0.0,0.0};
-    string ans_string  = "2.542317e308";
+    string ans_string  = "3.4e308";
     mpfr_t res,ans;
     mpfr_inits(res,ans,NULL);
     mpfr_set_str(ans,ans_string.c_str(),10,GMP_RNDN);
     getManhattan(res, v1, v2);
 
     mpfr_printf("Result: %.5Re\n",res);
-    EXPECT_TRUE(mpfr_cmp(res,ans));
+    EXPECT_TRUE(mpfr_cmp(res,ans) == 0);
     mpfr_clears(res,ans,NULL);
 }
 

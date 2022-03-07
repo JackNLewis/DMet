@@ -199,6 +199,30 @@ DMet/BinningTests.cpp.s:
 	cd /Users/jacklewis/Documents/work/year3/DMet/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/Google_tests_run.dir/build.make test/CMakeFiles/Google_tests_run.dir/DMet/BinningTests.cpp.s
 .PHONY : DMet/BinningTests.cpp.s
 
+DMet/ChebyshevStrTests.o: DMet/ChebyshevStrTests.cpp.o
+.PHONY : DMet/ChebyshevStrTests.o
+
+# target to build an object file
+DMet/ChebyshevStrTests.cpp.o:
+	cd /Users/jacklewis/Documents/work/year3/DMet/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/Google_tests_run.dir/build.make test/CMakeFiles/Google_tests_run.dir/DMet/ChebyshevStrTests.cpp.o
+.PHONY : DMet/ChebyshevStrTests.cpp.o
+
+DMet/ChebyshevStrTests.i: DMet/ChebyshevStrTests.cpp.i
+.PHONY : DMet/ChebyshevStrTests.i
+
+# target to preprocess a source file
+DMet/ChebyshevStrTests.cpp.i:
+	cd /Users/jacklewis/Documents/work/year3/DMet/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/Google_tests_run.dir/build.make test/CMakeFiles/Google_tests_run.dir/DMet/ChebyshevStrTests.cpp.i
+.PHONY : DMet/ChebyshevStrTests.cpp.i
+
+DMet/ChebyshevStrTests.s: DMet/ChebyshevStrTests.cpp.s
+.PHONY : DMet/ChebyshevStrTests.s
+
+# target to generate assembly for a file
+DMet/ChebyshevStrTests.cpp.s:
+	cd /Users/jacklewis/Documents/work/year3/DMet/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/Google_tests_run.dir/build.make test/CMakeFiles/Google_tests_run.dir/DMet/ChebyshevStrTests.cpp.s
+.PHONY : DMet/ChebyshevStrTests.cpp.s
+
 DMet/ChebyshevTests.o: DMet/ChebyshevTests.cpp.o
 .PHONY : DMet/ChebyshevTests.o
 
@@ -367,29 +391,29 @@ DMet/MinkowskiTests.cpp.s:
 	cd /Users/jacklewis/Documents/work/year3/DMet/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/Google_tests_run.dir/build.make test/CMakeFiles/Google_tests_run.dir/DMet/MinkowskiTests.cpp.s
 .PHONY : DMet/MinkowskiTests.cpp.s
 
-DMet/PointDistanceTests.o: DMet/PointDistanceTests.cpp.o
-.PHONY : DMet/PointDistanceTests.o
+Dmet/ManhattanStrTests.o: Dmet/ManhattanStrTests.cpp.o
+.PHONY : Dmet/ManhattanStrTests.o
 
 # target to build an object file
-DMet/PointDistanceTests.cpp.o:
-	cd /Users/jacklewis/Documents/work/year3/DMet/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/Google_tests_run.dir/build.make test/CMakeFiles/Google_tests_run.dir/DMet/PointDistanceTests.cpp.o
-.PHONY : DMet/PointDistanceTests.cpp.o
+Dmet/ManhattanStrTests.cpp.o:
+	cd /Users/jacklewis/Documents/work/year3/DMet/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/Google_tests_run.dir/build.make test/CMakeFiles/Google_tests_run.dir/Dmet/ManhattanStrTests.cpp.o
+.PHONY : Dmet/ManhattanStrTests.cpp.o
 
-DMet/PointDistanceTests.i: DMet/PointDistanceTests.cpp.i
-.PHONY : DMet/PointDistanceTests.i
+Dmet/ManhattanStrTests.i: Dmet/ManhattanStrTests.cpp.i
+.PHONY : Dmet/ManhattanStrTests.i
 
 # target to preprocess a source file
-DMet/PointDistanceTests.cpp.i:
-	cd /Users/jacklewis/Documents/work/year3/DMet/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/Google_tests_run.dir/build.make test/CMakeFiles/Google_tests_run.dir/DMet/PointDistanceTests.cpp.i
-.PHONY : DMet/PointDistanceTests.cpp.i
+Dmet/ManhattanStrTests.cpp.i:
+	cd /Users/jacklewis/Documents/work/year3/DMet/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/Google_tests_run.dir/build.make test/CMakeFiles/Google_tests_run.dir/Dmet/ManhattanStrTests.cpp.i
+.PHONY : Dmet/ManhattanStrTests.cpp.i
 
-DMet/PointDistanceTests.s: DMet/PointDistanceTests.cpp.s
-.PHONY : DMet/PointDistanceTests.s
+Dmet/ManhattanStrTests.s: Dmet/ManhattanStrTests.cpp.s
+.PHONY : Dmet/ManhattanStrTests.s
 
 # target to generate assembly for a file
-DMet/PointDistanceTests.cpp.s:
-	cd /Users/jacklewis/Documents/work/year3/DMet/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/Google_tests_run.dir/build.make test/CMakeFiles/Google_tests_run.dir/DMet/PointDistanceTests.cpp.s
-.PHONY : DMet/PointDistanceTests.cpp.s
+Dmet/ManhattanStrTests.cpp.s:
+	cd /Users/jacklewis/Documents/work/year3/DMet/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/Google_tests_run.dir/build.make test/CMakeFiles/Google_tests_run.dir/Dmet/ManhattanStrTests.cpp.s
+.PHONY : Dmet/ManhattanStrTests.cpp.s
 
 # Help Target
 help:
@@ -407,6 +431,9 @@ help:
 	@echo "... DMet/BinningTests.o"
 	@echo "... DMet/BinningTests.i"
 	@echo "... DMet/BinningTests.s"
+	@echo "... DMet/ChebyshevStrTests.o"
+	@echo "... DMet/ChebyshevStrTests.i"
+	@echo "... DMet/ChebyshevStrTests.s"
 	@echo "... DMet/ChebyshevTests.o"
 	@echo "... DMet/ChebyshevTests.i"
 	@echo "... DMet/ChebyshevTests.s"
@@ -428,9 +455,9 @@ help:
 	@echo "... DMet/MinkowskiTests.o"
 	@echo "... DMet/MinkowskiTests.i"
 	@echo "... DMet/MinkowskiTests.s"
-	@echo "... DMet/PointDistanceTests.o"
-	@echo "... DMet/PointDistanceTests.i"
-	@echo "... DMet/PointDistanceTests.s"
+	@echo "... Dmet/ManhattanStrTests.o"
+	@echo "... Dmet/ManhattanStrTests.i"
+	@echo "... Dmet/ManhattanStrTests.s"
 .PHONY : help
 
 

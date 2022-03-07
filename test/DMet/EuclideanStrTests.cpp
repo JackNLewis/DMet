@@ -223,7 +223,8 @@ TEST(EuclideanStrTests, Underflow){
     mpfr_set_str(ans,ans_string.c_str(),10,GMP_RNDN);
     getEuclidean(res, v1, v2);
 
-    mpfr_printf("Result: %.5Re\n",res);
+    mpfr_printf("ans: %.64Re\n",ans);
+    mpfr_printf("Result: %.64Re\n",res);
     EXPECT_EQ(mpfr_cmp(res,ans),0);
     mpfr_clears(res,ans,NULL);
 }
@@ -232,16 +233,15 @@ TEST(EuclideanStrTests, Underflow){
  * Tests for values larger than max value of 64 bit double floating point
  */
 TEST(EuclideanStrTests, Overflow){
-    double max = std::numeric_limits<double>::max();
-    vector<string> v1 {"1.79769e+308","1.79769e+308"};
-    vector<string> v2 {"0","0"};
-    string ans_string  = "2.542317e308";
+    vector<string> v1 {"1.0e+308","1.0e+308","1.0e+308","1.0e+308"};
+    vector<string> v2 {"0","0","0","0"};
+    string ans_string  = "2.0e308";
     mpfr_t res,ans;
     mpfr_inits(res,ans,NULL);
     mpfr_set_str(ans,ans_string.c_str(),10,GMP_RNDN);
     getEuclidean(res, v1, v2);
 
     mpfr_printf("Result: %.5Re\n",res);
-    EXPECT_TRUE(mpfr_cmp(res,ans));
+    EXPECT_TRUE(mpfr_cmp(res,ans)==0);
     mpfr_clears(res,ans,NULL);
 }
