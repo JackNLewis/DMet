@@ -104,24 +104,16 @@ TEST(EuclideanTests, SamePoints){
     }
 }
 
-/**
- * Test to see what happens when multiple infinite value are input. Tested on both input vectors
- * Tests for an input of infinite and negative infinity
- */
-TEST(EuclideanTests, MachinePrecision){
-    GTEST_SKIP();
-    double eps = std::numeric_limits<double>::epsilon();
-    vector<double> v1 {8493.0,72.89,1221.0};
-    vector<double> v2 {8493.0+eps,72.89,1221.0};
-    //problem doing normal float addition first
-    //need to make it to accept types of mpfr_t to tell the difference
 
+/**
+ * Test for whether v1 is empty or v2 is empty
+ */
+TEST(EuclideanTests, EmptyArguments){
+    vector<double> v1;
+    vector<double> v2;
     mpfr_t res;
     mpfr_init(res);
-    getEuclidean(res, v1, v2);
-    mpfr_printf("Res %.5Re\n",res);
-    double res_d = mpfr_get_d(res,GMP_RNDN);
-    EXPECT_FLOAT_EQ(res_d,eps);
+    EXPECT_THROW(getEuclidean(res, v1, v2),std::invalid_argument);
     mpfr_clear(res);
 }
 
@@ -137,17 +129,7 @@ TEST(EuclideanTests, IncompatableSizes){
     mpfr_clear(res);
 }
 
-/**
- * Test for whether v1 is empty or v2 is empty
- */
-TEST(EuclideanTests, EmptyArguments){
-    vector<double> v1;
-    vector<double> v2;
-    mpfr_t res;
-    mpfr_init(res);
-    EXPECT_THROW(getEuclidean(res, v1, v2),std::invalid_argument);
-    mpfr_clear(res);
-}
+
 
 /**
  * Test to see what happens when a single infinite value is input. Tested on both input vectors
@@ -213,19 +195,3 @@ TEST(EuclideanTests, Overflow){
     mpfr_clears(res,ans,NULL);
 }
 
-TEST(EuclideanTests, Underflow){
-    GTEST_SKIP();
-    double max = std::numeric_limits<double>::max();
-    vector<double> v1 {max,max};
-    vector<double> v2 {0.0,0.0};
-    string ans_string  = "2.542317e308";
-
-    mpfr_t res,ans;
-    mpfr_inits(res,ans,NULL);
-    mpfr_set_str(ans,ans_string.c_str(),2,GMP_RNDN);
-    getEuclidean(res, v1, v2);
-
-    mpfr_printf("Result: %.5Re\n",res);
-    EXPECT_TRUE(mpfr_cmp(res,ans));
-    mpfr_clears(res,ans,NULL);
-}
