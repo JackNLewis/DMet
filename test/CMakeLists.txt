@@ -22,6 +22,7 @@ add_executable(
         DMet/JennsonShannonTests.cpp
         DMet/EuclideanTests.cpp
         DMet/EuclideanStrTests.cpp
+        DMet/ManhattanTests.cpp
 )
 
 target_link_libraries(Google_tests_run DMet)

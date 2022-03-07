@@ -1,4 +1,8 @@
 //
+// Created by jack lewis on 07/03/2022.
+//
+
+//
 // Created by jack lewis on 04/03/2022.
 //
 
@@ -13,13 +17,13 @@
 using std::cout;
 using std::endl;
 using std::vector;
-using DMet::PointDistances::getEuclidean;
+using DMet::PointDistances::getManhattan;
 using std::ifstream;
 using std::string;
 using namespace std::chrono;
 
-TEST(EuclideanTests, General) {
-    ifstream data("/Users/jacklewis/Documents/work/year3/DMet/test/scripts/eucl_general");
+TEST(ManhattanTests, General) {
+    ifstream data("/Users/jacklewis/Documents/work/year3/DMet/test/scripts/man_general");
     string line,field;
 
     if (!data.is_open()) {
@@ -50,7 +54,7 @@ TEST(EuclideanTests, General) {
             mpfr_init(res);
 
             auto start = high_resolution_clock::now(); // start clock
-            getEuclidean(res,v1,v2);
+            getManhattan(res,v1,v2);
             auto stop = high_resolution_clock::now();
             auto duration = duration_cast<microseconds>(stop - start);
 
@@ -64,7 +68,7 @@ TEST(EuclideanTests, General) {
 /**
  * Test to library produces consistent results with the same points are input
  */
-TEST(EuclideanTests, SamePoints){
+TEST(ManhattanTests, SamePoints){
     ifstream data("/Users/jacklewis/Documents/work/year3/DMet/test/scripts/same_points");
     string line,field;
 
@@ -93,7 +97,7 @@ TEST(EuclideanTests, SamePoints){
             mpfr_init(res);
 
             auto start = high_resolution_clock::now(); // start clock
-            getEuclidean(res, v1, v2);
+            getManhattan(res, v1, v2);
             auto stop = high_resolution_clock::now();
             auto duration = duration_cast<microseconds>(stop - start);
 
@@ -104,43 +108,40 @@ TEST(EuclideanTests, SamePoints){
     }
 }
 
-
 /**
  * Test for whether v1 is empty or v2 is empty
  */
-TEST(EuclideanTests, EmptyArguments){
+TEST(ManhattanTests, EmptyArguments){
     vector<double> v1;
     vector<double> v2;
     mpfr_t res;
     mpfr_init(res);
-    EXPECT_THROW(getEuclidean(res, v1, v2),std::invalid_argument);
+    EXPECT_THROW(getManhattan(res, v1, v2),std::invalid_argument);
     mpfr_clear(res);
 }
 
 /**
  * Test to see if the method throws an error when incompatable sized arrays are input
  */
-TEST(EuclideanTests, IncompatableSizes){
+TEST(ManhattanTests, IncompatableSizes){
     vector<double> v1 {0.0,1.0,2.0};
     vector<double> v2 {0.0,1.0};
     mpfr_t res;
     mpfr_init(res);
-    EXPECT_THROW(getEuclidean(res, v1, v2),std::invalid_argument);
+    EXPECT_THROW(getManhattan(res, v1, v2),std::invalid_argument);
     mpfr_clear(res);
 }
-
-
 
 /**
  * Test to see what happens when a single infinite value is input. Tested on both input vectors
  */
-TEST(EuclideanTests, SingleInfinite){
+TEST(ManhattanTests, SingleInfinite){
     double inf = std::numeric_limits<double>::infinity();
     vector<double> v1 {inf,1.0,1.0};
     vector<double> v2 {2.0,1.0,3.0};
     mpfr_t res;
     mpfr_init(res);
-    getEuclidean(res, v1, v2);
+    getManhattan(res, v1, v2);
     EXPECT_EQ(mpfr_get_d(res,GMP_RNDN), inf);
     mpfr_clear(res);
 
@@ -149,7 +150,7 @@ TEST(EuclideanTests, SingleInfinite){
     vector<double> v4 {inf,1.0,3.0};
     mpfr_t res2;
     mpfr_init(res2);
-    getEuclidean(res2, v3, v4);
+    getManhattan(res2, v3, v4);
     EXPECT_EQ(mpfr_get_d(res2,GMP_RNDN), inf);
     mpfr_clear(res2);
 }
@@ -158,14 +159,14 @@ TEST(EuclideanTests, SingleInfinite){
  * Test to see what happens when multiple infinite value are input. Tested on both input vectors
  * Tests for an input of infinite and negative infinity
  */
-TEST(EuclideanTests, MultipleInfinite){
+TEST(ManhattanTests, MultipleInfinite){
     //need to see how to test for nan
     double inf = std::numeric_limits<double>::infinity();
     vector<double> v1 {inf,1.0,1.0};
     vector<double> v2 {inf,1.0,3.0};
     mpfr_t res;
     mpfr_init(res);
-    getEuclidean(res, v1, v2);
+    getManhattan(res, v1, v2);
     double res_d = mpfr_get_d(res,GMP_RNDN);
     EXPECT_TRUE(isnan(res_d));
     mpfr_clear(res);
@@ -174,21 +175,20 @@ TEST(EuclideanTests, MultipleInfinite){
     vector<double> v4 {inf,1.0,3.0};
     mpfr_t res2;
     mpfr_init(res2);
-    getEuclidean(res2, v3, v4);
+    getManhattan(res2, v3, v4);
     EXPECT_EQ(mpfr_get_d(res2,GMP_RNDN), inf);
     mpfr_clear(res2);
 }
 
-TEST(EuclideanTests, Overflow){
+TEST(ManhattanTests, Overflow){
     double max = std::numeric_limits<double>::max();
     vector<double> v1 {max,max};
     vector<double> v2 {0.0,0.0};
     string ans_string  = "2.542317e308";
-    cout << "MAX: " << max <<endl;
     mpfr_t res,ans;
     mpfr_inits(res,ans,NULL);
     mpfr_set_str(ans,ans_string.c_str(),10,GMP_RNDN);
-    getEuclidean(res, v1, v2);
+    getManhattan(res, v1, v2);
 
     mpfr_printf("Result: %.5Re\n",res);
     EXPECT_TRUE(mpfr_cmp(res,ans));
