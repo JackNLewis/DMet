@@ -12,7 +12,7 @@ gmp.h
 mpfr.h
 -
 
-/Users/jacklewis/Documents/work/year3/DMet/test/DMet/EuclideanTests.cpp
+/Users/jacklewis/Documents/work/year3/DMet/test/DMet/MinkowskiTests.cpp
 gtest/gtest.h
 /Users/jacklewis/Documents/work/year3/DMet/test/DMet/gtest/gtest.h
 fstream
@@ -22,12 +22,6 @@ vector
 mpfr.h
 -
 DMet/PointDistances.h
--
-sstream
--
-iostream
--
-chrono
 -
 
 /usr/local/include/gmp.h

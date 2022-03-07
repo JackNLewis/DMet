@@ -100,7 +100,6 @@ TEST(MinkowskiTests, IncompatableSizes) {
 }
 
 TEST(MinkowskiTests, SingleInfinite) {
-    GTEST_SKIP();
     vector<double> v1 {1.0, std::numeric_limits<double>::infinity(),3.0};
     vector<double> v2 {1.0,0,0};
 
@@ -131,6 +130,19 @@ TEST(MinkowskiTests, InfintePval) {
     mpfr_clear(res);
 }
 
+TEST(MinkowskiTests, NegInfintePval) {
+    vector<double> v1 {1.0, 1.0,50.0};
+    vector<double> v2 {1.0,0,0};
+    double inf = std::numeric_limits<double>::infinity();
+    mpfr_t res;
+    mpfr_init(res);
+
+    getMinkowski(res,v1,v2,-inf);
+    double resCheck1 = mpfr_get_d(res,GMP_RNDN);
+
+    EXPECT_FLOAT_EQ(0,resCheck1);
+    mpfr_clear(res);
+}
 
 
 

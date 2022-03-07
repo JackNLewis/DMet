@@ -6,6 +6,7 @@
 #include <gmp.h>
 #include <mpfr.h>
 
+using std::vector;
 
 /*!
  * Outer namespace of library
@@ -16,10 +17,11 @@ namespace DMet{
      */
     namespace PointDistances{
 
-        void getMinkowski(mpfr_t &res, std::vector<double> &vector1, std::vector<double> &vector2, double pvalue);
-        void getManhattan(mpfr_t &res, std::vector<double> &vector1, std::vector<double> &vector2);
-        void getEuclidean(mpfr_t &res, std::vector<double> &vector1, std::vector<double> &vector2);
-        void getChebyshev(mpfr_t &res, std::vector<double> &vector1, std::vector<double> &vector2);
+        void getMinkowski(mpfr_t &res, vector<double> &vector1, vector<double> &vector2, double pvalue);
+        void getMinkowskiInfP(mpfr_t &res, vector<double> &vector1, vector<double> &vector2, bool pos);
+        void getManhattan(mpfr_t &res, vector<double> &vector1, vector<double> &vector2);
+        void getEuclidean(mpfr_t &res, vector<double> &vector1, vector<double> &vector2);
+        void getChebyshev(mpfr_t &res, vector<double> &vector1, vector<double> &vector2);
 }}
 
 

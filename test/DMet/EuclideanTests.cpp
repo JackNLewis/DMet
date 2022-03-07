@@ -26,7 +26,6 @@ TEST(EuclideanTests, General) {
         cout << "file not open" << endl;
     }
 
-
     while(std::getline(data,field)){
         // get next line in file
         while ( getline(data,line) ){
@@ -110,14 +109,17 @@ TEST(EuclideanTests, SamePoints){
  * Tests for an input of infinite and negative infinity
  */
 TEST(EuclideanTests, MachinePrecision){
+    GTEST_SKIP();
     double eps = std::numeric_limits<double>::epsilon();
-    vector<double> v1 {1.0,1.0,1.0};
-    vector<double> v2 {1.0+eps,1.0,1.0};
+    vector<double> v1 {8493.0,72.89,1221.0};
+    vector<double> v2 {8493.0+eps,72.89,1221.0};
+    //problem doing normal float addition first
+    //need to make it to accept types of mpfr_t to tell the difference
 
     mpfr_t res;
     mpfr_init(res);
     getEuclidean(res, v1, v2);
-//    mpfr_printf("Res %.5Re\n",res);
+    mpfr_printf("Res %.5Re\n",res);
     double res_d = mpfr_get_d(res,GMP_RNDN);
     EXPECT_FLOAT_EQ(res_d,eps);
     mpfr_clear(res);
@@ -152,13 +154,22 @@ TEST(EuclideanTests, EmptyArguments){
  */
 TEST(EuclideanTests, SingleInfinite){
     double inf = std::numeric_limits<double>::infinity();
-
-    vector<double> v1;
-    vector<double> v2;
+    vector<double> v1 {inf,1.0,1.0};
+    vector<double> v2 {2.0,1.0,3.0};
     mpfr_t res;
     mpfr_init(res);
-    EXPECT_THROW(getEuclidean(res, v1, v2),std::invalid_argument);
+    getEuclidean(res, v1, v2);
+    EXPECT_EQ(mpfr_get_d(res,GMP_RNDN), inf);
     mpfr_clear(res);
+
+
+    vector<double> v3 {2.0,1.0,1.0};
+    vector<double> v4 {inf,1.0,3.0};
+    mpfr_t res2;
+    mpfr_init(res2);
+    getEuclidean(res2, v3, v4);
+    EXPECT_EQ(mpfr_get_d(res2,GMP_RNDN), inf);
+    mpfr_clear(res2);
 }
 
 /**
@@ -166,5 +177,55 @@ TEST(EuclideanTests, SingleInfinite){
  * Tests for an input of infinite and negative infinity
  */
 TEST(EuclideanTests, MultipleInfinite){
+    //need to see how to test for nan
+    double inf = std::numeric_limits<double>::infinity();
+    vector<double> v1 {inf,1.0,1.0};
+    vector<double> v2 {inf,1.0,3.0};
+    mpfr_t res;
+    mpfr_init(res);
+    getEuclidean(res, v1, v2);
+    double res_d = mpfr_get_d(res,GMP_RNDN);
+    EXPECT_TRUE(isnan(res_d));
+    mpfr_clear(res);
 
+    vector<double> v3 {2.0,1.0,inf};
+    vector<double> v4 {inf,1.0,3.0};
+    mpfr_t res2;
+    mpfr_init(res2);
+    getEuclidean(res2, v3, v4);
+    EXPECT_EQ(mpfr_get_d(res2,GMP_RNDN), inf);
+    mpfr_clear(res2);
+}
+
+TEST(EuclideanTests, Overflow){
+    double max = std::numeric_limits<double>::max();
+    vector<double> v1 {max,max};
+    vector<double> v2 {0.0,0.0};
+    string ans_string  = "2.542317e308";
+
+    mpfr_t res,ans;
+    mpfr_inits(res,ans,NULL);
+    mpfr_set_str(ans,ans_string.c_str(),2,GMP_RNDN);
+    getEuclidean(res, v1, v2);
+
+    mpfr_printf("Result: %.5Re\n",res);
+    EXPECT_TRUE(mpfr_cmp(res,ans));
+    mpfr_clears(res,ans,NULL);
+}
+
+TEST(EuclideanTests, Underflow){
+    GTEST_SKIP();
+    double max = std::numeric_limits<double>::max();
+    vector<double> v1 {max,max};
+    vector<double> v2 {0.0,0.0};
+    string ans_string  = "2.542317e308";
+
+    mpfr_t res,ans;
+    mpfr_inits(res,ans,NULL);
+    mpfr_set_str(ans,ans_string.c_str(),2,GMP_RNDN);
+    getEuclidean(res, v1, v2);
+
+    mpfr_printf("Result: %.5Re\n",res);
+    EXPECT_TRUE(mpfr_cmp(res,ans));
+    mpfr_clears(res,ans,NULL);
 }

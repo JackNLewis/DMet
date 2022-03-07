@@ -13,6 +13,7 @@
 
 namespace DMet { namespace PointDistances{
         using std::vector;
+
         /*!
         * Function that computes the distance between vector 1 and vector 2
         * Uses Minkowski distance
@@ -28,7 +29,7 @@ namespace DMet { namespace PointDistances{
         */
         void getMinkowski(mpfr_t &res, vector<double> &vector1, vector<double> &vector2, double pvalue){
             double inf = std::numeric_limits<double>::infinity();
-            long precision = 200;
+            long precision = 400;
             //check arrays are compatible sizes
             if(vector1.empty() || vector2.empty()){
                 throw std::invalid_argument("vector is empty");
@@ -36,32 +37,27 @@ namespace DMet { namespace PointDistances{
             if(vector1.size() != vector2.size()){
                 throw std::invalid_argument("vector1 and vector2 are incompatible sizes");
             }
+
             //check pvalue is +inf or -infinity
             if(pvalue == inf){
-                getChebyshev(res,vector1,vector2);
+                getMinkowskiInfP(res,vector1,vector2,true);
                 return;
             }else if(pvalue == -inf){
-                //oposite of chebshev
+                getMinkowskiInfP(res,vector1,vector2,false);
+                return;
             }
 
             mpfr_t sum,x,y,p;
-            mpfr_inits2(precision,sum,x,y,NULL);
+            mpfr_inits2(precision,sum,x,y,p,NULL);
             mpfr_set_d(sum,0,GMP_RNDN);
 
             for(int i=0; i<vector1.size(); i++){
                 // inf - inf is undefined so set sum to nan
                 if((vector1[i] == inf)
                 && (vector2[i] == inf)){
-                    mpfr_set_d(res,NAN,GMP_RNDN);
+                    mpfr_set_nan (res);
                     mpfr_clears(x,y,p,sum,NULL);
-                    break;
-                }
-                else if(mpfr_get_d(sum,GMP_RNDN) == inf){
-                    continue;
-                }
-                else if(vector1[i] == inf || vector2[i] == inf){
-                    mpfr_set_d(res,inf,GMP_RNDN);
-                    continue;
+                    return;
                 }
                 mpfr_set_d(x,vector1[i],GMP_RNDN);
                 mpfr_set_d(y,vector2[i],GMP_RNDN);
@@ -101,6 +97,27 @@ namespace DMet { namespace PointDistances{
         void getManhattan(mpfr_t &res, vector<double> &vector1, vector<double> &vector2){
             getMinkowski(res, vector1, vector2 ,1);
         }
+
+        void getMinkowskiInfP(mpfr_t &res, vector<double> &vector1, vector<double> &vector2, bool pos){
+            mpfr_t max_min,x ,y;
+            mpfr_init_set_d(max_min, 0, GMP_RNDN);
+            mpfr_inits(x,y,NULL);
+
+            for(int i=0;i<vector1.size();i++){
+                mpfr_set_d(x,vector1[i],GMP_RNDN);
+                mpfr_set_d(y,vector2[i],GMP_RNDN);
+                mpfr_sub(y,x,y,GMP_RNDN);
+                mpfr_abs(y,y,GMP_RNDD);
+                //if positive p and is greater than max
+                //or negative p and less than min
+                if((pos && mpfr_greater_p(y, max_min)) || (!pos && mpfr_less_p(y, max_min))){
+                    mpfr_set(max_min, y, GMP_RNDN);
+                }
+            }
+            mpfr_set(res, max_min, GMP_RNDN);
+            mpfr_clears(x, y, max_min, NULL);
+        }
+
         /*!
          * Function that computes the Chebeshev distance.
          * Uses a different implimentation than minkowski
@@ -111,26 +128,12 @@ namespace DMet { namespace PointDistances{
          */
          //Test for infinite values
         void getChebyshev(mpfr_t &res, vector<double> &vector1, vector<double> &vector2){
-            if(vector1.size() != vector2.size()){
-                std::cout << "Array sizes not compatable" << std:: endl;
-                return;
-            }
-
-            mpfr_t max,x ,y;
-            mpfr_init_set_d(max,0,GMP_RNDN);
-            mpfr_inits(x,y,NULL);
-
-            for(int i=0;i<vector1.size();i++){
-                mpfr_set_d(x,vector1[i],GMP_RNDN);
-                mpfr_set_d(y,vector2[i],GMP_RNDN);
-                mpfr_sub(y,x,y,GMP_RNDN);
-                mpfr_abs(y,y,GMP_RNDD);
-                if(mpfr_cmp(y,max)>0){
-                    mpfr_set(max,y,GMP_RNDN);
-                }
-            }
-//            mpfr_printf("Result %.64Re \n", max);
-            mpfr_set(res,max,GMP_RNDN);
-            mpfr_clears(x,y,max,NULL);
+             if(vector1.empty() || vector2.empty()){
+                 throw std::invalid_argument("vector is empty");
+             }
+             if(vector1.size() != vector2.size()){
+                 throw std::invalid_argument("vector1 and vector2 are incompatible sizes");
+             }
+             getMinkowskiInfP(res,vector1,vector2,true);
         }
 } }
