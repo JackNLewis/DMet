@@ -420,6 +420,9 @@
 		<Unit filename="/Users/jacklewis/Documents/work/year3/DMet/test/DMet/ChebyshevTests.cpp">
 			<Option target="Google_tests_run"/>
 		</Unit>
+		<Unit filename="/Users/jacklewis/Documents/work/year3/DMet/test/DMet/EuclideanStrTests.cpp">
+			<Option target="Google_tests_run"/>
+		</Unit>
 		<Unit filename="/Users/jacklewis/Documents/work/year3/DMet/test/DMet/EuclideanTests.cpp">
 			<Option target="Google_tests_run"/>
 		</Unit>

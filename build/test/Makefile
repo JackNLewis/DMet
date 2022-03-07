@@ -223,6 +223,30 @@ DMet/ChebyshevTests.cpp.s:
 	cd /Users/jacklewis/Documents/work/year3/DMet/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/Google_tests_run.dir/build.make test/CMakeFiles/Google_tests_run.dir/DMet/ChebyshevTests.cpp.s
 .PHONY : DMet/ChebyshevTests.cpp.s
 
+DMet/EuclideanStrTests.o: DMet/EuclideanStrTests.cpp.o
+.PHONY : DMet/EuclideanStrTests.o
+
+# target to build an object file
+DMet/EuclideanStrTests.cpp.o:
+	cd /Users/jacklewis/Documents/work/year3/DMet/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/Google_tests_run.dir/build.make test/CMakeFiles/Google_tests_run.dir/DMet/EuclideanStrTests.cpp.o
+.PHONY : DMet/EuclideanStrTests.cpp.o
+
+DMet/EuclideanStrTests.i: DMet/EuclideanStrTests.cpp.i
+.PHONY : DMet/EuclideanStrTests.i
+
+# target to preprocess a source file
+DMet/EuclideanStrTests.cpp.i:
+	cd /Users/jacklewis/Documents/work/year3/DMet/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/Google_tests_run.dir/build.make test/CMakeFiles/Google_tests_run.dir/DMet/EuclideanStrTests.cpp.i
+.PHONY : DMet/EuclideanStrTests.cpp.i
+
+DMet/EuclideanStrTests.s: DMet/EuclideanStrTests.cpp.s
+.PHONY : DMet/EuclideanStrTests.s
+
+# target to generate assembly for a file
+DMet/EuclideanStrTests.cpp.s:
+	cd /Users/jacklewis/Documents/work/year3/DMet/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/Google_tests_run.dir/build.make test/CMakeFiles/Google_tests_run.dir/DMet/EuclideanStrTests.cpp.s
+.PHONY : DMet/EuclideanStrTests.cpp.s
+
 DMet/EuclideanTests.o: DMet/EuclideanTests.cpp.o
 .PHONY : DMet/EuclideanTests.o
 
@@ -362,6 +386,9 @@ help:
 	@echo "... DMet/ChebyshevTests.o"
 	@echo "... DMet/ChebyshevTests.i"
 	@echo "... DMet/ChebyshevTests.s"
+	@echo "... DMet/EuclideanStrTests.o"
+	@echo "... DMet/EuclideanStrTests.i"
+	@echo "... DMet/EuclideanStrTests.s"
 	@echo "... DMet/EuclideanTests.o"
 	@echo "... DMet/EuclideanTests.i"
 	@echo "... DMet/EuclideanTests.s"

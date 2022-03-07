@@ -202,7 +202,7 @@ TEST(EuclideanTests, Overflow){
     vector<double> v1 {max,max};
     vector<double> v2 {0.0,0.0};
     string ans_string  = "2.542317e308";
-
+    cout << "MAX: " << max <<endl;
     mpfr_t res,ans;
     mpfr_inits(res,ans,NULL);
     mpfr_set_str(ans,ans_string.c_str(),2,GMP_RNDN);
