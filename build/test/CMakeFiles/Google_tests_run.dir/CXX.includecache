@@ -6,13 +6,11 @@
 
 #IncludeRegexTransform: 
 
-../include/DMet/PointDistances.h
-gmp.h
--
-mpfr.h
+../include/DMet/DistribDistance.h
+vector
 -
 
-/Users/jacklewis/Documents/work/year3/DMet/test/DMet/ChebyshevStrTests.cpp
+/Users/jacklewis/Documents/work/year3/DMet/test/DMet/KLDivTests.cpp
 gtest/gtest.h
 /Users/jacklewis/Documents/work/year3/DMet/test/DMet/gtest/gtest.h
 fstream
@@ -21,11 +19,7 @@ vector
 -
 mpfr.h
 -
-DMet/PointDistances.h
--
-iostream
--
-chrono
+DMet/DistribDistance.h
 -
 
 /usr/local/include/gmp.h

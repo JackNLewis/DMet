@@ -367,6 +367,30 @@ DMet/ManhattanTests.cpp.s:
 	cd /Users/jacklewis/Documents/work/year3/DMet/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/Google_tests_run.dir/build.make test/CMakeFiles/Google_tests_run.dir/DMet/ManhattanTests.cpp.s
 .PHONY : DMet/ManhattanTests.cpp.s
 
+DMet/MinkowskiStrTests.o: DMet/MinkowskiStrTests.cpp.o
+.PHONY : DMet/MinkowskiStrTests.o
+
+# target to build an object file
+DMet/MinkowskiStrTests.cpp.o:
+	cd /Users/jacklewis/Documents/work/year3/DMet/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/Google_tests_run.dir/build.make test/CMakeFiles/Google_tests_run.dir/DMet/MinkowskiStrTests.cpp.o
+.PHONY : DMet/MinkowskiStrTests.cpp.o
+
+DMet/MinkowskiStrTests.i: DMet/MinkowskiStrTests.cpp.i
+.PHONY : DMet/MinkowskiStrTests.i
+
+# target to preprocess a source file
+DMet/MinkowskiStrTests.cpp.i:
+	cd /Users/jacklewis/Documents/work/year3/DMet/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/Google_tests_run.dir/build.make test/CMakeFiles/Google_tests_run.dir/DMet/MinkowskiStrTests.cpp.i
+.PHONY : DMet/MinkowskiStrTests.cpp.i
+
+DMet/MinkowskiStrTests.s: DMet/MinkowskiStrTests.cpp.s
+.PHONY : DMet/MinkowskiStrTests.s
+
+# target to generate assembly for a file
+DMet/MinkowskiStrTests.cpp.s:
+	cd /Users/jacklewis/Documents/work/year3/DMet/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/Google_tests_run.dir/build.make test/CMakeFiles/Google_tests_run.dir/DMet/MinkowskiStrTests.cpp.s
+.PHONY : DMet/MinkowskiStrTests.cpp.s
+
 DMet/MinkowskiTests.o: DMet/MinkowskiTests.cpp.o
 .PHONY : DMet/MinkowskiTests.o
 
@@ -452,6 +476,9 @@ help:
 	@echo "... DMet/ManhattanTests.o"
 	@echo "... DMet/ManhattanTests.i"
 	@echo "... DMet/ManhattanTests.s"
+	@echo "... DMet/MinkowskiStrTests.o"
+	@echo "... DMet/MinkowskiStrTests.i"
+	@echo "... DMet/MinkowskiStrTests.s"
 	@echo "... DMet/MinkowskiTests.o"
 	@echo "... DMet/MinkowskiTests.i"
 	@echo "... DMet/MinkowskiTests.s"

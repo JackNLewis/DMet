@@ -7,6 +7,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/Google_tests_run.dir/DMet/JennsonShannonTests.cpp.o"
   "CMakeFiles/Google_tests_run.dir/DMet/KLDivTests.cpp.o"
   "CMakeFiles/Google_tests_run.dir/DMet/ManhattanTests.cpp.o"
+  "CMakeFiles/Google_tests_run.dir/DMet/MinkowskiStrTests.cpp.o"
   "CMakeFiles/Google_tests_run.dir/DMet/MinkowskiTests.cpp.o"
   "CMakeFiles/Google_tests_run.dir/Dmet/ManhattanStrTests.cpp.o"
   "Google_tests_run"

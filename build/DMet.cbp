@@ -438,6 +438,9 @@
 		<Unit filename="/Users/jacklewis/Documents/work/year3/DMet/test/DMet/ManhattanTests.cpp">
 			<Option target="Google_tests_run"/>
 		</Unit>
+		<Unit filename="/Users/jacklewis/Documents/work/year3/DMet/test/DMet/MinkowskiStrTests.cpp">
+			<Option target="Google_tests_run"/>
+		</Unit>
 		<Unit filename="/Users/jacklewis/Documents/work/year3/DMet/test/DMet/MinkowskiTests.cpp">
 			<Option target="Google_tests_run"/>
 		</Unit>

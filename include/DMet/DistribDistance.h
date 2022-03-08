@@ -10,7 +10,7 @@ namespace DMet { namespace Distrib{
 
     void KLDiv(mpfr_t &res, vector<double> &v1, vector<double> &v2, bool pdfCheck);
     void KLDiv(mpfr_t &res, vector<double> &v1, vector<double> &v2);
-    void KLDiv(mpfr_t &res, vector<vector<double>> &v1, vector<vector<double>> &v2); // allows binning
+    void KLDiv(mpfr_t &res, vector<vector<double>> &v1, vector<vector<double>> &v2, int arity); // allows binning
 
 
     void JensenShannon(mpfr_t &res, vector<double> &vector1, vector<double> &vector2);

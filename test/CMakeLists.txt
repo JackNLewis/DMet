@@ -15,6 +15,7 @@ enable_testing()
 add_executable(
         Google_tests_run
         DMet/MinkowskiTests.cpp
+        DMet/MinkowskiStrTests.cpp
         DMet/ChebyshevTests.cpp
         DMet/ChebyshevStrTests.cpp
         DMet/EuclideanTests.cpp

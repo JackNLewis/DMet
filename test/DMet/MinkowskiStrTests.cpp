@@ -1,4 +1,8 @@
 //
+// Created by jack lewis on 08/03/2022.
+//
+
+//
 // Created by jack lewis on 06/02/2022.
 //
 
@@ -15,7 +19,7 @@ using std::vector;
 using DMet::PointDistances::getMinkowski;
 
 
-TEST(MinkowskiTests, WorkingInRange) {
+TEST(MinkowskiStrTests, WorkingRange) {
     std::ifstream data("/Users/jacklewis/Documents/work/year3/DMet/test/scripts/minkowskiTests.csv");
     std::string line,field;
 
@@ -26,17 +30,17 @@ TEST(MinkowskiTests, WorkingInRange) {
     while ( getline(data,line) ){
         std::stringstream ss(line);
         //split line
-        vector<double> v1;
-        vector<double> v2;
+        vector<string> v1;
+        vector<string> v2;
 
         int index = 0;
         double pval5;
         double pval10;
         while(std::getline(ss,field,',')){
             if(index <= 3){ // place in first array
-                v1.push_back(std::stod(field));
+                v1.push_back(field);
             }else if(index <= 7){ // place in second array
-                v2.push_back(std::stod(field));
+                v2.push_back(field);
             }else if(index == 8){ // result for p val 5
                 pval5 = std::stod(field);
             }else{ // reslut for pval 10
@@ -57,10 +61,10 @@ TEST(MinkowskiTests, WorkingInRange) {
 
 }
 
-TEST(MinkowskiTests, SamePoints) {
+TEST(MinkowskiStrTests, SamePoints) {
     double pVals[] = {1.0,10.0,100.0};
-    vector<double> v1 {1.0, 0.0, 0.0};
-    vector<double> v2 {1.0,0.0,0.0};
+    vector<string> v1 {"1.0","0.0", "0.0"};
+    vector<string> v2 {"1.0","0.0","0.0"};
     for(int i=0;i<1;i++){
         mpfr_t res;
         mpfr_init(res);
@@ -71,7 +75,7 @@ TEST(MinkowskiTests, SamePoints) {
         mpfr_clear(res);
     }
 
-    vector<double> v3 {1.50625103e+308,1.34702226e+308,1.38046575e+307};
+    vector<string> v3 {"1.50625103e+308","1.34702226e+308","1.38046575e+307"};
     for(int i=0;i<1;i++){
         mpfr_t res;
         mpfr_init(res);
@@ -82,12 +86,12 @@ TEST(MinkowskiTests, SamePoints) {
     }
 }
 
-TEST(MinkowskiTests, IncompatableSizes) {
+TEST(MinkowskiStrTests, IncompatableSizes) {
 
-    vector<double> v1 {1.0, 0.0, 0.0};
-    vector<double> v2 {1.0,0.0};
+    vector<string> v1 {"1.0", "0.0", "0.0"};
+    vector<string> v2 {"1.0","0.0"};
 
-    vector<double> v3 {1.50625103e+308};
+    vector<string> v3 {"1.50625103e+308"};
     mpfr_t res;
     mpfr_init(res);
 
@@ -96,9 +100,9 @@ TEST(MinkowskiTests, IncompatableSizes) {
     mpfr_clear(res);
 }
 
-TEST(MinkowskiTests, SingleInfinite) {
-    vector<double> v1 {1.0, std::numeric_limits<double>::infinity(),3.0};
-    vector<double> v2 {1.0,0,0};
+TEST(MinkowskiStrTests, SingleInfinite) {
+    vector<string> v1 {"1.0", "inf", "3.0"};
+    vector<string> v2 {"1.0","0","0"};
 
     mpfr_t res;
     mpfr_init(res);
@@ -113,9 +117,9 @@ TEST(MinkowskiTests, SingleInfinite) {
     mpfr_clear(res);
 }
 
-TEST(MinkowskiTests, InfintePval) {
-    vector<double> v1 {1.0, 1.0,50.0};
-    vector<double> v2 {1.0,0,0};
+TEST(MinkowskiStrTests, InfintePval) {
+    vector<string> v1 {"1.0", "1.0","50.0"};
+    vector<string> v2 {"1.0","0.0","0.0"};
 
     mpfr_t res;
     mpfr_init(res);
@@ -127,9 +131,9 @@ TEST(MinkowskiTests, InfintePval) {
     mpfr_clear(res);
 }
 
-TEST(MinkowskiTests, NegInfintePval) {
-    vector<double> v1 {1.0, 1.0,50.0};
-    vector<double> v2 {1.0,0,0};
+TEST(MinkowskiStrTests, NegInfintePval) {
+    vector<string> v1 {"1.0","50.0"};
+    vector<string> v2 {"1.0","0.0"};
     double inf = std::numeric_limits<double>::infinity();
     mpfr_t res;
     mpfr_init(res);
@@ -141,7 +145,7 @@ TEST(MinkowskiTests, NegInfintePval) {
     mpfr_clear(res);
 }
 
-TEST(MinkowskiTests, VariableLength){
+TEST(MinkowskiStrTests, VariableLength){
     std::ifstream data("/Users/jacklewis/Documents/work/year3/DMet/test/scripts/mink_var_length");
     std::string line,field;
 
@@ -156,8 +160,8 @@ TEST(MinkowskiTests, VariableLength){
     while (getline(data,line)){
         std::stringstream ss(line);
         //split line
-        vector<double> v1;
-        vector<double> v2;
+        vector<string> v1;
+        vector<string> v2;
         double ans;
         int i=0;
 
@@ -165,9 +169,9 @@ TEST(MinkowskiTests, VariableLength){
             if(i==0){
                 ans = std::stod(field);
             }else if(i < inputSizes[index]+1){
-                v1.push_back(std::stod(field));
+                v1.push_back(field);
             }else if(i < inputSizes[index]*2+1){
-                v2.push_back(std::stod(field));
+                v2.push_back(field);
             }
             i++;
         }
@@ -180,14 +184,33 @@ TEST(MinkowskiTests, VariableLength){
 }
 
 
-//TEST(MinkowskiTests, Oveflow) {
-//    double maxVal = std::numeric_limits<double>::max();
-//    double arr1[] = {maxVal, maxVal, maxVal};
-//    double arr2[] = {1.0f,0.0f,0.0f};
-//    int size1 = sizeof(arr1) / sizeof(arr1[0]);
-//    int size2 = sizeof(arr2) / sizeof(arr2[0]);
-//    EXPECT_FLOAT_EQ(HUGE_VAL,DMet::PointDistances::getMinkowski(arr1,arr2,size1,size2,2));
-//
-//}
-//
+TEST(MinkowskiStrTests, Oveflow) {
+    vector<string> v1 {"1.0e+308","1.0e+308","1.0e+308","1.0e+308"};
+    vector<string> v2 {"0","0","0","0"};
+    string ans_string  = "2.0e308";
+    mpfr_t res,ans;
+    mpfr_inits(res,ans,NULL);
+    mpfr_set_str(ans,ans_string.c_str(),10,GMP_RNDN);
+    getMinkowski(res, v1, v2,2);
 
+    mpfr_printf("Result: %.5Re\n",res);
+    EXPECT_TRUE(mpfr_cmp(res,ans)==0);
+    mpfr_clears(res,ans,NULL);
+
+}
+
+TEST(MinkowskiStrTests, Underflow) {
+    vector<string> v1 {"0","0"};
+    vector<string> v2 {"3.0e-400","4.0e-400"};
+
+    mpfr_t res,ans;
+    mpfr_inits(res,ans,NULL);
+    string ans_string = "5.0e-400";
+    mpfr_set_str(ans,ans_string.c_str(),10,GMP_RNDN);
+    getMinkowski(res, v1, v2,2);
+
+    mpfr_printf("ans: %.64Re\n",ans);
+    mpfr_printf("Result: %.64Re\n",res);
+    EXPECT_EQ(mpfr_cmp(res,ans),0);
+    mpfr_clears(res,ans,NULL);
+}

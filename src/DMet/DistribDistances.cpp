@@ -29,19 +29,21 @@ namespace DMet { namespace Distrib{
                 return;
             }
         }
-        if(DMet::Utils::containsZero(v2)){
-            cout << "Array 2 contains zero value" << endl;
-            return;
-        }
 
         mpfr_t sum, x,y;
         mpfr_init_set_d(sum ,0 ,GMP_RNDN);
         mpfr_inits(x,y,NULL);
 
         for(int i=0; i<v1.size(); i++){
-            if(v2[i] == 0){ // if divides by zero continue
+
+            if(v1[i] == 0 && v2[i]>=0){ // if divides by zero continue
                 continue;
             }
+            else if(v1[i] >0 && v2[i] == 0){
+                mpfr_inf_p(res);
+                continue;
+            }
+
             mpfr_set_d(x,v1[i],GMP_RNDN);
             mpfr_set_d(y,v2[i],GMP_RNDN);
 
@@ -49,7 +51,6 @@ namespace DMet { namespace Distrib{
             mpfr_div(y,x,y,GMP_RNDN);
             mpfr_log(y,y,GMP_RNDN);
             mpfr_mul(x,x,y,GMP_RNDN);
-
 
             //sum += res;
             mpfr_add(sum,sum,x,GMP_RNDN);
@@ -62,18 +63,26 @@ namespace DMet { namespace Distrib{
         KLDiv(res,v1,v2,true);
     }
 
-    void KLDiv(mpfr_t &res, vector<vector<double>> &v1, vector<vector<double>> &v2){
+    void KLDiv(mpfr_t &res, vector<vector<double>> &v1, vector<vector<double>> &v2, int arity){
         DMet::EqWidthBin bin = DMet::EqWidthBin();
         vector<vector<double>> copy (v1);
         copy.insert(copy.end(),v2.begin(),v2.end());
         bin.setRanges(copy);
-        bin.generateBins(3);
+        bin.generateBins(arity);
         bin.assignBins(v1);
         vector<double> pdf1 = bin.getPDF();
+        for(double d: pdf1){
+            cout << d << endl;
+        }
+        cout<<std::endl;
         bin.clearBins();
         bin.assignBins(v2);
         vector<double> pdf2 = bin.getPDF();
+        for(double d: pdf2){
+            cout << d << endl;
+        }
         KLDiv(res,pdf1,pdf2,true);
+        mpfr_printf("Result: %.5Re\n",res);
     }
 
     void JensenShannon(mpfr_t &res, vector<double> &v1, vector<double> &v2){

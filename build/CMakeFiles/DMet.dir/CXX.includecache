@@ -6,27 +6,33 @@
 
 #IncludeRegexTransform: 
 
-../include/DMet/PointDistances.h
-gmp.h
--
-mpfr.h
+../include/DMet/DistribDistance.h
+vector
 -
 
-/Users/jacklewis/Documents/work/year3/DMet/src/DMet/PointDistances.cpp
-iostream
--
-cmath
--
-DMet/PointDistances.h
-/Users/jacklewis/Documents/work/year3/DMet/src/DMet/DMet/PointDistances.h
-limits
--
-mpfr.h
--
-gmp.h
+../include/DMet/EqWidthBin.h
+fstream
 -
 vector
 -
+ostream
+-
+
+../include/DMet/utils.h
+vector
+-
+
+/Users/jacklewis/Documents/work/year3/DMet/src/DMet/DistribDistances.cpp
+iostream
+-
+mpfr.h
+-
+DMet/EqWidthBin.h
+-
+DMet/DistribDistance.h
+/Users/jacklewis/Documents/work/year3/DMet/src/DMet/DMet/DistribDistance.h
+DMet/utils.h
+/Users/jacklewis/Documents/work/year3/DMet/src/DMet/DMet/utils.h
 
 /usr/local/include/gmp.h
 iosfwd
