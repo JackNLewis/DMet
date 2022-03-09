@@ -21,12 +21,12 @@ namespace DMet { namespace Distrib{
     void KLDiv(mpfr_t &res, vector<double> &v1, vector<double> &v2, bool pdfCheck){
         if(v1.size() != v2.size()){
             cout << "Input vectors are incompattable sizes" << endl;
-            return;
+            throw std::invalid_argument("Input vector sizes are incompatible");
         }
         if(!DMet::Utils::isPDF(v1) || !DMet::Utils::isPDF(v2)){
             if(pdfCheck){
                 cout << "Input arrays not a PDF" << endl;
-                return;
+                throw std::invalid_argument("Input array is not a pdf");
             }
         }
 
@@ -40,8 +40,9 @@ namespace DMet { namespace Distrib{
                 continue;
             }
             else if(v1[i] >0 && v2[i] == 0){
-                mpfr_inf_p(res);
-                continue;
+                cout<< "set to inf" <<endl;
+                mpfr_set_d(res,std::numeric_limits<double>::infinity(),GMP_RNDN);
+                return;
             }
 
             mpfr_set_d(x,v1[i],GMP_RNDN);
@@ -158,4 +159,19 @@ namespace DMet { namespace Distrib{
         mpfr_clears(x,y,NULL);
     }
 
+    void JensenShannon(mpfr_t &res, vector<vector<double>> &v1, vector<vector<double>> &v2,int arity){
+        DMet::EqWidthBin bin = DMet::EqWidthBin();
+        vector<vector<double>> copy (v1);
+        copy.insert(copy.end(),v2.begin(),v2.end());
+        bin.setRanges(copy);
+        bin.generateBins(arity);
+        bin.assignBins(v1);
+        vector<double> pdf1 = bin.getPDF();
+        cout<<std::endl;
+        bin.clearBins();
+        bin.assignBins(v2);
+        vector<double> pdf2 = bin.getPDF();
+        JensenShannon(res,v1,v2,arity);
+        mpfr_printf("Result: %.5Re\n",res);
+    }
 }}
