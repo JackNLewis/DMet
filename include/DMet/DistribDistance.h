@@ -14,6 +14,6 @@ namespace DMet { namespace Distrib{
 
 
     void JensenShannon(mpfr_t &res, vector<double> &vector1, vector<double> &vector2);
-    void JensenShannon(mpfr_t &res, vector<vector<double>> &v1, vector<vector<double>> &v2);
+    void JensenShannon(mpfr_t &res, vector<vector<double>> &v1, vector<vector<double>> &v2,int arity);
 }}
 

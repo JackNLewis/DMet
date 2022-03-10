@@ -89,74 +89,30 @@ namespace DMet { namespace Distrib{
     void JensenShannon(mpfr_t &res, vector<double> &v1, vector<double> &v2){
         if(v1.size() != v2.size()){
             cout << "Input vectors are incompattable sizes" << endl;
-            return;
+            throw std::invalid_argument("Input vector sizes are incompatible");
         }
         if(!DMet::Utils::isPDF(v1) || !DMet::Utils::isPDF(v2)){
             cout << "Input arrays not a PDF" << endl;
-            return;
-        }
-        if(DMet::Utils::containsZero(v2)){
-            cout << "Array 2 contains zero value" << endl;
-            return;
+            throw std::invalid_argument("Input array is not a pdf");
         }
 
-        //Compute M
-        mpfr_t x,y, kl1, kl2;
-        mpfr_t m[v1.size()];
-        mpfr_init_set_d(kl1 ,0 ,GMP_RNDN);
-        mpfr_init_set_d(kl2 ,0 ,GMP_RNDN);
-        mpfr_inits(x,y,NULL);
-
-        //m = 1/2 *(v1+v2)
+        vector<double> m;
         for(int i=0;i<v1.size();i++){
-            mpfr_init(m[i]);
-            mpfr_set_d(x,v1[i],GMP_RNDN);
-            mpfr_set_d(y,v2[i],GMP_RNDN);
-            mpfr_add(m[i],x,y,GMP_RNDN);
-            mpfr_div_d(m[i],m[i],2,GMP_RNDN);
+            double mval = 0.5*(v1[i] +v2[i]);
+            m.push_back(mval);
         }
+        mpfr_t kl1,kl2;
+        mpfr_inits(kl1, kl2,NULL);
 
-        //compute KL(v1||m)
-        for(int i=0; i<v1.size(); i++){
-            if(mpfr_get_d(m[i],GMP_RNDN) == 0){ // if divides by zero continue
-                continue;
-            }
-            mpfr_set_d(x,v1[i],GMP_RNDN);
+        KLDiv(kl1, v1, m);
+        KLDiv(kl2, v2, m);
 
-            // v1[i] * log(v1[i] / m[i]);
-            mpfr_div(y,x,m[i],GMP_RNDN);
-            mpfr_log(y,y,GMP_RNDN);
-            mpfr_mul(x,x,y,GMP_RNDN);
+        mpfr_add(kl1,kl1,kl2,GMP_RNDN);
+        mpfr_div_d(kl1,kl1,2,GMP_RNDN);
 
-            mpfr_div_d(x,x,2,GMP_RNDN);
-            mpfr_add(kl1,kl1,x,GMP_RNDN);
-        }
+        mpfr_set(res,kl1,GMP_RNDN);
 
-        //compute KL(v2||m)
-        for(int i=0; i<v2.size(); i++){
-            if(mpfr_get_d(m[i],GMP_RNDN) == 0){ // if divides by zero continue
-                continue;
-            }
-            mpfr_set_d(x,v2[i],GMP_RNDN);
-
-            // v1[i] * log(2*v1[i] / m[i]);
-            mpfr_div(y,x,m[i],GMP_RNDN);
-            mpfr_log(y,y,GMP_RNDN);
-            mpfr_mul(x,x,y,GMP_RNDN);
-
-            //sum += res;
-            mpfr_div_d(x,x,2,GMP_RNDN);
-            mpfr_add(kl2,kl2,x,GMP_RNDN);
-        }
-
-
-        mpfr_add(kl2,kl2,kl1,GMP_RNDN);
-        mpfr_set(res,kl2,GMP_RNDN);
-        mpfr_printf("\nJensen Shannon: %.32Rf", res);
-        for(auto a: m){
-            mpfr_clear(a);
-        }
-        mpfr_clears(x,y,NULL);
+        mpfr_clears(kl1,kl2,NULL);
     }
 
     void JensenShannon(mpfr_t &res, vector<vector<double>> &v1, vector<vector<double>> &v2,int arity){
@@ -166,12 +122,20 @@ namespace DMet { namespace Distrib{
         bin.setRanges(copy);
         bin.generateBins(arity);
         bin.assignBins(v1);
-        vector<double> pdf1 = bin.getPDF();
-        cout<<std::endl;
+        vector<double> pdf1 (bin.getPDF());
         bin.clearBins();
         bin.assignBins(v2);
-        vector<double> pdf2 = bin.getPDF();
-        JensenShannon(res,v1,v2,arity);
-        mpfr_printf("Result: %.5Re\n",res);
+        vector<double> pdf2 (bin.getPDF());
+        cout << "[" << std::flush;
+        for(double d: pdf1){
+            cout << d << "," << std::flush;
+        }
+        cout << "]" << endl;
+        cout << "[" << std::flush;
+        for(double d: pdf2){
+            cout << d << "," << std::flush;
+        }
+        cout << "]" << endl;
+        JensenShannon(res,pdf1,pdf2);
     }
 }}
