@@ -70,9 +70,28 @@
   <section id="welcome-to-dmet-s-documentation">
 <h1>Welcome to DMet’s documentation!<a class="headerlink" href="#welcome-to-dmet-s-documentation" title="Permalink to this headline"></a></h1>
 <p>DMet’s purpose is to compute various distance metrics such difference between points and distributions.
-The use of arbitrary precision floating point numbers means it can work out distances which would usually result in an over or underflow error if you are working with
-specifically large or small floating point numbers. The library also contains a binning class enabling you to input raw data up to n dimensions and produces the
+The use of arbitrary precision floating point numbers means it can work out distances which would usually result in an overflow or underflow error.
+The library also contains a binning class which enables you to input raw data up to n dimensions and produces the
 probability density function.</p>
+<p>There is a simple code snippet on how to use MPFR below.
+Follow this link to find out more about MPFR: <a class="reference external" href="https://www.mpfr.org/mpfr-current/mpfr.html">https://www.mpfr.org/mpfr-current/mpfr.html</a></p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="c1">//decleare and initialise variables</span>
+<span class="n">mpfr_t</span><span class="w"> </span><span class="n">res</span><span class="p">;</span><span class="w"></span>
+<span class="n">mpfr_init</span><span class="p">(</span><span class="n">res</span><span class="p">);</span><span class="w"></span>
+
+<span class="c1">//use library to comupte distances e.g. euclidean distance</span>
+<span class="n">vector</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">v1</span><span class="w"> </span><span class="p">{</span><span class="mf">3.0</span><span class="p">,</span><span class="mf">1.0</span><span class="p">,</span><span class="mf">1.0</span><span class="p">};</span><span class="w"></span>
+<span class="n">vector</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">v2</span><span class="w"> </span><span class="p">{</span><span class="mf">2.0</span><span class="p">,</span><span class="mf">1.0</span><span class="p">,</span><span class="mf">3.0</span><span class="p">};</span><span class="w"></span>
+<span class="n">DMet</span><span class="o">::</span><span class="n">getEuclidean</span><span class="p">(</span><span class="n">res</span><span class="p">,</span><span class="n">v1</span><span class="p">,</span><span class="n">v2</span><span class="p">);</span><span class="w"></span>
+
+<span class="c1">//Can print value using</span>
+
+<span class="c1">//if it fits in a double can convert it</span>
+
+<span class="c1">//clear variables</span>
+<span class="n">mpfr_clear</span><span class="p">(</span><span class="n">res</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
 <p>View the full code on <a class="reference external" href="https://github.com/JackNLewis/DMet">Github</a>.</p>
 <div class="toctree-wrapper compound">
 <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>

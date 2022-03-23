@@ -10,8 +10,6 @@ using std::cout;
 using std::endl;
 using std::flush;
 
-
-
 vector<vector<double>> DMet::EqWidthBin::setRanges(vector<vector<double>> &data) {
     int columns = data[0].size();
     // insert bounds -ininity and +infinity for all dimensions

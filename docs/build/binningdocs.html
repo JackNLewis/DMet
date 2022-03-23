@@ -69,10 +69,129 @@
              
   <section id="binning">
 <h1>Binning<a class="headerlink" href="#binning" title="Permalink to this headline"></a></h1>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>doxygenclass: Cannot find class “DMet::EqWidthBin” in doxygen xml output for project “DMet_docs” from directory: /Users/jacklewis/Documents/work/year3/DMet/docs/source/../xml</p>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N4DMet10EqWidthBinE">
+<span id="_CPPv3N4DMet10EqWidthBinE"></span><span id="_CPPv2N4DMet10EqWidthBinE"></span><span id="DMet::EqWidthBin"></span><span class="target" id="class_d_met_1_1_eq_width_bin"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">DMet</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">EqWidthBin</span></span></span><a class="headerlink" href="#_CPPv4N4DMet10EqWidthBinE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Class for equal width binning </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4DMet10EqWidthBin9setRangesER6vectorI6vectorIdEE">
+<span id="_CPPv3N4DMet10EqWidthBin9setRangesER6vectorI6vectorIdEE"></span><span id="_CPPv2N4DMet10EqWidthBin9setRangesER6vectorI6vectorIdEE"></span><span id="DMet::EqWidthBin::setRanges__vector:vector:double::R"></span><span class="target" id="class_d_met_1_1_eq_width_bin_1a12ebeed1b30aea531e747fd27ca65c51"></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setRanges</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">data</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4DMet10EqWidthBin9setRangesER6vectorI6vectorIdEE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Method to set the ranges for every dimension given data </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>data</strong> – </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4DMet10EqWidthBin12generateBinsEi">
+<span id="_CPPv3N4DMet10EqWidthBin12generateBinsEi"></span><span id="_CPPv2N4DMet10EqWidthBin12generateBinsEi"></span><span id="DMet::EqWidthBin::generateBins__i"></span><span class="target" id="class_d_met_1_1_eq_width_bin_1a45600ba094f008cfe20d477626d37147"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">generateBins</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">arity</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4DMet10EqWidthBin12generateBinsEi" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Generates the bins from the ranges for each dimension then creates the cartesian product of these bins</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>arity</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4DMet10EqWidthBin10assignBinsER6vectorI6vectorIdEE">
+<span id="_CPPv3N4DMet10EqWidthBin10assignBinsER6vectorI6vectorIdEE"></span><span id="_CPPv2N4DMet10EqWidthBin10assignBinsER6vectorI6vectorIdEE"></span><span id="DMet::EqWidthBin::assignBins__vector:vector:double::R"></span><span class="target" id="class_d_met_1_1_eq_width_bin_1a33124a9c9f1ce41f3e5f539378cb666b"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">assignBins</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">data</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4DMet10EqWidthBin10assignBinsER6vectorI6vectorIdEE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Assign the values from parameter data to the bins that have been generated. Throws an error if the bins have not been generated.</p>
+<p>
+assigns data points to correct bins if it falls in the bins range. It falls in the range if the point x is lower bound &lt;= x &lt; upper bound if upper bound = inf then point is in range to make sure points with infinity are assigned lower bound &lt;= x &lt;= upper bound</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> – </p></li>
+<li><p><strong>data</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4DMet10EqWidthBin11assignPointER6vectorIdE">
+<span id="_CPPv3N4DMet10EqWidthBin11assignPointER6vectorIdE"></span><span id="_CPPv2N4DMet10EqWidthBin11assignPointER6vectorIdE"></span><span id="DMet::EqWidthBin::assignPoint__vector:double:R"></span><span class="target" id="class_d_met_1_1_eq_width_bin_1a5f4b5b24cfc83ca7f86837bac89367b9"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">assignPoint</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">point</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4DMet10EqWidthBin11assignPointER6vectorIdE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Assingns a single point to its correct bin </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>point</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4DMet10EqWidthBin9clearBinsEv">
+<span id="_CPPv3N4DMet10EqWidthBin9clearBinsEv"></span><span id="_CPPv2N4DMet10EqWidthBin9clearBinsEv"></span><span id="DMet::EqWidthBin::clearBins"></span><span class="target" id="class_d_met_1_1_eq_width_bin_1aa30b3de1214365b166dc14bf7520d3c6"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">clearBins</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4DMet10EqWidthBin9clearBinsEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Clears all of the values in the bins so each bin is empty </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4DMet10EqWidthBin6getPDFEv">
+<span id="_CPPv3N4DMet10EqWidthBin6getPDFEv"></span><span id="_CPPv2N4DMet10EqWidthBin6getPDFEv"></span><span id="DMet::EqWidthBin::getPDF"></span><span class="target" id="class_d_met_1_1_eq_width_bin_1a67f63578d2c378887b76ea4a1e09aff8"></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getPDF</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4DMet10EqWidthBin6getPDFEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Returns the probability density function of the binned values </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
 </div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N4DMet10EqWidthBin6rangesE">
+<span id="_CPPv3N4DMet10EqWidthBin6rangesE"></span><span id="_CPPv2N4DMet10EqWidthBin6rangesE"></span><span id="DMet::EqWidthBin::ranges__vector:vector:double::"></span><span class="target" id="class_d_met_1_1_eq_width_bin_1aee6c178d022a087b6ff080bc5a3bcec7"></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ranges</span></span></span><a class="headerlink" href="#_CPPv4N4DMet10EqWidthBin6rangesE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Stores the ranges of each dimension </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N4DMet10EqWidthBin4binsE">
+<span id="_CPPv3N4DMet10EqWidthBin4binsE"></span><span id="_CPPv2N4DMet10EqWidthBin4binsE"></span><span id="DMet::EqWidthBin::bins__vector:Bin:"></span><span class="target" id="class_d_met_1_1_eq_width_bin_1a1704cfef7cffaff6356616bdb8593283"></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4N4DMet10EqWidthBin3BinE" title="DMet::EqWidthBin::Bin"><span class="n"><span class="pre">Bin</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bins</span></span></span><a class="headerlink" href="#_CPPv4N4DMet10EqWidthBin4binsE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Stores the different vector of bins </p>
+</dd></dl>
+
+</div>
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4N4DMet10EqWidthBin3BinE">
+<span id="_CPPv3N4DMet10EqWidthBin3BinE"></span><span id="_CPPv2N4DMet10EqWidthBin3BinE"></span><span id="DMet::EqWidthBin::Bin"></span><span class="target" id="struct_d_met_1_1_eq_width_bin_1_1_bin"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Bin</span></span></span><a class="headerlink" href="#_CPPv4N4DMet10EqWidthBin3BinE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Structure for a bin </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N4DMet10EqWidthBin3Bin5rangeE">
+<span id="_CPPv3N4DMet10EqWidthBin3Bin5rangeE"></span><span id="_CPPv2N4DMet10EqWidthBin3Bin5rangeE"></span><span id="DMet::EqWidthBin::Bin::range__vector:vector:double::"></span><span class="target" id="struct_d_met_1_1_eq_width_bin_1_1_bin_1ac776059b3066ede32475282dea99d62c"></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">range</span></span></span><a class="headerlink" href="#_CPPv4N4DMet10EqWidthBin3Bin5rangeE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Contains the vector of ranges for each dimension </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N4DMet10EqWidthBin3Bin6valuesE">
+<span id="_CPPv3N4DMet10EqWidthBin3Bin6valuesE"></span><span id="_CPPv2N4DMet10EqWidthBin3Bin6valuesE"></span><span id="DMet::EqWidthBin::Bin::values__vector:vector:double::"></span><span class="target" id="struct_d_met_1_1_eq_width_bin_1_1_bin_1a61c6ca4bacb356c0ee9a974805459339"></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">values</span></span></span><a class="headerlink" href="#_CPPv4N4DMet10EqWidthBin3Bin6valuesE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Contains a list of the raw values for each dimension </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-friends">Friends</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4DMet10EqWidthBin3BinlsERNSt7ostreamERK3Bin">
+<span id="_CPPv3N4DMet10EqWidthBin3BinlsERNSt7ostreamERK3Bin"></span><span id="_CPPv2N4DMet10EqWidthBin3BinlsERNSt7ostreamERK3Bin"></span><span id="DMet::EqWidthBin::Bin::lshift-operator__osR.BinCR"></span><span class="target" id="struct_d_met_1_1_eq_width_bin_1_1_bin_1a5d77c71aa104532e0ff910bb2be9320c"></span><span class="k"><span class="pre">friend</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">ostream</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">&lt;&lt;</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">ostream</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">out</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N4DMet10EqWidthBin3BinE" title="DMet::EqWidthBin::Bin"><span class="n"><span class="pre">Bin</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">point</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4DMet10EqWidthBin3BinlsERNSt7ostreamERK3Bin" title="Permalink to this definition"></a><br /></dt>
+<dd><p>override operator &lt;&lt; in order to print the bin on screen </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</dd></dl>
+
 </section>
 
 

@@ -3,11 +3,15 @@
   <compounddef id="namespace_d_met_1_1_distrib" kind="namespace" language="C++">
     <compoundname>DMet::Distrib</compoundname>
       <sectiondef kind="func">
-      <memberdef kind="function" id="_distrib_distances_8cpp_1a887584a4f487b5e06c9879546519ed38" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>double</type>
-        <definition>double DMet::Distrib::KLDiv</definition>
-        <argsstring>(vector&lt; double &gt; &amp;v1, vector&lt; double &gt; &amp;v2)</argsstring>
+      <memberdef kind="function" id="_distrib_distance_8h_1a1c41e04848ac4d2677ec15d6bdcefc20" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DMet::Distrib::KLDiv</definition>
+        <argsstring>(mpfr_t &amp;res, vector&lt; double &gt; &amp;v1, vector&lt; double &gt; &amp;v2, bool pdfCheck)</argsstring>
         <name>KLDiv</name>
+        <param>
+          <type>mpfr_t &amp;</type>
+          <declname>res</declname>
+        </param>
         <param>
           <type>vector&lt; double &gt; &amp;</type>
           <declname>v1</declname>
@@ -15,6 +19,10 @@
         <param>
           <type>vector&lt; double &gt; &amp;</type>
           <declname>v2</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>pdfCheck</declname>
         </param>
         <briefdescription>
         </briefdescription>
@@ -42,13 +50,121 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/jacklewis/Documents/work/year3/DMet/src/DMet/DistribDistances.cpp" line="20" column="12" bodyfile="/Users/jacklewis/Documents/work/year3/DMet/src/DMet/DistribDistances.cpp" bodystart="20" bodyend="50"/>
+        <location file="/Users/jacklewis/Documents/work/year3/DMet/src/DMet/DistribDistances.cpp" line="21" column="10" bodyfile="/Users/jacklewis/Documents/work/year3/DMet/src/DMet/DistribDistances.cpp" bodystart="21" bodyend="61" declfile="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/DistribDistance.h" declline="11" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="_distrib_distance_8h_1a9558ccb77bd3b13042424f63dc3cf397" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DMet::Distrib::KLDiv</definition>
+        <argsstring>(mpfr_t &amp;res, vector&lt; double &gt; &amp;v1, vector&lt; double &gt; &amp;v2)</argsstring>
+        <name>KLDiv</name>
+        <param>
+          <type>mpfr_t &amp;</type>
+          <declname>res</declname>
+        </param>
+        <param>
+          <type>vector&lt; double &gt; &amp;</type>
+          <declname>v1</declname>
+        </param>
+        <param>
+          <type>vector&lt; double &gt; &amp;</type>
+          <declname>v2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jacklewis/Documents/work/year3/DMet/src/DMet/DistribDistances.cpp" line="63" column="10" bodyfile="/Users/jacklewis/Documents/work/year3/DMet/src/DMet/DistribDistances.cpp" bodystart="63" bodyend="65" declfile="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/DistribDistance.h" declline="12" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="_distrib_distance_8h_1a791838408247fd8660a0fb757c42e9cf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DMet::Distrib::KLDiv</definition>
+        <argsstring>(mpfr_t &amp;res, vector&lt; vector&lt; double &gt; &gt; &amp;v1, vector&lt; vector&lt; double &gt; &gt; &amp;v2, int arity)</argsstring>
+        <name>KLDiv</name>
+        <param>
+          <type>mpfr_t &amp;</type>
+          <declname>res</declname>
+        </param>
+        <param>
+          <type>vector&lt; vector&lt; double &gt; &gt; &amp;</type>
+          <declname>v1</declname>
+        </param>
+        <param>
+          <type>vector&lt; vector&lt; double &gt; &gt; &amp;</type>
+          <declname>v2</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>arity</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jacklewis/Documents/work/year3/DMet/src/DMet/DistribDistances.cpp" line="67" column="10" bodyfile="/Users/jacklewis/Documents/work/year3/DMet/src/DMet/DistribDistances.cpp" bodystart="67" bodyend="87" declfile="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/DistribDistance.h" declline="13" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="_distrib_distance_8h_1aced7faf83b692238a942e852ca61fa88" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DMet::Distrib::JensenShannon</definition>
+        <argsstring>(mpfr_t &amp;res, vector&lt; double &gt; &amp;vector1, vector&lt; double &gt; &amp;vector2)</argsstring>
+        <name>JensenShannon</name>
+        <param>
+          <type>mpfr_t &amp;</type>
+          <declname>res</declname>
+        </param>
+        <param>
+          <type>vector&lt; double &gt; &amp;</type>
+          <declname>vector1</declname>
+        </param>
+        <param>
+          <type>vector&lt; double &gt; &amp;</type>
+          <declname>vector2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jacklewis/Documents/work/year3/DMet/src/DMet/DistribDistances.cpp" line="89" column="10" bodyfile="/Users/jacklewis/Documents/work/year3/DMet/src/DMet/DistribDistances.cpp" bodystart="89" bodyend="116" declfile="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/DistribDistance.h" declline="16" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="_distrib_distance_8h_1a28a6da07a2b13dd32a9811a9e4300fef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DMet::Distrib::JensenShannon</definition>
+        <argsstring>(mpfr_t &amp;res, vector&lt; vector&lt; double &gt; &gt; &amp;v1, vector&lt; vector&lt; double &gt; &gt; &amp;v2, int arity)</argsstring>
+        <name>JensenShannon</name>
+        <param>
+          <type>mpfr_t &amp;</type>
+          <declname>res</declname>
+        </param>
+        <param>
+          <type>vector&lt; vector&lt; double &gt; &gt; &amp;</type>
+          <declname>v1</declname>
+        </param>
+        <param>
+          <type>vector&lt; vector&lt; double &gt; &gt; &amp;</type>
+          <declname>v2</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>arity</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jacklewis/Documents/work/year3/DMet/src/DMet/DistribDistances.cpp" line="118" column="10" bodyfile="/Users/jacklewis/Documents/work/year3/DMet/src/DMet/DistribDistances.cpp" bodystart="118" bodyend="140" declfile="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/DistribDistance.h" declline="17" declcolumn="10"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/Users/jacklewis/Documents/work/year3/DMet/src/DMet/DistribDistances.cpp" line="12" column="14"/>
+    <location file="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/DistribDistance.h" line="8" column="14"/>
   </compounddef>
 </doxygen>

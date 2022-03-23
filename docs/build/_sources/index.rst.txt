@@ -6,9 +6,30 @@
 Welcome to DMet's documentation!
 ================================
 DMet's purpose is to compute various distance metrics such difference between points and distributions.
-The use of arbitrary precision floating point numbers means it can work out distances which would usually result in an over or underflow error if you are working with
-specifically large or small floating point numbers. The library also contains a binning class enabling you to input raw data up to n dimensions and produces the
+The use of arbitrary precision floating point numbers means it can work out distances which would usually result in an overflow or underflow error.
+The library also contains a binning class which enables you to input raw data up to n dimensions and produces the
 probability density function.
+
+There is a simple code snippet on how to use MPFR below.
+Follow this link to find out more about MPFR: https://www.mpfr.org/mpfr-current/mpfr.html
+
+.. code-block:: c
+
+   //decleare and initialise variables
+   mpfr_t res;
+   mpfr_init(res);
+
+   //use library to comupte distances e.g. euclidean distance
+   vector<double> v1 {3.0,1.0,1.0};
+   vector<double> v2 {2.0,1.0,3.0};
+   DMet::getEuclidean(res,v1,v2);
+
+   //Can print value using
+
+   //if it fits in a double can convert it
+
+   //clear variables
+   mpfr_clear(res);
 
 View the full code on `Github`_.
 

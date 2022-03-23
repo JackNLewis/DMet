@@ -2,22 +2,20 @@
 // Created by jack lewis on 13/02/2022.
 //
 #include "gtest/gtest.h"
-#include "DMet/PointDistances.h"
 #include "DMet/EqWidthBin.h"
-#include "DMet/DistribDistance.h"
 #include <fstream>
 #include <vector>
-#include <gmp.h>
-#include <mpfr.h>
-
+#include <random>
 using std::cout;
 using std::endl;
 using std::flush;
 using std::vector;
 
 
-TEST(Binning, BinningRanges){
-
+/**
+ * Test that the assign bins function works
+ */
+TEST(Binning, BinningGeneral){
     DMet::EqWidthBin bin = DMet::EqWidthBin();
     vector<vector<double>> vect
             {
@@ -29,48 +27,130 @@ TEST(Binning, BinningRanges){
     bin.setRanges(vect);
     bin.generateBins(3);
     bin.assignBins(vect);
+    //should create values in order [1,0,1,1,0,0,0,0,1]
+    vector<double> values {1,0,1,1,0,0,0,0,1};
+
+    for(int i=0;i<bin.bins.size();i++){
+        int values_size = bin.bins[i].values.size();
+        EXPECT_FLOAT_EQ(values_size,values[i]);
+    }
     vector<double> t{-std::numeric_limits<double>::infinity(),4};
     bin.assignPoint(t);
-
-//    for(auto a : bin.bins){
-//        cout << a << endl;
-//    }
 }
 
 
-
-TEST(Binning, BinningTests) {
+/**
+ * Test that correct bins are created
+ */
+TEST(Binning, BinCreation) {
+    double inf = std::numeric_limits<double>::infinity();
     DMet::EqWidthBin bin = DMet::EqWidthBin();
     vector<vector<double>> vect
             {
-                    {1, 5, 3},
-                    {4, 1, 6},
-                    {9, 6, 12},
-                    {0,0,0}
+                    {1, 5},
+                    {4, 1},
+                    {9, 6},
+                    {0,0}
             };
     bin.setRanges(vect);
     bin.generateBins(3);
-    bin.assignBins(vect);
-//
-//    cout << "[" << std::flush;
-//    for(double d: bin.getPDF()){
-//        cout << d << "," <<std::flush;
-//    }
-//    cout << "]"<< endl;
 
-    bin.clearBins();
-    vector<vector<double>> vect2
+    vector<vector<vector<double>>> res{
+            {{-inf,3},{-inf,2}},
+            {{-inf,3},{2,4}},
+            {{-inf,3},{4,inf}},
+            {{3,6},{-inf,2}},
+            {{3,6},{2,4}},
+            {{3,6},{4,inf}},
+            {{6,inf},{-inf,2}},
+            {{6,inf},{2,4}},
+            {{6,inf},{4,inf}},
+    };
+
+    //compare the ranges
+    for(int i=0;i<bin.bins.size();i++){
+        vector<vector<double>> ranges = bin.bins[i].range;
+        for(int j=0;j<ranges.size();j++){ //go through each dimension
+            for(int k=0;k<ranges.size();k++){//for each bound of dimension
+                EXPECT_FLOAT_EQ(ranges[j][k],res[i][j][k]);
+            }
+        }
+    }
+}
+
+
+/**
+ * Test the bins work with infinite values
+[-inf,3][-inf,2]
+[-inf,3][2,4]
+[-inf,3][4,inf]
+[3,6][-inf,2]
+[3,6][2,4]
+[3,6][4,inf]
+[6,inf][-inf,2]
+[6,inf][2,4]
+[6,inf][4,inf]
+ Adding point (-inf,4) will be added to bin 3
+ */
+TEST(Binning, InfiniteVals) {
+    DMet::EqWidthBin bin = DMet::EqWidthBin();
+    vector<vector<double>> vect
             {
-                    {1, 5, 3},
-                    {4, 1, 6},
-                    {9, 6, 12},
-                    {0,4,0}
+                    {1, 5},
+                    {4, 1},
+                    {9, 6},
+                    {0,0}
             };
-    bin.assignBins(vect2);
-//    cout << "[" << std::flush;
-//    for(double d: bin.getPDF()){
-//        cout << d << "," <<std::flush;
-//    }
-//    cout << "]" << endl;
+    vector<double> before{0.25,0,0.25,0.25,0,0,0,0,0.25};
+    vector<double> after{0.2,0,0.4,0.2,0,0,0,0,0.2};
+    bin.setRanges(vect);
+    bin.generateBins(3);
+    bin.assignBins(vect);
+    bin.printBins(bin);
+    vector<double> pdf_before (bin.getPDF());
+    vector<double> t{-std::numeric_limits<double>::infinity(),4};// pdf should increase in bin {-inf-3,2-4}
+    bin.assignPoint(t);
+    cout << endl;vector<double> pdf_after (bin.getPDF());
+    for(int i=0;i<pdf_before.size();i++){
+        EXPECT_FLOAT_EQ(pdf_before[i],before[i]);
+        EXPECT_FLOAT_EQ(pdf_after[i],after[i]);
+    }
+}
+
+/**
+ * Set a time limit of 5 seconds,
+ * see how many dimensions it gets up to
+ */
+TEST(Binning, MaxDims) {
+
+    double lower_bound = 0;
+    double upper_bound = 10000;
+    std::uniform_real_distribution<double> unif(lower_bound,upper_bound);
+    std::default_random_engine re;
+
+    vector<vector<double>> vect;
+    //generate 100 data points with a single dimension
+    for(int i=0;i<100;i++){
+        double random_d = unif(re);
+        vector<double> v;
+        v.push_back(random_d);
+        vect.push_back(v);
+    }
+
+    //increase the dimension and calculate time of generating bins
+    for(int i=0;i<5;i++){
+        for(vector<double> v : vect){
+            double random_d = unif(re);
+            cout << random_d << endl;
+            v.push_back(random_d);
+        }
+    }
+
+    for(vector<double> v1 : vect){
+        for(double d: v1){
+            cout << d << endl;
+        }
+        break;
+    }
 
 }

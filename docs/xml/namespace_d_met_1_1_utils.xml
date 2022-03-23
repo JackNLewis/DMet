@@ -3,6 +3,82 @@
   <compounddef id="namespace_d_met_1_1_utils" kind="namespace" language="C++">
     <compoundname>DMet::Utils</compoundname>
       <sectiondef kind="func">
+      <memberdef kind="function" id="utils_8h_1acc80b898959c39b833002da0bd987c03" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool DMet::Utils::isPDF</definition>
+        <argsstring>(std::vector&lt; double &gt; &amp;v)</argsstring>
+        <name>isPDF</name>
+        <param>
+          <type>std::vector&lt; double &gt; &amp;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/utils.h" line="12" column="10" declfile="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/utils.h" declline="12" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="utils_8h_1a3b468643e312f9ce16b94ad92f0b3837" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool DMet::Utils::containsZero</definition>
+        <argsstring>(std::vector&lt; double &gt; &amp;v)</argsstring>
+        <name>containsZero</name>
+        <param>
+          <type>std::vector&lt; double &gt; &amp;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jacklewis/Documents/work/year3/DMet/src/DMet/utils.cpp" line="32" column="10" bodyfile="/Users/jacklewis/Documents/work/year3/DMet/src/DMet/utils.cpp" bodystart="32" bodyend="40" declfile="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/utils.h" declline="13" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="utils_8h_1ae49506e5e8fa93ef777024a36b78f1e1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; vector&lt; vector&lt; double &gt; &gt; &gt;</type>
+        <definition>vector&lt; vector&lt; vector&lt; double &gt; &gt; &gt; DMet::Utils::cartesian</definition>
+        <argsstring>(vector&lt; vector&lt; vector&lt; double &gt; &gt; &gt; &amp;vec1, vector&lt; vector&lt; double &gt; &gt; &amp;vec2)</argsstring>
+        <name>cartesian</name>
+        <param>
+          <type>vector&lt; vector&lt; vector&lt; double &gt; &gt; &gt; &amp;</type>
+          <declname>vec1</declname>
+        </param>
+        <param>
+          <type>vector&lt; vector&lt; double &gt; &gt; &amp;</type>
+          <declname>vec2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Generates the cartesian product of two lists of vectors</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>vec1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>vec2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jacklewis/Documents/work/year3/DMet/src/DMet/utils.cpp" line="45" column="16" bodyfile="/Users/jacklewis/Documents/work/year3/DMet/src/DMet/utils.cpp" bodystart="45" bodyend="71" declfile="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/utils.h" declline="23" declcolumn="16"/>
+      </memberdef>
       <memberdef kind="function" id="utils_8cpp_1ac2c0c2779188097446aaaaed8f10db09" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
         <definition>bool DMet::Utils::isPDF</definition>
@@ -20,28 +96,11 @@
         </inbodydescription>
         <location file="/Users/jacklewis/Documents/work/year3/DMet/src/DMet/utils.cpp" line="16" column="10" bodyfile="/Users/jacklewis/Documents/work/year3/DMet/src/DMet/utils.cpp" bodystart="16" bodyend="29"/>
       </memberdef>
-      <memberdef kind="function" id="utils_8cpp_1a3b468643e312f9ce16b94ad92f0b3837" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>bool</type>
-        <definition>bool DMet::Utils::containsZero</definition>
-        <argsstring>(std::vector&lt; double &gt; &amp;v)</argsstring>
-        <name>containsZero</name>
-        <param>
-          <type>std::vector&lt; double &gt; &amp;</type>
-          <declname>v</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/jacklewis/Documents/work/year3/DMet/src/DMet/utils.cpp" line="32" column="10" bodyfile="/Users/jacklewis/Documents/work/year3/DMet/src/DMet/utils.cpp" bodystart="32" bodyend="40"/>
-      </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/Users/jacklewis/Documents/work/year3/DMet/src/DMet/utils.cpp" line="14" column="14"/>
+    <location file="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/utils.h" line="11" column="14"/>
   </compounddef>
 </doxygen>

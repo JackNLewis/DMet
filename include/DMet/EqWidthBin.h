@@ -15,7 +15,6 @@ namespace DMet {
      */
     class EqWidthBin {
         public:
-
         /*!
          * Structure for a bin
          */
@@ -53,7 +52,6 @@ namespace DMet {
          * @param arity
          */
         void generateBins(int arity);
-
 
         /*!
          * Assign the values from parameter data to the bins that have been generated.

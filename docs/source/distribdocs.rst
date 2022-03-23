@@ -2,5 +2,5 @@ Distribution Distances
 ======================
 
 .. doxygennamespace:: DMet::Distrib
-   :project: DMet_docs
-   :content-only:
+    :project: DMet_docs
+    :members:
