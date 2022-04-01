@@ -3,14 +3,16 @@
 //
 #include "gtest/gtest.h"
 #include "DMet/EqWidthBin.h"
-#include <fstream>
 #include <vector>
 #include <random>
+#include <chrono>
+
 using std::cout;
 using std::endl;
 using std::flush;
 using std::vector;
 
+using namespace std::chrono;
 
 /**
  * Test that the assign bins function works
@@ -117,40 +119,44 @@ TEST(Binning, InfiniteVals) {
     }
 }
 
-/**
- * Set a time limit of 5 seconds,
- * see how many dimensions it gets up to
- */
+// /**
+// * Set a time limit of 5 seconds,
+// * see how many dimensions it gets up to
+// */
 TEST(Binning, MaxDims) {
+    for(int z=0;z<11;z++){
+        double lower_bound = 0;
+        double upper_bound = 10000;
+        std::uniform_real_distribution<double> unif(lower_bound,upper_bound);
+        std::default_random_engine re;
 
-    double lower_bound = 0;
-    double upper_bound = 10000;
-    std::uniform_real_distribution<double> unif(lower_bound,upper_bound);
-    std::default_random_engine re;
-
-    vector<vector<double>> vect;
-    //generate 100 data points with a single dimension
-    for(int i=0;i<100;i++){
-        double random_d = unif(re);
-        vector<double> v;
-        v.push_back(random_d);
-        vect.push_back(v);
-    }
-
-    //increase the dimension and calculate time of generating bins
-    for(int i=0;i<5;i++){
-        for(vector<double> v : vect){
-            double random_d = unif(re);
-            cout << random_d << endl;
-            v.push_back(random_d);
+        int size = 8;
+        vector<vector<double>> vect;
+        //generate 100 data points with a single dimension
+        for(int i=0;i<100;i++){
+            vector<double> v;
+            for(int j=0;j<size;j++){
+                double random_d = unif(re);
+                v.push_back(random_d);
+            }
+            vect.push_back(v);
         }
-    }
 
-    for(vector<double> v1 : vect){
-        for(double d: v1){
-            cout << d << endl;
+        //increase the dimension and calculate time of generating bins
+        DMet::EqWidthBin bin = DMet::EqWidthBin();
+
+        auto start = high_resolution_clock::now();
+        bin.setRanges(vect);
+        bin.generateBins(3);
+        bin.assignBins(vect);
+        auto end = high_resolution_clock::now();
+
+        auto duration = duration_cast<microseconds>(end - start);
+        cout << duration.count() <<", " <<flush;
+        if(duration.count() > 2000000){
+            cout << "Max Dim: "<< size;
+            break;
         }
-        break;
     }
 
 }

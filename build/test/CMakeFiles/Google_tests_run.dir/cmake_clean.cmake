@@ -2,6 +2,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/Google_tests_run.dir/DMet/BinningTests.cpp.o"
   "CMakeFiles/Google_tests_run.dir/DMet/ChebyshevStrTests.cpp.o"
   "CMakeFiles/Google_tests_run.dir/DMet/ChebyshevTests.cpp.o"
+  "CMakeFiles/Google_tests_run.dir/DMet/Demo.cpp.o"
   "CMakeFiles/Google_tests_run.dir/DMet/EuclideanStrTests.cpp.o"
   "CMakeFiles/Google_tests_run.dir/DMet/EuclideanTests.cpp.o"
   "CMakeFiles/Google_tests_run.dir/DMet/JennsonShannonTests.cpp.o"
