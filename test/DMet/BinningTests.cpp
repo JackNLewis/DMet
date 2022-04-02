@@ -124,6 +124,7 @@ TEST(Binning, InfiniteVals) {
 // * see how many dimensions it gets up to
 // */
 TEST(Binning, MaxDims) {
+    GTEST_SKIP();
     for(int z=0;z<11;z++){
         double lower_bound = 0;
         double upper_bound = 10000;

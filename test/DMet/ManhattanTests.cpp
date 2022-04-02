@@ -13,6 +13,7 @@
 #include <DMet/PointDistances.h>
 #include <iostream>
 #include <chrono>
+#include <math.h>
 
 using std::cout;
 using std::endl;
