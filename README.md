@@ -10,6 +10,10 @@ with infinite values and also arbitary floating point precision. The distances f
 - Jensen Shannon
 
 ## Installation
+DMet is compiled using CMake so you will need to have that install on your system.
+
+        brew install cmake
+        
 DMet requires the library GMP and MPFR for the arbitary floating point precision which need to be installed seperately. You can use homebrew to install
 these easily:
 
@@ -37,7 +41,7 @@ Clone the Github
 ## Running tests from terminal
 Move into the DMet project 
 
-        cd DMet
+        cd jxl1358
         
 Then build the project using CMake and place files in a new build directory
 
