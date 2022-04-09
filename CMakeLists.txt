@@ -24,4 +24,8 @@ set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake")
 
 #Add test subdirectory
 add_subdirectory(test)
-add_subdirectory(docs)
+
+option(BUILD-DOCS "BUILD DOCS" OFF)
+if(BUILD-DOCS)
+    add_subdirectory(docs)
+endif(BUILD-DOCS)
