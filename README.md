@@ -43,15 +43,11 @@ Then build the project using CMake and place files in a new build directory
 
         cmake -S . -B build
 
-To run test files go into build test folder
+To compile and run test files go into build test folder
 
         cd build/test
 
-Then run
-
         make
-        
-Then call the google tests executable 
 
         ./Google_tests_run
    
