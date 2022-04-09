@@ -18,12 +18,6 @@ vector
 ostream
 -
 
-../include/DMet/PointDistances.h
-gmp.h
--
-mpfr.h
--
-
 ../include/DMet/utils.h
 vector
 -
@@ -47,22 +41,6 @@ iostream
 -
 DMet/utils.h
 /Users/jacklewis/Documents/work/year3/DMet/src/DMet/DMet/utils.h
-
-/Users/jacklewis/Documents/work/year3/DMet/src/DMet/PointDistances.cpp
-iostream
--
-cmath
--
-DMet/PointDistances.h
-/Users/jacklewis/Documents/work/year3/DMet/src/DMet/DMet/PointDistances.h
-limits
--
-mpfr.h
--
-gmp.h
--
-vector
--
 
 /Users/jacklewis/Documents/work/year3/DMet/src/DMet/utils.cpp
 vector

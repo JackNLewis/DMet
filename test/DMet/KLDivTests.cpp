@@ -17,7 +17,10 @@ using std::ifstream;
 using std::string;
 
 TEST(KLTests, WorkingPoints) {
-    ifstream data("/Users/jacklewis/Documents/work/year3/DMet/test/scripts/kl_general");
+    namespace fs = std::__fs::filesystem;
+    fs::path p = std::__fs::filesystem::current_path();
+    ifstream data(p.parent_path().parent_path().string() + "/test/scripts/kl_general");
+
     string line,field;
 
     if (!data.is_open()) {

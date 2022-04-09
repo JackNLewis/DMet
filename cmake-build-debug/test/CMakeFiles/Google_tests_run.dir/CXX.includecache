@@ -6,24 +6,38 @@
 
 #IncludeRegexTransform: 
 
-../include/DMet/EqWidthBin.h
+../include/DMet/PointDistances.h
+gmp.h
+-
+mpfr.h
+-
+
+/Users/jacklewis/Documents/work/year3/DMet/test/DMet/MinkowskiStrTests.cpp
+gtest/gtest.h
+/Users/jacklewis/Documents/work/year3/DMet/test/DMet/gtest/gtest.h
 fstream
 -
 vector
 -
-ostream
+mpfr.h
+-
+DMet/PointDistances.h
 -
 
-/Users/jacklewis/Documents/work/year3/DMet/test/DMet/BinningTests.cpp
-gtest/gtest.h
-/Users/jacklewis/Documents/work/year3/DMet/test/DMet/gtest/gtest.h
-DMet/EqWidthBin.h
-/Users/jacklewis/Documents/work/year3/DMet/test/DMet/DMet/EqWidthBin.h
-vector
+/usr/local/include/gmp.h
+iosfwd
 -
-random
+cstdio
 -
-chrono
+stddef.h
+-
+limits.h
+-
+
+/usr/local/include/mpfr.h
+gmp.h
+-
+mini-gmp.h
 -
 
 _deps/googletest-src/googletest/include/gtest/gtest-death-test.h

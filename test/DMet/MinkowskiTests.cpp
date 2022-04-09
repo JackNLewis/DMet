@@ -16,7 +16,10 @@ using DMet::PointDistances::getMinkowski;
 
 
 TEST(MinkowskiTests, WorkingInRange) {
-    std::ifstream data("/Users/jacklewis/Documents/work/year3/DMet/test/scripts/minkowskiTests.csv");
+    namespace fs = std::__fs::filesystem;
+    fs::path p = std::__fs::filesystem::current_path();
+    std::ifstream data(p.parent_path().parent_path().string() + "/test/scripts/minkowskiTests.csv");
+
     std::string line,field;
 
     if (!data.is_open()) {
@@ -142,7 +145,10 @@ TEST(MinkowskiTests, NegInfintePval) {
 }
 
 TEST(MinkowskiTests, VariableLength){
-    std::ifstream data("/Users/jacklewis/Documents/work/year3/DMet/test/scripts/mink_var_length");
+    namespace fs = std::__fs::filesystem;
+    fs::path p = std::__fs::filesystem::current_path();
+    std::ifstream data(p.parent_path().parent_path().string() + "/test/scripts/mink_var_length");
+
     std::string line,field;
 
     if (!data.is_open()) {
@@ -178,16 +184,4 @@ TEST(MinkowskiTests, VariableLength){
     }
     mpfr_clear(res);
 }
-
-
-//TEST(MinkowskiTests, Oveflow) {
-//    double maxVal = std::numeric_limits<double>::max();
-//    double arr1[] = {maxVal, maxVal, maxVal};
-//    double arr2[] = {1.0f,0.0f,0.0f};
-//    int size1 = sizeof(arr1) / sizeof(arr1[0]);
-//    int size2 = sizeof(arr2) / sizeof(arr2[0]);
-//    EXPECT_FLOAT_EQ(HUGE_VAL,DMet::PointDistances::getMinkowski(arr1,arr2,size1,size2,2));
-//
-//}
-//
 

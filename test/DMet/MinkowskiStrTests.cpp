@@ -20,7 +20,10 @@ using DMet::PointDistances::getMinkowski;
 
 
 TEST(MinkowskiStrTests, WorkingRange) {
-    std::ifstream data("/Users/jacklewis/Documents/work/year3/DMet/test/scripts/minkowskiTests.csv");
+    namespace fs = std::__fs::filesystem;
+    fs::path p = std::__fs::filesystem::current_path();
+    std::ifstream data(p.parent_path().parent_path().string() + "/test/scripts/minkowskiTests.csv");
+
     std::string line,field;
 
     if (!data.is_open()) {
@@ -146,7 +149,9 @@ TEST(MinkowskiStrTests, NegInfintePval) {
 }
 
 TEST(MinkowskiStrTests, VariableLength){
-    std::ifstream data("/Users/jacklewis/Documents/work/year3/DMet/test/scripts/mink_var_length");
+    namespace fs = std::__fs::filesystem;
+    fs::path p = std::__fs::filesystem::current_path();
+    std::ifstream data(p.parent_path().parent_path().string() + "/test/scripts/mink_var_length");
     std::string line,field;
 
     if (!data.is_open()) {

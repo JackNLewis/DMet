@@ -31,7 +31,10 @@ using namespace std::chrono;
  * General tests for manhattan distance. Should all compute a value
  */
 TEST(ManhattanStrTests, General) {
-    ifstream data("/Users/jacklewis/Documents/work/year3/DMet/test/scripts/man_general");
+    namespace fs = std::__fs::filesystem;
+    fs::path p = std::__fs::filesystem::current_path();
+    ifstream data(p.parent_path().parent_path().string() + "/test/scripts/man_general");
+
     string line,field;
 
     if (!data.is_open()) {
@@ -77,7 +80,10 @@ TEST(ManhattanStrTests, General) {
  * Test to library produces consistent results with the same points are input
  */
 TEST(ManhattanStrTests, SamePoints){
-    ifstream data("/Users/jacklewis/Documents/work/year3/DMet/test/scripts/same_points");
+    namespace fs = std::__fs::filesystem;
+    fs::path p = std::__fs::filesystem::current_path();
+    ifstream data(p.parent_path().parent_path().string() + "/test/scripts/same_points");
+
     string line,field;
 
     if (!data.is_open()) {

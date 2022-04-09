@@ -9,6 +9,7 @@
 #include <DMet/PointDistances.h>
 #include <iostream>
 #include <chrono>
+#include <filesystem>
 
 using std::cout;
 using std::endl;
@@ -19,7 +20,9 @@ using std::string;
 using namespace std::chrono;
 
 TEST(EuclideanTests, General) {
-    ifstream data("/Users/jacklewis/Documents/work/year3/DMet/test/scripts/eucl_general");
+    namespace fs = std::__fs::filesystem;
+    fs::path p = std::__fs::filesystem::current_path();
+    ifstream data(p.parent_path().parent_path().string() + "/test/scripts/eucl_general");
     string line,field;
 
     if (!data.is_open()) {
@@ -65,7 +68,10 @@ TEST(EuclideanTests, General) {
  * Test to library produces consistent results with the same points are input
  */
 TEST(EuclideanTests, SamePoints){
-    ifstream data("/Users/jacklewis/Documents/work/year3/DMet/test/scripts/same_points");
+    namespace fs = std::__fs::filesystem;
+    fs::path p = std::__fs::filesystem::current_path();
+    ifstream data(p.parent_path().parent_path().string() + "/test/scripts/same_points");
+
     string line,field;
 
     if (!data.is_open()) {
@@ -146,7 +152,7 @@ TEST(EuclideanTests, SingleInfinite){
 
 
     vector<double> v3 {2.0,1.0,1.0};
-    vector<double> v4 {inf,1.0,3.0};
+    vector<double> v4 {3.0,inf,3.0};
     mpfr_t res2;
     mpfr_init(res2);
     getEuclidean(res2, v3, v4);

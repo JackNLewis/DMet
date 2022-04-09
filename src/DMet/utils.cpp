@@ -29,18 +29,6 @@ namespace DMet{ namespace Utils{
     }
 
 
-    bool containsZero(std::vector<double> &v){
-        for(double i : v){
-//            cout << i <<endl;
-            if(i == 0){
-                return true;
-            }
-        }
-        return false;
-    }
-
-
-
 
         vector<vector<vector<double>>> cartesian(vector<vector<vector<double>>>& vec1, vector<vector<double>>& vec2){
             //no dimesnions yet
