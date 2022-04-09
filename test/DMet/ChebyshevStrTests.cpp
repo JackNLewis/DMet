@@ -206,7 +206,7 @@ TEST(ChebyshevStrTests, Underflow){
     mpfr_set_str(ans,ans_string.c_str(),10,GMP_RNDN);
     getChebyshev(res, v1, v2);
 
-    mpfr_printf("Result: %.5Re\n",res);
+//    mpfr_printf("Result: %.5Re\n",res);
     EXPECT_TRUE(mpfr_cmp(res,ans));
     mpfr_clears(res,ans,NULL);
 }
@@ -221,7 +221,7 @@ TEST(ChebyshevStrTests, Overflow){
     mpfr_set_str(ans,ans_string.c_str(),10,GMP_RNDN);
     getChebyshev(res, v1, v2);
 
-    mpfr_printf("Result: %.5Re\n",res);
+//    mpfr_printf("Result: %.5Re\n",res);
     EXPECT_TRUE(mpfr_cmp(res,ans)==0);
     mpfr_clears(res,ans,NULL);
 }

@@ -153,7 +153,6 @@ TEST(EuclideanStrTests, InvalidString){
  */
 TEST(EuclideanStrTests, MachinePrecision){
     double eps = std::numeric_limits<double>::epsilon();
-    cout << eps << endl;
     vector<string> v1 {"0","0","0"};
     vector<string> v2 {"2.22045e-16","0","0"};
     //problem doing normal float addition first
@@ -163,7 +162,6 @@ TEST(EuclideanStrTests, MachinePrecision){
     mpfr_inits(res,ans,NULL);
     mpfr_set_str(ans,"2.22045e-16",10,GMP_RNDN);
     getEuclidean(res, v1, v2);
-//    mpfr_printf("Res %.5Re\n",res);
     EXPECT_EQ(mpfr_cmp(res,ans),0);
     mpfr_clear(res);
 }

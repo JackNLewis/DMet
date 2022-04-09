@@ -108,7 +108,6 @@ TEST(Binning, InfiniteVals) {
     bin.setRanges(vect);
     bin.generateBins(3);
     bin.assignBins(vect);
-    bin.printBins(bin);
     vector<double> pdf_before (bin.getPDF());
     vector<double> t{-std::numeric_limits<double>::infinity(),4};// pdf should increase in bin {-inf-3,2-4}
     bin.assignPoint(t);

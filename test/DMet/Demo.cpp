@@ -36,7 +36,7 @@ TEST(Demo, Overflow) {
     mpfr_t res;
     mpfr_inits(res, NULL);
     getEuclidean(res, v1, v2);
-    mpfr_printf("Overflow Result %.5Re\n", res); //result "2.0e308"
+//    mpfr_printf("Overflow Result %.5Re\n", res); //result "2.0e308"
 }
 
 
@@ -64,6 +64,6 @@ TEST(Demo, Binning){
     bin.setRanges(vect);
     bin.generateBins(3);
     bin.assignBins(vect);
-    bin.printBins(bin);
+//    bin.printBins(bin);
     bin.getPDF();
 }
