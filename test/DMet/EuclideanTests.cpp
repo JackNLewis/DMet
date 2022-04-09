@@ -195,8 +195,8 @@ TEST(EuclideanTests, Overflow){
     mpfr_set_str(ans,ans_string.c_str(),10,GMP_RNDN);
     getEuclidean(res, v1, v2);
 
-    mpfr_printf("Ans: %.64Re\n",ans);
-    mpfr_printf("Result: %.64Re\n",res);
+//    mpfr_printf("Ans: %.64Re\n",ans);
+//    mpfr_printf("Result: %.64Re\n",res);
     EXPECT_TRUE(mpfr_cmp(res,ans) == 0);
     mpfr_clears(res,ans,NULL);
 }

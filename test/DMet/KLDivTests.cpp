@@ -96,8 +96,6 @@ TEST(KLTests, ZeroDiff){
     DMet::Distrib::KLDiv(res,v3,v4);
     double res2 = mpfr_get_d(res,GMP_RNDN);
 
-    cout << "res 1: " << res1 << endl;
-    cout << "res 2: " << res2 << endl;
     EXPECT_FLOAT_EQ(res1,res2);
     EXPECT_FLOAT_EQ(res1,0.3680642071684971);
     mpfr_clear(res);
@@ -205,6 +203,6 @@ TEST(KLTests, Binning){
     mpfr_t res;
     mpfr_init(res);
     DMet::Distrib::KLDiv(res,v1,v2,3);
-    mpfr_printf("Result: %.5Re\n",res);
+//    mpfr_printf("Result: %.5Re\n",res);
     mpfr_clear(res);
 }

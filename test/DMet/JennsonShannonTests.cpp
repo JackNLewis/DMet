@@ -139,8 +139,6 @@ TEST(JSTests, ZeroDiff){
     DMet::Distrib::JensenShannon(res,v3,v4);
     double res2 = mpfr_get_d(res,GMP_RNDN);
 
-    cout << "res 1: " << res1 << endl;
-    cout << "res 2: " << res2 << endl;
     EXPECT_FLOAT_EQ(res1,res2);
     EXPECT_FLOAT_EQ(res1,0.10174922507919676);
 

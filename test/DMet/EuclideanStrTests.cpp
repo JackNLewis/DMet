@@ -163,7 +163,7 @@ TEST(EuclideanStrTests, MachinePrecision){
     mpfr_inits(res,ans,NULL);
     mpfr_set_str(ans,"2.22045e-16",10,GMP_RNDN);
     getEuclidean(res, v1, v2);
-    mpfr_printf("Res %.5Re\n",res);
+//    mpfr_printf("Res %.5Re\n",res);
     EXPECT_EQ(mpfr_cmp(res,ans),0);
     mpfr_clear(res);
 }
@@ -228,8 +228,8 @@ TEST(EuclideanStrTests, Underflow){
     mpfr_set_str(ans,ans_string.c_str(),10,GMP_RNDN);
     getEuclidean(res, v1, v2);
 
-    mpfr_printf("ans: %.64Re\n",ans);
-    mpfr_printf("Result: %.64Re\n",res);
+//    mpfr_printf("ans: %.64Re\n",ans);
+//    mpfr_printf("Result: %.64Re\n",res);
     EXPECT_EQ(mpfr_cmp(res,ans),0);
     mpfr_clears(res,ans,NULL);
 }
@@ -246,7 +246,7 @@ TEST(EuclideanStrTests, Overflow){
     mpfr_set_str(ans,ans_string.c_str(),10,GMP_RNDN);
     getEuclidean(res, v1, v2);
 
-    mpfr_printf("Result: %.5Re\n",res);
+//    mpfr_printf("Result: %.5Re\n",res);
     EXPECT_TRUE(mpfr_cmp(res,ans)==0);
     mpfr_clears(res,ans,NULL);
 }

@@ -198,7 +198,6 @@ TEST(MinkowskiStrTests, Oveflow) {
     mpfr_set_str(ans,ans_string.c_str(),10,GMP_RNDN);
     getMinkowski(res, v1, v2,2);
 
-    mpfr_printf("Result: %.5Re\n",res);
     EXPECT_TRUE(mpfr_cmp(res,ans)==0);
     mpfr_clears(res,ans,NULL);
 
@@ -214,8 +213,8 @@ TEST(MinkowskiStrTests, Underflow) {
     mpfr_set_str(ans,ans_string.c_str(),10,GMP_RNDN);
     getMinkowski(res, v1, v2,2);
 
-    mpfr_printf("ans: %.64Re\n",ans);
-    mpfr_printf("Result: %.64Re\n",res);
+//    mpfr_printf("ans: %.64Re\n",ans);
+//    mpfr_printf("Result: %.64Re\n",res);
     EXPECT_EQ(mpfr_cmp(res,ans),0);
     mpfr_clears(res,ans,NULL);
 }

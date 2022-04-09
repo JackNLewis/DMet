@@ -20,12 +20,10 @@ namespace DMet { namespace Distrib{
      */
     void KLDiv(mpfr_t &res, vector<double> &v1, vector<double> &v2, bool pdfCheck){
         if(v1.size() != v2.size()){
-            cout << "Input vectors are incompattable sizes" << endl;
             throw std::invalid_argument("Input vector sizes are incompatible");
         }
         if(!DMet::Utils::isPDF(v1) || !DMet::Utils::isPDF(v2)){
             if(pdfCheck){
-                cout << "Input arrays not a PDF" << endl;
                 throw std::invalid_argument("Input array is not a pdf");
             }
         }
@@ -40,7 +38,6 @@ namespace DMet { namespace Distrib{
                 continue;
             }
             else if(v1[i] >0 && v2[i] == 0){
-                cout<< "set to inf" <<endl;
                 mpfr_set_d(res,std::numeric_limits<double>::infinity(),GMP_RNDN);
                 return;
             }
@@ -72,27 +69,25 @@ namespace DMet { namespace Distrib{
         bin.generateBins(arity);
         bin.assignBins(v1);
         vector<double> pdf1 = bin.getPDF();
-        for(double d: pdf1){
-            cout << d << endl;
-        }
-        cout<<std::endl;
+//        for(double d: pdf1){
+//            cout << d << endl;
+//        }
+//        cout<<std::endl;
         bin.clearBins();
         bin.assignBins(v2);
         vector<double> pdf2 = bin.getPDF();
-        for(double d: pdf2){
-            cout << d << endl;
-        }
+//        for(double d: pdf2){
+//            cout << d << endl;
+//        }
         KLDiv(res,pdf1,pdf2,true);
-        mpfr_printf("Result: %.5Re\n",res);
+//        mpfr_printf("Result: %.5Re\n",res);
     }
 
     void JensenShannon(mpfr_t &res, vector<double> &v1, vector<double> &v2){
         if(v1.size() != v2.size()){
-            cout << "Input vectors are incompattable sizes" << endl;
             throw std::invalid_argument("Input vector sizes are incompatible");
         }
         if(!DMet::Utils::isPDF(v1) || !DMet::Utils::isPDF(v2)){
-            cout << "Input arrays not a PDF" << endl;
             throw std::invalid_argument("Input array is not a pdf");
         }
 
@@ -126,16 +121,6 @@ namespace DMet { namespace Distrib{
         bin.clearBins();
         bin.assignBins(v2);
         vector<double> pdf2 (bin.getPDF());
-        cout << "[" << std::flush;
-        for(double d: pdf1){
-            cout << d << "," << std::flush;
-        }
-        cout << "]" << endl;
-        cout << "[" << std::flush;
-        for(double d: pdf2){
-            cout << d << "," << std::flush;
-        }
-        cout << "]" << endl;
         JensenShannon(res,pdf1,pdf2);
     }
 }}
