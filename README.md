@@ -29,3 +29,25 @@ https://gmplib.org/#DOWNLOAD
 https://www.mpfr.org/mpfr-current/#download
 
 and follow the instuctions to install from there.
+
+Clone the Github
+
+        git clone https://git-teaching.cs.bham.ac.uk/mod-ug-proj-2021/jxl1358.git
+        
+## Running tests from terminal
+Move into the DMet project 
+
+        cd DMet
+        
+Then build the project using CMake and place files in a new build directory
+
+        cmake -S . -B build
+
+To compile and run test files go into build test folder
+
+        cd build/test
+
+        make
+
+        ./Google_tests_run
+   
