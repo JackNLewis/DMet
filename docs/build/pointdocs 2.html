@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Point Distances &mdash; DMet  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Distribution Distances" href="distribdocs.html" />
+    <link rel="prev" title="Welcome to DMet’s documentation!" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> DMet
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Point Distances</a></li>
+<li class="toctree-l1"><a class="reference internal" href="distribdocs.html">Distribution Distances</a></li>
+<li class="toctree-l1"><a class="reference internal" href="binningdocs.html">Binning</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">DMet</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Point Distances</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/pointdocs.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="point-distances">
+<h1>Point Distances<a class="headerlink" href="#point-distances" title="Permalink to this headline"></a></h1>
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N4DMet14PointDistancesE">
+<span id="_CPPv3N4DMet14PointDistancesE"></span><span id="_CPPv2N4DMet14PointDistancesE"></span><span id="DMet::PointDistances"></span><span class="target" id="namespace_d_met_1_1_point_distances"></span><span class="k"><span class="pre">namespace</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">DMet</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">PointDistances</span></span></span><a class="headerlink" href="#_CPPv4N4DMet14PointDistancesE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>namespace for functions to compute point distances </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-functions">Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4DMet14PointDistances12getMinkowskiER6mpfr_tR6vectorIdER6vectorIdEd">
+<span id="_CPPv3N4DMet14PointDistances12getMinkowskiER6mpfr_tR6vectorIdER6vectorIdEd"></span><span id="_CPPv2N4DMet14PointDistances12getMinkowskiER6mpfr_tR6vectorIdER6vectorIdEd"></span><span id="DMet::PointDistances::getMinkowski__mpfr_tR.vector:double:R.vector:double:R.double"></span><span class="target" id="namespace_d_met_1_1_point_distances_1a57dc766ab02da35a2fca9bedabf044aa"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getMinkowski</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">mpfr_t</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">res</span></span>, <span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">vector1</span></span>, <span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">vector2</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">pvalue</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4DMet14PointDistances12getMinkowskiER6mpfr_tR6vectorIdER6vectorIdEd" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Function that computes the distance between vector 1 and vector 2 Uses Minkowski distance Uses precision 200 (∑|Xi−Yi|^p)^1/p</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>vector1</strong> – </p></li>
+<li><p><strong>vector2</strong> – </p></li>
+<li><p><strong>size1</strong> – size of vector1 </p></li>
+<li><p><strong>size2</strong> – size of vector2 </p></li>
+<li><p><strong>pvalue</strong> – pvalue </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>floating point result </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4DMet14PointDistances16getMinkowskiInfPER6mpfr_tR6vectorIdER6vectorIdEb">
+<span id="_CPPv3N4DMet14PointDistances16getMinkowskiInfPER6mpfr_tR6vectorIdER6vectorIdEb"></span><span id="_CPPv2N4DMet14PointDistances16getMinkowskiInfPER6mpfr_tR6vectorIdER6vectorIdEb"></span><span id="DMet::PointDistances::getMinkowskiInfP__mpfr_tR.vector:double:R.vector:double:R.b"></span><span class="target" id="namespace_d_met_1_1_point_distances_1a6b1e7f1adada1d40f5119282e7c846e1"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getMinkowskiInfP</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">mpfr_t</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">res</span></span>, <span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">vector1</span></span>, <span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">vector2</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">pos</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4DMet14PointDistances16getMinkowskiInfPER6mpfr_tR6vectorIdER6vectorIdEb" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Calculates minkowski distance when the p value is either +inf or -inf. This is equivalent to finding the largest distance when p is +inf or finding the smallest distance when p is -inf.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>res</strong> – </p></li>
+<li><p><strong>vector1</strong> – </p></li>
+<li><p><strong>vector2</strong> – </p></li>
+<li><p><strong>pos</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4DMet14PointDistances12getManhattanER6mpfr_tR6vectorIdER6vectorIdE">
+<span id="_CPPv3N4DMet14PointDistances12getManhattanER6mpfr_tR6vectorIdER6vectorIdE"></span><span id="_CPPv2N4DMet14PointDistances12getManhattanER6mpfr_tR6vectorIdER6vectorIdE"></span><span id="DMet::PointDistances::getManhattan__mpfr_tR.vector:double:R.vector:double:R"></span><span class="target" id="namespace_d_met_1_1_point_distances_1ad2eefad0907dbb734ff7ca556df352ac"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getManhattan</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">mpfr_t</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">res</span></span>, <span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">vector1</span></span>, <span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">vector2</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4DMet14PointDistances12getManhattanER6mpfr_tR6vectorIdER6vectorIdE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Function that computes the Manhattan distance. Uses the implementation of Minkowski distance with a p value set as 1 </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>vector1</strong> – </p></li>
+<li><p><strong>vector2</strong> – </p></li>
+<li><p><strong>size1</strong> – size of vector1 </p></li>
+<li><p><strong>size2</strong> – size of vector2 </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>floating point result </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4DMet14PointDistances12getEuclideanER6mpfr_tR6vectorIdER6vectorIdE">
+<span id="_CPPv3N4DMet14PointDistances12getEuclideanER6mpfr_tR6vectorIdER6vectorIdE"></span><span id="_CPPv2N4DMet14PointDistances12getEuclideanER6mpfr_tR6vectorIdER6vectorIdE"></span><span id="DMet::PointDistances::getEuclidean__mpfr_tR.vector:double:R.vector:double:R"></span><span class="target" id="namespace_d_met_1_1_point_distances_1a941ec37666c3e9c6164498e8a0c9ab1d"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getEuclidean</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">mpfr_t</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">res</span></span>, <span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">vector1</span></span>, <span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">vector2</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4DMet14PointDistances12getEuclideanER6mpfr_tR6vectorIdER6vectorIdE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Function that computes the Euclidean distance. Uses the implementation of Minkowski distance with a p value set as 2</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>vector1</strong> – input vector 1 </p></li>
+<li><p><strong>vector2</strong> – input vector 2 </p></li>
+<li><p><strong>precision</strong> – the precision of the result </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>floating point result </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4DMet14PointDistances12getChebyshevER6mpfr_tR6vectorIdER6vectorIdE">
+<span id="_CPPv3N4DMet14PointDistances12getChebyshevER6mpfr_tR6vectorIdER6vectorIdE"></span><span id="_CPPv2N4DMet14PointDistances12getChebyshevER6mpfr_tR6vectorIdER6vectorIdE"></span><span id="DMet::PointDistances::getChebyshev__mpfr_tR.vector:double:R.vector:double:R"></span><span class="target" id="namespace_d_met_1_1_point_distances_1aa56b86ccff59a4b963feb50373605dc2"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getChebyshev</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">mpfr_t</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">res</span></span>, <span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">vector1</span></span>, <span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">vector2</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4DMet14PointDistances12getChebyshevER6mpfr_tR6vectorIdER6vectorIdE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Function that computes the Chebeshev distance. Uses a different implementation than minkowski</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>vector1</strong> – </p></li>
+<li><p><strong>vector2</strong> – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>floating point result </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4DMet14PointDistances12getMinkowskiER6mpfr_tR6vectorI6stringER6vectorI6stringEd">
+<span id="_CPPv3N4DMet14PointDistances12getMinkowskiER6mpfr_tR6vectorI6stringER6vectorI6stringEd"></span><span id="_CPPv2N4DMet14PointDistances12getMinkowskiER6mpfr_tR6vectorI6stringER6vectorI6stringEd"></span><span id="DMet::PointDistances::getMinkowski__mpfr_tR.vector:string:R.vector:string:R.double"></span><span class="target" id="namespace_d_met_1_1_point_distances_1aad2f7d57b852ba3101e7e7fe617405da"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getMinkowski</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">mpfr_t</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">res</span></span>, <span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">vector1</span></span>, <span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">vector2</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">pvalue</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4DMet14PointDistances12getMinkowskiER6mpfr_tR6vectorI6stringER6vectorI6stringEd" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Retrieves Minkowski distance. Accepts vector of strings as inputs if higher precision than double is needed.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>res</strong> – </p></li>
+<li><p><strong>vector1</strong> – </p></li>
+<li><p><strong>vector2</strong> – </p></li>
+<li><p><strong>pvalue</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4DMet14PointDistances16getMinkowskiInfPER6mpfr_tR6vectorI6stringER6vectorI6stringEb">
+<span id="_CPPv3N4DMet14PointDistances16getMinkowskiInfPER6mpfr_tR6vectorI6stringER6vectorI6stringEb"></span><span id="_CPPv2N4DMet14PointDistances16getMinkowskiInfPER6mpfr_tR6vectorI6stringER6vectorI6stringEb"></span><span id="DMet::PointDistances::getMinkowskiInfP__mpfr_tR.vector:string:R.vector:string:R.b"></span><span class="target" id="namespace_d_met_1_1_point_distances_1a975ed9ad59552100fe3943d64de8cb23"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getMinkowskiInfP</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">mpfr_t</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">res</span></span>, <span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">vector1</span></span>, <span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">vector2</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">pos</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4DMet14PointDistances16getMinkowskiInfPER6mpfr_tR6vectorI6stringER6vectorI6stringEb" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4DMet14PointDistances12getManhattanER6mpfr_tR6vectorI6stringER6vectorI6stringE">
+<span id="_CPPv3N4DMet14PointDistances12getManhattanER6mpfr_tR6vectorI6stringER6vectorI6stringE"></span><span id="_CPPv2N4DMet14PointDistances12getManhattanER6mpfr_tR6vectorI6stringER6vectorI6stringE"></span><span id="DMet::PointDistances::getManhattan__mpfr_tR.vector:string:R.vector:string:R"></span><span class="target" id="namespace_d_met_1_1_point_distances_1aee7e6b4dd1ce836faa08ee273f6f5919"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getManhattan</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">mpfr_t</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">res</span></span>, <span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">vector1</span></span>, <span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">vector2</span></span><span class="sig-paren">)</span><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4DMet14PointDistances12getEuclideanER6mpfr_tR6vectorI6stringER6vectorI6stringE">
+<span id="_CPPv3N4DMet14PointDistances12getEuclideanER6mpfr_tR6vectorI6stringER6vectorI6stringE"></span><span id="_CPPv2N4DMet14PointDistances12getEuclideanER6mpfr_tR6vectorI6stringER6vectorI6stringE"></span><span id="DMet::PointDistances::getEuclidean__mpfr_tR.vector:string:R.vector:string:R"></span><span class="target" id="namespace_d_met_1_1_point_distances_1a3d754929133bc577ac5f283250012238"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getEuclidean</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">mpfr_t</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">res</span></span>, <span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">vector1</span></span>, <span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">vector2</span></span><span class="sig-paren">)</span><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4DMet14PointDistances12getChebyshevER6mpfr_tR6vectorI6stringER6vectorI6stringE">
+<span id="_CPPv3N4DMet14PointDistances12getChebyshevER6mpfr_tR6vectorI6stringER6vectorI6stringE"></span><span id="_CPPv2N4DMet14PointDistances12getChebyshevER6mpfr_tR6vectorI6stringER6vectorI6stringE"></span><span id="DMet::PointDistances::getChebyshev__mpfr_tR.vector:string:R.vector:string:R"></span><span class="target" id="namespace_d_met_1_1_point_distances_1a4cdc45d2b39f9205b374b53526c4c48f"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getChebyshev</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">mpfr_t</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">res</span></span>, <span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">vector1</span></span>, <span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">vector2</span></span><span class="sig-paren">)</span><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Welcome to DMet’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="distribdocs.html" class="btn btn-neutral float-right" title="Distribution Distances" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Jack Lewis.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

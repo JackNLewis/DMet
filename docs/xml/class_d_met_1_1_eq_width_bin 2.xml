@@ -1,0 +1,208 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="class_d_met_1_1_eq_width_bin" kind="class" language="C++" prot="public">
+    <compoundname>DMet::EqWidthBin</compoundname>
+    <includes refid="_eq_width_bin_8h" local="no">EqWidthBin.h</includes>
+    <innerclass refid="struct_d_met_1_1_eq_width_bin_1_1_bin" prot="public">DMet::EqWidthBin::Bin</innerclass>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_d_met_1_1_eq_width_bin_1aee6c178d022a087b6ff080bc5a3bcec7" prot="public" static="no" mutable="no">
+        <type>vector&lt; vector&lt; double &gt; &gt;</type>
+        <definition>vector&lt;vector&lt;double&gt; &gt; DMet::EqWidthBin::ranges</definition>
+        <argsstring></argsstring>
+        <name>ranges</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Stores the ranges of each dimension </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/EqWidthBin.h" line="33" column="16" bodyfile="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/EqWidthBin.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_met_1_1_eq_width_bin_1a1704cfef7cffaff6356616bdb8593283" prot="public" static="no" mutable="no">
+        <type>vector&lt; <ref refid="struct_d_met_1_1_eq_width_bin_1_1_bin" kindref="compound">Bin</ref> &gt;</type>
+        <definition>vector&lt;Bin&gt; DMet::EqWidthBin::bins</definition>
+        <argsstring></argsstring>
+        <name>bins</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Stores the different vector of bins </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/EqWidthBin.h" line="38" column="16" bodyfile="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/EqWidthBin.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_d_met_1_1_eq_width_bin_1a12ebeed1b30aea531e747fd27ca65c51" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; vector&lt; double &gt; &gt;</type>
+        <definition>vector&lt; vector&lt; double &gt; &gt; DMet::EqWidthBin::setRanges</definition>
+        <argsstring>(vector&lt; vector&lt; double &gt; &gt; &amp;data)</argsstring>
+        <name>setRanges</name>
+        <param>
+          <type>vector&lt; vector&lt; double &gt; &gt; &amp;</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Method to set the ranges for every dimension given data <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/EqWidthBin.h" line="45" column="16" bodyfile="/Users/jacklewis/Documents/work/year3/DMet/src/DMet/EqWidthBin.cpp" bodystart="13" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="class_d_met_1_1_eq_width_bin_1a45600ba094f008cfe20d477626d37147" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DMet::EqWidthBin::generateBins</definition>
+        <argsstring>(int arity)</argsstring>
+        <name>generateBins</name>
+        <param>
+          <type>int</type>
+          <declname>arity</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Generates the bins from the ranges for each dimension then creates the cartesian product of these bins</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>arity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the number of bins per dimension </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/EqWidthBin.h" line="52" column="14" bodyfile="/Users/jacklewis/Documents/work/year3/DMet/src/DMet/EqWidthBin.cpp" bodystart="38" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="class_d_met_1_1_eq_width_bin_1a33124a9c9f1ce41f3e5f539378cb666b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DMet::EqWidthBin::assignBins</definition>
+        <argsstring>(vector&lt; vector&lt; double &gt; &gt; &amp;data)</argsstring>
+        <name>assignBins</name>
+        <param>
+          <type>vector&lt; vector&lt; double &gt; &gt; &amp;</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Assign the values from parameter data to the bins that have been generated. Throws an error if the bins have not been generated.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+assigns data points to correct bins if it falls in the bins range. It falls in the range if the point x is lower bound &lt;= x &lt; upper bound if upper bound = inf then point is in range to make sure points with infinity are assigned lower bound &lt;= x &lt;= upper bound</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/EqWidthBin.h" line="60" column="14" bodyfile="/Users/jacklewis/Documents/work/year3/DMet/src/DMet/EqWidthBin.cpp" bodystart="85" bodyend="89"/>
+      </memberdef>
+      <memberdef kind="function" id="class_d_met_1_1_eq_width_bin_1a5f4b5b24cfc83ca7f86837bac89367b9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DMet::EqWidthBin::assignPoint</definition>
+        <argsstring>(vector&lt; double &gt; &amp;point)</argsstring>
+        <name>assignPoint</name>
+        <param>
+          <type>vector&lt; double &gt; &amp;</type>
+          <declname>point</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Assigns a single point to its correct bin</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>point</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/EqWidthBin.h" line="67" column="14" bodyfile="/Users/jacklewis/Documents/work/year3/DMet/src/DMet/EqWidthBin.cpp" bodystart="91" bodyend="112"/>
+      </memberdef>
+      <memberdef kind="function" id="class_d_met_1_1_eq_width_bin_1aa30b3de1214365b166dc14bf7520d3c6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DMet::EqWidthBin::clearBins</definition>
+        <argsstring>()</argsstring>
+        <name>clearBins</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Clears all of the values in the bins so each bin is empty </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/EqWidthBin.h" line="72" column="14" bodyfile="/Users/jacklewis/Documents/work/year3/DMet/src/DMet/EqWidthBin.cpp" bodystart="124" bodyend="128"/>
+      </memberdef>
+      <memberdef kind="function" id="class_d_met_1_1_eq_width_bin_1a67f63578d2c378887b76ea4a1e09aff8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt; double &gt; DMet::EqWidthBin::getPDF</definition>
+        <argsstring>()</argsstring>
+        <name>getPDF</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the probability density function of the binned values <simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/EqWidthBin.h" line="78" column="16" bodyfile="/Users/jacklewis/Documents/work/year3/DMet/src/DMet/EqWidthBin.cpp" bodystart="130" bodyend="143"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Class for equal width binning </para>
+    </detaileddescription>
+    <location file="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/EqWidthBin.h" line="16" column="5" bodyfile="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/EqWidthBin.h" bodystart="16" bodyend="81"/>
+    <listofallmembers>
+      <member refid="class_d_met_1_1_eq_width_bin_1a33124a9c9f1ce41f3e5f539378cb666b" prot="public" virt="non-virtual"><scope>DMet::EqWidthBin</scope><name>assignBins</name></member>
+      <member refid="class_d_met_1_1_eq_width_bin_1a5f4b5b24cfc83ca7f86837bac89367b9" prot="public" virt="non-virtual"><scope>DMet::EqWidthBin</scope><name>assignPoint</name></member>
+      <member refid="class_d_met_1_1_eq_width_bin_1a1704cfef7cffaff6356616bdb8593283" prot="public" virt="non-virtual"><scope>DMet::EqWidthBin</scope><name>bins</name></member>
+      <member refid="class_d_met_1_1_eq_width_bin_1aa30b3de1214365b166dc14bf7520d3c6" prot="public" virt="non-virtual"><scope>DMet::EqWidthBin</scope><name>clearBins</name></member>
+      <member refid="class_d_met_1_1_eq_width_bin_1a45600ba094f008cfe20d477626d37147" prot="public" virt="non-virtual"><scope>DMet::EqWidthBin</scope><name>generateBins</name></member>
+      <member refid="class_d_met_1_1_eq_width_bin_1a67f63578d2c378887b76ea4a1e09aff8" prot="public" virt="non-virtual"><scope>DMet::EqWidthBin</scope><name>getPDF</name></member>
+      <member refid="class_d_met_1_1_eq_width_bin_1aee6c178d022a087b6ff080bc5a3bcec7" prot="public" virt="non-virtual"><scope>DMet::EqWidthBin</scope><name>ranges</name></member>
+      <member refid="class_d_met_1_1_eq_width_bin_1a12ebeed1b30aea531e747fd27ca65c51" prot="public" virt="non-virtual"><scope>DMet::EqWidthBin</scope><name>setRanges</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

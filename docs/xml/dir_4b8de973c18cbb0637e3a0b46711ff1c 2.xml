@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="dir_4b8de973c18cbb0637e3a0b46711ff1c" kind="dir">
+    <compoundname>/Users/jacklewis/Documents/work/year3/DMet/src/DMet</compoundname>
+    <innerfile refid="_distrib_distances_8cpp">DistribDistances.cpp</innerfile>
+    <innerfile refid="_eq_width_bin_8cpp">EqWidthBin.cpp</innerfile>
+    <innerfile refid="_point_distances_8cpp">PointDistances.cpp</innerfile>
+    <innerfile refid="utils_8cpp">utils.cpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/jacklewis/Documents/work/year3/DMet/src/DMet/"/>
+  </compounddef>
+</doxygen>

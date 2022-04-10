@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="namespace_d_met" kind="namespace" language="C++">
+    <compoundname>DMet</compoundname>
+    <innerclass refid="class_d_met_1_1_eq_width_bin" prot="public">DMet::EqWidthBin</innerclass>
+    <innernamespace refid="namespace_d_met_1_1_distrib">DMet::Distrib</innernamespace>
+    <innernamespace refid="namespace_d_met_1_1_point_distances">DMet::PointDistances</innernamespace>
+    <innernamespace refid="namespace_d_met_1_1_utils">DMet::Utils</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Outer namespace of library </para>
+    </detaileddescription>
+    <location file="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/DistribDistance.h" line="9" column="1"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Welcome to DMet’s documentation! &mdash; DMet  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Point Distances" href="pointdocs.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="#" class="icon icon-home"> DMet
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="pointdocs.html">Point Distances</a></li>
+<li class="toctree-l1"><a class="reference internal" href="distribdocs.html">Distribution Distances</a></li>
+<li class="toctree-l1"><a class="reference internal" href="binningdocs.html">Binning</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">DMet</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="#" class="icon icon-home"></a> &raquo;</li>
+      <li>Welcome to DMet’s documentation!</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="welcome-to-dmet-s-documentation">
+<h1>Welcome to DMet’s documentation!<a class="headerlink" href="#welcome-to-dmet-s-documentation" title="Permalink to this headline"></a></h1>
+<p>DMet’s purpose is to compute various distance metrics such difference between points and distributions.
+The use of arbitrary precision floating point numbers means it can work out distances which would usually result in an overflow or underflow error.
+The library also contains a binning class which enables you to input raw data up to n dimensions and produces the
+probability density function.</p>
+<p>There is a simple code snippet on how to use MPFR below.
+Follow this link to find out more about MPFR: <a class="reference external" href="https://www.mpfr.org/mpfr-current/mpfr.html">https://www.mpfr.org/mpfr-current/mpfr.html</a></p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="c1">//decleare and initialise variables</span>
+<span class="n">mpfr_t</span><span class="w"> </span><span class="n">res</span><span class="p">;</span><span class="w"></span>
+<span class="n">mpfr_init</span><span class="p">(</span><span class="n">res</span><span class="p">);</span><span class="w"></span>
+
+<span class="c1">//use library to comupte distances e.g. euclidean distance</span>
+<span class="n">vector</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">v1</span><span class="w"> </span><span class="p">{</span><span class="mf">3.0</span><span class="p">,</span><span class="mf">1.0</span><span class="p">,</span><span class="mf">1.0</span><span class="p">};</span><span class="w"></span>
+<span class="n">vector</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">v2</span><span class="w"> </span><span class="p">{</span><span class="mf">2.0</span><span class="p">,</span><span class="mf">1.0</span><span class="p">,</span><span class="mf">3.0</span><span class="p">};</span><span class="w"></span>
+<span class="n">DMet</span><span class="o">::</span><span class="n">getEuclidean</span><span class="p">(</span><span class="n">res</span><span class="p">,</span><span class="n">v1</span><span class="p">,</span><span class="n">v2</span><span class="p">);</span><span class="w"></span>
+
+<span class="c1">//Can print value using</span>
+
+<span class="c1">//if it fits in a double can convert it</span>
+
+<span class="c1">//clear variables</span>
+<span class="n">mpfr_clear</span><span class="p">(</span><span class="n">res</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p>View the full code on <a class="reference external" href="https://github.com/JackNLewis/DMet">Github</a>.</p>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="pointdocs.html">Point Distances</a></li>
+<li class="toctree-l1"><a class="reference internal" href="distribdocs.html">Distribution Distances</a></li>
+<li class="toctree-l1"><a class="reference internal" href="binningdocs.html">Binning</a></li>
+</ul>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="pointdocs.html" class="btn btn-neutral float-right" title="Point Distances" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Jack Lewis.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

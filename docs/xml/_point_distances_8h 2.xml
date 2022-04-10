@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="_point_distances_8h" kind="file" language="C++">
+    <compoundname>PointDistances.h</compoundname>
+    <includes local="no">gmp.h</includes>
+    <includes local="no">mpfr.h</includes>
+    <includedby refid="_point_distances_8cpp" local="yes">/Users/jacklewis/Documents/work/year3/DMet/src/DMet/PointDistances.cpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>/Users/jacklewis/Documents/work/year3/DMet/include/DMet/PointDistances.h</label>
+        <link refid="_point_distances_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>gmp.h</label>
+      </node>
+      <node id="3">
+        <label>mpfr.h</label>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespace_d_met">DMet</innernamespace>
+    <innernamespace refid="namespace_d_met_1_1_point_distances">DMet::PointDistances</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Created<sp/>by<sp/>jack<sp/>lewis<sp/>on<sp/>03/11/2021.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;gmp.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;mpfr.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>std::vector;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>std::string;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_d_met" kindref="compound">DMet</ref>{</highlight></codeline>
+<codeline lineno="18" refid="namespace_d_met_1_1_point_distances" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">PointDistances{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespace_d_met_1_1_point_distances_1a57dc766ab02da35a2fca9bedabf044aa" kindref="member">getMinkowski</ref>(mpfr_t<sp/>&amp;res,<sp/>vector&lt;double&gt;<sp/>&amp;vector1,<sp/>vector&lt;double&gt;<sp/>&amp;vector2,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>pvalue);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespace_d_met_1_1_point_distances_1a6b1e7f1adada1d40f5119282e7c846e1" kindref="member">getMinkowskiInfP</ref>(mpfr_t<sp/>&amp;res,<sp/>vector&lt;double&gt;<sp/>&amp;vector1,<sp/>vector&lt;double&gt;<sp/>&amp;vector2,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>pos);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespace_d_met_1_1_point_distances_1ad2eefad0907dbb734ff7ca556df352ac" kindref="member">getManhattan</ref>(mpfr_t<sp/>&amp;res,<sp/>vector&lt;double&gt;<sp/>&amp;vector1,<sp/>vector&lt;double&gt;<sp/>&amp;vector2);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63" refid="namespace_d_met_1_1_point_distances_1a941ec37666c3e9c6164498e8a0c9ab1d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespace_d_met_1_1_point_distances_1a941ec37666c3e9c6164498e8a0c9ab1d" kindref="member">getEuclidean</ref>(mpfr_t<sp/>&amp;res,<sp/>vector&lt;double&gt;<sp/>&amp;vector1,<sp/>vector&lt;double&gt;<sp/>&amp;vector2);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespace_d_met_1_1_point_distances_1aa56b86ccff59a4b963feb50373605dc2" kindref="member">getChebyshev</ref>(mpfr_t<sp/>&amp;res,<sp/>vector&lt;double&gt;<sp/>&amp;vector1,<sp/>vector&lt;double&gt;<sp/>&amp;vector2);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//distances<sp/>accepting<sp/>strings<sp/>for<sp/>higher<sp/>precision</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>/***</highlight></codeline>
+<codeline lineno="76"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>Function<sp/>that<sp/>computes<sp/>the<sp/>distance<sp/>between<sp/>two<sp/>points<sp/>represented<sp/>by<sp/>their<sp/>cartesian<sp/>coordinated</highlight></codeline>
+<codeline lineno="77"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>Uses<sp/>Minkowski<sp/>distance</highlight></codeline>
+<codeline lineno="78"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>Uses<sp/>precision<sp/>200</highlight></codeline>
+<codeline lineno="79"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>(∑|Xi−Yi|^p)^1/p</highlight></codeline>
+<codeline lineno="80"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="81"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>@param<sp/>res<sp/>mpfr<sp/>variable<sp/>to<sp/>store<sp/>result</highlight></codeline>
+<codeline lineno="82"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>@param<sp/>vector1<sp/>point<sp/>1</highlight></codeline>
+<codeline lineno="83"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>@param<sp/>vector2<sp/>point<sp/>2</highlight></codeline>
+<codeline lineno="84"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>@param<sp/>pvalue<sp/>pvalue</highlight></codeline>
+<codeline lineno="85"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespace_d_met_1_1_point_distances_1a57dc766ab02da35a2fca9bedabf044aa" kindref="member">getMinkowski</ref>(mpfr_t<sp/>&amp;res,<sp/>vector&lt;string&gt;<sp/>&amp;vector1,<sp/>vector&lt;string&gt;<sp/>&amp;vector2,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>pvalue);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespace_d_met_1_1_point_distances_1a6b1e7f1adada1d40f5119282e7c846e1" kindref="member">getMinkowskiInfP</ref>(mpfr_t<sp/>&amp;res,<sp/>vector&lt;string&gt;<sp/>&amp;vector1,<sp/>vector&lt;string&gt;<sp/>&amp;vector2,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>pos);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespace_d_met_1_1_point_distances_1ad2eefad0907dbb734ff7ca556df352ac" kindref="member">getManhattan</ref>(mpfr_t<sp/>&amp;res,<sp/>vector&lt;string&gt;<sp/>&amp;vector1,<sp/>vector&lt;string&gt;<sp/>&amp;vector2);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespace_d_met_1_1_point_distances_1a941ec37666c3e9c6164498e8a0c9ab1d" kindref="member">getEuclidean</ref>(mpfr_t<sp/>&amp;res,<sp/>vector&lt;string&gt;<sp/>&amp;vector1,<sp/>vector&lt;string&gt;<sp/>&amp;vector2);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespace_d_met_1_1_point_distances_1aa56b86ccff59a4b963feb50373605dc2" kindref="member">getChebyshev</ref>(mpfr_t<sp/>&amp;res,<sp/>vector&lt;string&gt;<sp/>&amp;vector1,<sp/>vector&lt;string&gt;<sp/>&amp;vector2);</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal">}}</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/PointDistances.h"/>
+  </compounddef>
+</doxygen>
