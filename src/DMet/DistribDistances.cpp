@@ -12,12 +12,6 @@ using std::endl;
 using std::vector;
 namespace DMet { namespace Distrib{
 
-    /*!
-     *
-     * @param x - this is the probability distribution x
-     * @param y  - this is the probability distribution y
-     * @return the KL distance between the two distributions
-     */
     void KLDiv(mpfr_t &res, vector<double> &v1, vector<double> &v2, bool pdfCheck){
         if(v1.size() != v2.size()){
             throw std::invalid_argument("Input vector sizes are incompatible");
@@ -69,18 +63,13 @@ namespace DMet { namespace Distrib{
         bin.generateBins(arity);
         bin.assignBins(v1);
         vector<double> pdf1 = bin.getPDF();
-//        for(double d: pdf1){
-//            cout << d << endl;
-//        }
-//        cout<<std::endl;
+
         bin.clearBins();
         bin.assignBins(v2);
         vector<double> pdf2 = bin.getPDF();
-//        for(double d: pdf2){
-//            cout << d << endl;
-//        }
+
         KLDiv(res,pdf1,pdf2,true);
-//        mpfr_printf("Result: %.5Re\n",res);
+
     }
 
     void JensenShannon(mpfr_t &res, vector<double> &v1, vector<double> &v2){
