@@ -85,8 +85,10 @@ Follow this link to find out more about MPFR: <a class="reference external" href
 <span class="n">DMet</span><span class="o">::</span><span class="n">getEuclidean</span><span class="p">(</span><span class="n">res</span><span class="p">,</span><span class="n">v1</span><span class="p">,</span><span class="n">v2</span><span class="p">);</span><span class="w"></span>
 
 <span class="c1">//Can print value using</span>
+<span class="n">mpfr_printf</span><span class="p">(</span><span class="s">&quot;Result %.5Re</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">mpfr_variable</span><span class="p">);</span><span class="w"></span>
 
 <span class="c1">//if it fits in a double can convert it</span>
+<span class="kt">double</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mpfr_get_d</span><span class="p">(</span><span class="n">res</span><span class="p">,</span><span class="w"> </span><span class="n">GMP_RNDN</span><span class="p">);</span><span class="w"></span>
 
 <span class="c1">//clear variables</span>
 <span class="n">mpfr_clear</span><span class="p">(</span><span class="n">res</span><span class="p">);</span><span class="w"></span>

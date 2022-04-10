@@ -33,38 +33,13 @@
         <location file="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/EqWidthBin.h" line="26" column="20" bodyfile="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/EqWidthBin.h" bodystart="26" bodyend="-1"/>
       </memberdef>
       </sectiondef>
-      <sectiondef kind="friend">
-      <memberdef kind="friend" id="struct_d_met_1_1_eq_width_bin_1_1_bin_1a5d77c71aa104532e0ff910bb2be9320c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>std::ostream &amp;</type>
-        <definition>std::ostream &amp; operator&lt;&lt;</definition>
-        <argsstring>(std::ostream &amp;out, const Bin &amp;point)</argsstring>
-        <name>operator&lt;&lt;</name>
-        <param>
-          <type>std::ostream &amp;</type>
-          <declname>out</declname>
-        </param>
-        <param>
-          <type>const <ref refid="struct_d_met_1_1_eq_width_bin_1_1_bin" kindref="compound">Bin</ref> &amp;</type>
-          <declname>point</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-<para>override operator &lt;&lt; in order to print the bin on screen </para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/EqWidthBin.h" line="29" column="20"/>
-      </memberdef>
-      </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
 <para>Structure for a bin </para>
     </detaileddescription>
-    <location file="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/EqWidthBin.h" line="21" column="9" bodyfile="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/EqWidthBin.h" bodystart="21" bodyend="30"/>
+    <location file="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/EqWidthBin.h" line="21" column="9" bodyfile="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/EqWidthBin.h" bodystart="21" bodyend="28"/>
     <listofallmembers>
-      <member refid="struct_d_met_1_1_eq_width_bin_1_1_bin_1a5d77c71aa104532e0ff910bb2be9320c" prot="public" virt="non-virtual"><scope>DMet::EqWidthBin::Bin</scope><name>operator&lt;&lt;</name></member>
       <member refid="struct_d_met_1_1_eq_width_bin_1_1_bin_1ac776059b3066ede32475282dea99d62c" prot="public" virt="non-virtual"><scope>DMet::EqWidthBin::Bin</scope><name>range</name></member>
       <member refid="struct_d_met_1_1_eq_width_bin_1_1_bin_1a61c6ca4bacb356c0ee9a974805459339" prot="public" virt="non-virtual"><scope>DMet::EqWidthBin::Bin</scope><name>values</name></member>
     </listofallmembers>

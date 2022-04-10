@@ -3,7 +3,6 @@
   <compounddef id="_distrib_distance_8h" kind="file" language="C++">
     <compoundname>DistribDistance.h</compoundname>
     <includes local="no">vector</includes>
-    <includedby refid="_distrib_distances_8cpp" local="yes">/Users/jacklewis/Documents/work/year3/DMet/src/DMet/DistribDistances.cpp</includedby>
     <incdepgraph>
       <node id="1">
         <label>/Users/jacklewis/Documents/work/year3/DMet/include/DMet/DistribDistance.h</label>
@@ -28,19 +27,24 @@
 <codeline lineno="4"><highlight class="normal"></highlight></codeline>
 <codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="7"><highlight class="normal"></highlight></codeline>
-<codeline lineno="8" refid="namespace_d_met" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_d_met" kindref="compound">DMet</ref><sp/>{<sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">Distrib{</highlight></codeline>
-<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>std::vector;</highlight></codeline>
-<codeline lineno="10"><highlight class="normal"></highlight></codeline>
-<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>KLDiv(mpfr_t<sp/>&amp;res,<sp/>vector&lt;double&gt;<sp/>&amp;v1,<sp/>vector&lt;double&gt;<sp/>&amp;v2,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>pdfCheck);</highlight></codeline>
-<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>KLDiv(mpfr_t<sp/>&amp;res,<sp/>vector&lt;double&gt;<sp/>&amp;v1,<sp/>vector&lt;double&gt;<sp/>&amp;v2);</highlight></codeline>
-<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>KLDiv(mpfr_t<sp/>&amp;res,<sp/>vector&lt;vector&lt;double&gt;&gt;<sp/>&amp;v1,<sp/>vector&lt;vector&lt;double&gt;&gt;<sp/>&amp;v2,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>arity);<sp/></highlight><highlight class="comment">//<sp/>allows<sp/>binning</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>std::vector;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9" refid="namespace_d_met" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_d_met" kindref="compound">DMet</ref><sp/>{</highlight></codeline>
+<codeline lineno="13" refid="namespace_d_met_1_1_distrib" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">Distrib{</highlight></codeline>
 <codeline lineno="14"><highlight class="normal"></highlight></codeline>
-<codeline lineno="15"><highlight class="normal"></highlight></codeline>
-<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>JensenShannon(mpfr_t<sp/>&amp;res,<sp/>vector&lt;double&gt;<sp/>&amp;vector1,<sp/>vector&lt;double&gt;<sp/>&amp;vector2);</highlight></codeline>
-<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>JensenShannon(mpfr_t<sp/>&amp;res,<sp/>vector&lt;vector&lt;double&gt;&gt;<sp/>&amp;v1,<sp/>vector&lt;vector&lt;double&gt;&gt;<sp/>&amp;v2,</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>arity);</highlight></codeline>
-<codeline lineno="18"><highlight class="normal">}}</highlight></codeline>
-<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="namespace_d_met_1_1_distrib_1a1c41e04848ac4d2677ec15d6bdcefc20" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespace_d_met_1_1_distrib_1a1c41e04848ac4d2677ec15d6bdcefc20" kindref="member">KLDiv</ref>(mpfr_t<sp/>&amp;res,<sp/>vector&lt;double&gt;<sp/>&amp;v1,<sp/>vector&lt;double&gt;<sp/>&amp;v2,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>pdfCheck);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="namespace_d_met_1_1_distrib_1a9558ccb77bd3b13042424f63dc3cf397" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespace_d_met_1_1_distrib_1a1c41e04848ac4d2677ec15d6bdcefc20" kindref="member">KLDiv</ref>(mpfr_t<sp/>&amp;res,<sp/>vector&lt;double&gt;<sp/>&amp;v1,<sp/>vector&lt;double&gt;<sp/>&amp;v2);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52" refid="namespace_d_met_1_1_distrib_1a791838408247fd8660a0fb757c42e9cf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespace_d_met_1_1_distrib_1a1c41e04848ac4d2677ec15d6bdcefc20" kindref="member">KLDiv</ref>(mpfr_t<sp/>&amp;res,<sp/>vector&lt;vector&lt;double&gt;&gt;<sp/>&amp;v1,<sp/>vector&lt;vector&lt;double&gt;&gt;<sp/>&amp;v2,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>arity);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66" refid="namespace_d_met_1_1_distrib_1aced7faf83b692238a942e852ca61fa88" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespace_d_met_1_1_distrib_1aced7faf83b692238a942e852ca61fa88" kindref="member">JensenShannon</ref>(mpfr_t<sp/>&amp;res,<sp/>vector&lt;double&gt;<sp/>&amp;vector1,<sp/>vector&lt;double&gt;<sp/>&amp;vector2);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79" refid="namespace_d_met_1_1_distrib_1a28a6da07a2b13dd32a9811a9e4300fef" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespace_d_met_1_1_distrib_1aced7faf83b692238a942e852ca61fa88" kindref="member">JensenShannon</ref>(mpfr_t<sp/>&amp;res,<sp/>vector&lt;vector&lt;double&gt;&gt;<sp/>&amp;v1,<sp/>vector&lt;vector&lt;double&gt;&gt;<sp/>&amp;v2,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>arity);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal">}}</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/DistribDistance.h"/>
   </compounddef>

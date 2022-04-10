@@ -17,7 +17,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/EqWidthBin.h" line="35" column="16" bodyfile="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/EqWidthBin.h" bodystart="35" bodyend="-1"/>
+        <location file="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/EqWidthBin.h" line="33" column="16" bodyfile="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/EqWidthBin.h" bodystart="33" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_d_met_1_1_eq_width_bin_1a1704cfef7cffaff6356616bdb8593283" prot="public" static="no" mutable="no">
         <type>vector&lt; <ref refid="struct_d_met_1_1_eq_width_bin_1_1_bin" kindref="compound">Bin</ref> &gt;</type>
@@ -31,7 +31,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/EqWidthBin.h" line="40" column="16" bodyfile="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/EqWidthBin.h" bodystart="40" bodyend="-1"/>
+        <location file="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/EqWidthBin.h" line="38" column="16" bodyfile="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/EqWidthBin.h" bodystart="38" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -52,17 +52,17 @@
 <parametername>data</parametername>
 </parameternamelist>
 <parameterdescription>
-<para></para>
+<para>vector of points </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para></para>
+<simplesect kind="return"><para>vector representing the ranges for each dimension </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/EqWidthBin.h" line="47" column="16" bodyfile="/Users/jacklewis/Documents/work/year3/DMet/src/DMet/EqWidthBin.cpp" bodystart="13" bodyend="36"/>
+        <location file="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/EqWidthBin.h" line="45" column="16"/>
       </memberdef>
       <memberdef kind="function" id="class_d_met_1_1_eq_width_bin_1a45600ba094f008cfe20d477626d37147" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -82,7 +82,7 @@
 <parametername>arity</parametername>
 </parameternamelist>
 <parameterdescription>
-<para></para>
+<para>the number of bins per dimension </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -90,7 +90,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/EqWidthBin.h" line="54" column="14" bodyfile="/Users/jacklewis/Documents/work/year3/DMet/src/DMet/EqWidthBin.cpp" bodystart="38" bodyend="74"/>
+        <location file="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/EqWidthBin.h" line="52" column="14"/>
       </memberdef>
       <memberdef kind="function" id="class_d_met_1_1_eq_width_bin_1a33124a9c9f1ce41f3e5f539378cb666b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -110,16 +110,7 @@
 <parametername>data</parametername>
 </parameternamelist>
 <parameterdescription>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-assigns data points to correct bins if it falls in the bins range. It falls in the range if the point x is lower bound &lt;= x &lt; upper bound if upper bound = inf then point is in range to make sure points with infinity are assigned lower bound &lt;= x &lt;= upper bound</para>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>data</parametername>
-</parameternamelist>
-<parameterdescription>
-<para></para>
+<para>vector of points </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -127,7 +118,7 @@ assigns data points to correct bins if it falls in the bins range. It falls in t
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/EqWidthBin.h" line="62" column="14" bodyfile="/Users/jacklewis/Documents/work/year3/DMet/src/DMet/EqWidthBin.cpp" bodystart="85" bodyend="89"/>
+        <location file="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/EqWidthBin.h" line="60" column="14"/>
       </memberdef>
       <memberdef kind="function" id="class_d_met_1_1_eq_width_bin_1a5f4b5b24cfc83ca7f86837bac89367b9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -141,12 +132,13 @@ assigns data points to correct bins if it falls in the bins range. It falls in t
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para>Assingns a single point to its correct bin <parameterlist kind="param"><parameteritem>
+<para>Assigns a single point to its correct bin</para>
+<para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>point</parametername>
 </parameternamelist>
 <parameterdescription>
-<para></para>
+<para>vector representing a single point </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -154,7 +146,7 @@ assigns data points to correct bins if it falls in the bins range. It falls in t
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/EqWidthBin.h" line="68" column="14" bodyfile="/Users/jacklewis/Documents/work/year3/DMet/src/DMet/EqWidthBin.cpp" bodystart="91" bodyend="112"/>
+        <location file="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/EqWidthBin.h" line="67" column="14"/>
       </memberdef>
       <memberdef kind="function" id="class_d_met_1_1_eq_width_bin_1aa30b3de1214365b166dc14bf7520d3c6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -168,7 +160,7 @@ assigns data points to correct bins if it falls in the bins range. It falls in t
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/EqWidthBin.h" line="73" column="14" bodyfile="/Users/jacklewis/Documents/work/year3/DMet/src/DMet/EqWidthBin.cpp" bodystart="124" bodyend="128"/>
+        <location file="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/EqWidthBin.h" line="72" column="14"/>
       </memberdef>
       <memberdef kind="function" id="class_d_met_1_1_eq_width_bin_1a67f63578d2c378887b76ea4a1e09aff8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>vector&lt; double &gt;</type>
@@ -178,30 +170,14 @@ assigns data points to correct bins if it falls in the bins range. It falls in t
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para>Returns the probability density function of the binned values <simplesect kind="return"><para></para>
+<para>Returns the probability density function of the binned values</para>
+<para><simplesect kind="return"><para>vector representing a proability density function </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/EqWidthBin.h" line="79" column="16" bodyfile="/Users/jacklewis/Documents/work/year3/DMet/src/DMet/EqWidthBin.cpp" bodystart="130" bodyend="143"/>
-      </memberdef>
-      <memberdef kind="function" id="class_d_met_1_1_eq_width_bin_1a7a26ae0041bdb9919c6b3cf05d94f79e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void DMet::EqWidthBin::printBins</definition>
-        <argsstring>(const DMet::EqWidthBin &amp;bin)</argsstring>
-        <name>printBins</name>
-        <param>
-          <type>const <ref refid="class_d_met_1_1_eq_width_bin" kindref="compound">DMet::EqWidthBin</ref> &amp;</type>
-          <declname>bin</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/EqWidthBin.h" line="81" column="14" bodyfile="/Users/jacklewis/Documents/work/year3/DMet/src/DMet/EqWidthBin.cpp" bodystart="145" bodyend="149"/>
+        <location file="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/EqWidthBin.h" line="79" column="16"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -217,7 +193,6 @@ assigns data points to correct bins if it falls in the bins range. It falls in t
       <member refid="class_d_met_1_1_eq_width_bin_1aa30b3de1214365b166dc14bf7520d3c6" prot="public" virt="non-virtual"><scope>DMet::EqWidthBin</scope><name>clearBins</name></member>
       <member refid="class_d_met_1_1_eq_width_bin_1a45600ba094f008cfe20d477626d37147" prot="public" virt="non-virtual"><scope>DMet::EqWidthBin</scope><name>generateBins</name></member>
       <member refid="class_d_met_1_1_eq_width_bin_1a67f63578d2c378887b76ea4a1e09aff8" prot="public" virt="non-virtual"><scope>DMet::EqWidthBin</scope><name>getPDF</name></member>
-      <member refid="class_d_met_1_1_eq_width_bin_1a7a26ae0041bdb9919c6b3cf05d94f79e" prot="public" virt="non-virtual"><scope>DMet::EqWidthBin</scope><name>printBins</name></member>
       <member refid="class_d_met_1_1_eq_width_bin_1aee6c178d022a087b6ff080bc5a3bcec7" prot="public" virt="non-virtual"><scope>DMet::EqWidthBin</scope><name>ranges</name></member>
       <member refid="class_d_met_1_1_eq_width_bin_1a12ebeed1b30aea531e747fd27ca65c51" prot="public" virt="non-virtual"><scope>DMet::EqWidthBin</scope><name>setRanges</name></member>
     </listofallmembers>

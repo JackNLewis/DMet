@@ -3,7 +3,6 @@
   <compound refid="struct_d_met_1_1_eq_width_bin_1_1_bin" kind="struct"><name>DMet::EqWidthBin::Bin</name>
     <member refid="struct_d_met_1_1_eq_width_bin_1_1_bin_1ac776059b3066ede32475282dea99d62c" kind="variable"><name>range</name></member>
     <member refid="struct_d_met_1_1_eq_width_bin_1_1_bin_1a61c6ca4bacb356c0ee9a974805459339" kind="variable"><name>values</name></member>
-    <member refid="struct_d_met_1_1_eq_width_bin_1_1_bin_1a5d77c71aa104532e0ff910bb2be9320c" kind="friend"><name>operator&lt;&lt;</name></member>
   </compound>
   <compound refid="class_d_met_1_1_eq_width_bin" kind="class"><name>DMet::EqWidthBin</name>
     <member refid="class_d_met_1_1_eq_width_bin_1aee6c178d022a087b6ff080bc5a3bcec7" kind="variable"><name>ranges</name></member>
@@ -14,16 +13,15 @@
     <member refid="class_d_met_1_1_eq_width_bin_1a5f4b5b24cfc83ca7f86837bac89367b9" kind="function"><name>assignPoint</name></member>
     <member refid="class_d_met_1_1_eq_width_bin_1aa30b3de1214365b166dc14bf7520d3c6" kind="function"><name>clearBins</name></member>
     <member refid="class_d_met_1_1_eq_width_bin_1a67f63578d2c378887b76ea4a1e09aff8" kind="function"><name>getPDF</name></member>
-    <member refid="class_d_met_1_1_eq_width_bin_1a7a26ae0041bdb9919c6b3cf05d94f79e" kind="function"><name>printBins</name></member>
   </compound>
   <compound refid="namespace_d_met" kind="namespace"><name>DMet</name>
   </compound>
   <compound refid="namespace_d_met_1_1_distrib" kind="namespace"><name>DMet::Distrib</name>
-    <member refid="_distrib_distance_8h_1a1c41e04848ac4d2677ec15d6bdcefc20" kind="function"><name>KLDiv</name></member>
-    <member refid="_distrib_distance_8h_1a9558ccb77bd3b13042424f63dc3cf397" kind="function"><name>KLDiv</name></member>
-    <member refid="_distrib_distance_8h_1a791838408247fd8660a0fb757c42e9cf" kind="function"><name>KLDiv</name></member>
-    <member refid="_distrib_distance_8h_1aced7faf83b692238a942e852ca61fa88" kind="function"><name>JensenShannon</name></member>
-    <member refid="_distrib_distance_8h_1a28a6da07a2b13dd32a9811a9e4300fef" kind="function"><name>JensenShannon</name></member>
+    <member refid="namespace_d_met_1_1_distrib_1a1c41e04848ac4d2677ec15d6bdcefc20" kind="function"><name>KLDiv</name></member>
+    <member refid="namespace_d_met_1_1_distrib_1a9558ccb77bd3b13042424f63dc3cf397" kind="function"><name>KLDiv</name></member>
+    <member refid="namespace_d_met_1_1_distrib_1a791838408247fd8660a0fb757c42e9cf" kind="function"><name>KLDiv</name></member>
+    <member refid="namespace_d_met_1_1_distrib_1aced7faf83b692238a942e852ca61fa88" kind="function"><name>JensenShannon</name></member>
+    <member refid="namespace_d_met_1_1_distrib_1a28a6da07a2b13dd32a9811a9e4300fef" kind="function"><name>JensenShannon</name></member>
   </compound>
   <compound refid="namespace_d_met_1_1_point_distances" kind="namespace"><name>DMet::PointDistances</name>
     <member refid="namespace_d_met_1_1_point_distances_1a57dc766ab02da35a2fca9bedabf044aa" kind="function"><name>getMinkowski</name></member>
@@ -39,9 +37,7 @@
   </compound>
   <compound refid="namespace_d_met_1_1_utils" kind="namespace"><name>DMet::Utils</name>
     <member refid="utils_8h_1acc80b898959c39b833002da0bd987c03" kind="function"><name>isPDF</name></member>
-    <member refid="utils_8h_1a3b468643e312f9ce16b94ad92f0b3837" kind="function"><name>containsZero</name></member>
     <member refid="utils_8h_1ae49506e5e8fa93ef777024a36b78f1e1" kind="function"><name>cartesian</name></member>
-    <member refid="utils_8cpp_1ac2c0c2779188097446aaaaed8f10db09" kind="function"><name>isPDF</name></member>
   </compound>
   <compound refid="_distrib_distance_8h" kind="file"><name>DistribDistance.h</name>
   </compound>
@@ -51,20 +47,8 @@
   </compound>
   <compound refid="utils_8h" kind="file"><name>utils.h</name>
   </compound>
-  <compound refid="_distrib_distances_8cpp" kind="file"><name>DistribDistances.cpp</name>
-  </compound>
-  <compound refid="_eq_width_bin_8cpp" kind="file"><name>EqWidthBin.cpp</name>
-  </compound>
-  <compound refid="_point_distances_8cpp" kind="file"><name>PointDistances.cpp</name>
-  </compound>
-  <compound refid="utils_8cpp" kind="file"><name>utils.cpp</name>
-  </compound>
   <compound refid="dir_9b59cf6179fe908cc491d3aa265d5a6a" kind="dir"><name>/Users/jacklewis/Documents/work/year3/DMet/include/DMet</name>
   </compound>
-  <compound refid="dir_4b8de973c18cbb0637e3a0b46711ff1c" kind="dir"><name>/Users/jacklewis/Documents/work/year3/DMet/src/DMet</name>
-  </compound>
   <compound refid="dir_d44c64559bbebec7f509842c48db8b23" kind="dir"><name>/Users/jacklewis/Documents/work/year3/DMet/include</name>
-  </compound>
-  <compound refid="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir"><name>/Users/jacklewis/Documents/work/year3/DMet/src</name>
   </compound>
 </doxygenindex>

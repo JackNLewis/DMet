@@ -58,7 +58,7 @@ namespace DMet{
          *
          * @param res mpfr variable to store result
          * @param vector1 point 1
-         * @param vector2 input  vector 2
+         * @param vector2 input vector 2
          */
         void getEuclidean(mpfr_t &res, vector<double> &vector1, vector<double> &vector2);
 
@@ -71,8 +71,8 @@ namespace DMet{
          */
         void getChebyshev(mpfr_t &res, vector<double> &vector1, vector<double> &vector2);
 
-        //distances accepting strings for higher precision
-        /***
+
+        /*!
         * Function that computes the distance between two points represented by their cartesian coordinated
         * Uses Minkowski distance
         * Uses precision 200
@@ -85,7 +85,7 @@ namespace DMet{
         */
         void getMinkowski(mpfr_t &res, vector<string> &vector1, vector<string> &vector2, double pvalue);
 
-        /**
+        /*!
          * Calculates the minkowski distance between two points represented by their cartesian coordinates
          * when the p value is either +inf or -inf. This is equivalent to finding the
          * largest distance when p is +inf or finding the smallest distance when p is -inf.

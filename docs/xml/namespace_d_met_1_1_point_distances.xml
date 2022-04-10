@@ -27,13 +27,21 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para>Function that computes the distance between vector 1 and vector 2 Uses Minkowski distance Uses precision 200 (∑|Xi−Yi|^p)^1/p</para>
+<para>Function that computes the distance between two points represented by their cartesian coordinated Uses Minkowski distance Uses precision 200 (∑|Xi−Yi|^p)^1/p</para>
 <para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>res</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>mpfr variable to store result </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
 <parameternamelist>
 <parametername>vector1</parametername>
 </parameternamelist>
 <parameterdescription>
-<para></para>
+<para>point 1 </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -41,23 +49,7 @@
 <parametername>vector2</parametername>
 </parameternamelist>
 <parameterdescription>
-<para></para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>size1</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>size of vector1 </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>size2</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>size of vector2 </para>
+<para>point 2 </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -69,13 +61,11 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>floating point result </para>
-</simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/PointDistances.h" line="34" column="14" bodyfile="/Users/jacklewis/Documents/work/year3/DMet/src/DMet/PointDistances.cpp" bodystart="16" bodyend="64" declfile="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/PointDistances.h" declline="34" declcolumn="14"/>
+        <location file="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/PointDistances.h" line="31" column="14" declfile="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/PointDistances.h" declline="31" declcolumn="14"/>
       </memberdef>
       <memberdef kind="function" id="namespace_d_met_1_1_point_distances_1a6b1e7f1adada1d40f5119282e7c846e1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -101,13 +91,13 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para>Calculates minkowski distance when the p value is either +inf or -inf. This is equivalent to finding the largest distance when p is +inf or finding the smallest distance when p is -inf.</para>
+<para>Calculates the minkowski distance between two points represented by their cartesian coordinates when the p value is either +inf or -inf. This is equivalent to finding the largest distance when p is +inf or finding the smallest distance when p is -inf.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>res</parametername>
 </parameternamelist>
 <parameterdescription>
-<para></para>
+<para>mpfr variable to store result </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -115,7 +105,7 @@
 <parametername>vector1</parametername>
 </parameternamelist>
 <parameterdescription>
-<para></para>
+<para>point 1 </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -123,7 +113,7 @@
 <parametername>vector2</parametername>
 </parameternamelist>
 <parameterdescription>
-<para></para>
+<para>point 2 </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -131,7 +121,7 @@
 <parametername>pos</parametername>
 </parameternamelist>
 <parameterdescription>
-<para></para>
+<para>flag to determine if Infinity is positive or negative. For positive set to true. </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -139,7 +129,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/PointDistances.h" line="45" column="14" bodyfile="/Users/jacklewis/Documents/work/year3/DMet/src/DMet/PointDistances.cpp" bodystart="66" bodyend="99" declfile="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/PointDistances.h" declline="45" declcolumn="14"/>
+        <location file="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/PointDistances.h" line="43" column="14" declfile="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/PointDistances.h" declline="43" declcolumn="14"/>
       </memberdef>
       <memberdef kind="function" id="namespace_d_met_1_1_point_distances_1ad2eefad0907dbb734ff7ca556df352ac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -161,12 +151,21 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para>Function that computes the Manhattan distance. Uses the implementation of Minkowski distance with a p value set as 1 <parameterlist kind="param"><parameteritem>
+<para>Function that computes the Manhattan distance between two points . Uses the implementation of Minkowski distance with a p value set as 1</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>res</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>mpfr variable to store result </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
 <parameternamelist>
 <parametername>vector1</parametername>
 </parameternamelist>
 <parameterdescription>
-<para></para>
+<para>point 1 </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -174,33 +173,15 @@
 <parametername>vector2</parametername>
 </parameternamelist>
 <parameterdescription>
-<para></para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>size1</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>size of vector1 </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>size2</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>size of vector2 </para>
+<para>point 2 </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>floating point result </para>
-</simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/PointDistances.h" line="56" column="14" bodyfile="/Users/jacklewis/Documents/work/year3/DMet/src/DMet/PointDistances.cpp" bodystart="105" bodyend="107" declfile="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/PointDistances.h" declline="56" declcolumn="14"/>
+        <location file="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/PointDistances.h" line="53" column="14" declfile="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/PointDistances.h" declline="53" declcolumn="14"/>
       </memberdef>
       <memberdef kind="function" id="namespace_d_met_1_1_point_distances_1a941ec37666c3e9c6164498e8a0c9ab1d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -222,13 +203,21 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para>Function that computes the Euclidean distance. Uses the implementation of Minkowski distance with a p value set as 2</para>
+<para>Function that computes the Euclidean distance between 2 points represented as cartesian coordinates. Uses the implementation of Minkowski distance with a p value set as 2</para>
 <para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>res</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>mpfr variable to store result </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
 <parameternamelist>
 <parametername>vector1</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>input vector 1 </para>
+<para>point 1 </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -239,22 +228,12 @@
 <para>input vector 2 </para>
 </parameterdescription>
 </parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>precision</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>the precision of the result </para>
-</parameterdescription>
-</parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>floating point result </para>
-</simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/PointDistances.h" line="67" column="14" declfile="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/PointDistances.h" declline="67" declcolumn="14"/>
+        <location file="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/PointDistances.h" line="63" column="14" declfile="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/PointDistances.h" declline="63" declcolumn="14"/>
       </memberdef>
       <memberdef kind="function" id="namespace_d_met_1_1_point_distances_1aa56b86ccff59a4b963feb50373605dc2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -276,13 +255,21 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para>Function that computes the Chebeshev distance. Uses a different implementation than minkowski</para>
+<para>Function that computes the Chebyshev distance between 2 points represented as cartesian coordinates.</para>
 <para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>res</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>mpfr variable to store result </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
 <parameternamelist>
 <parametername>vector1</parametername>
 </parameternamelist>
 <parameterdescription>
-<para></para>
+<para>point 1 </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -290,17 +277,15 @@
 <parametername>vector2</parametername>
 </parameternamelist>
 <parameterdescription>
-<para></para>
+<para>point 2 </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>floating point result </para>
-</simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/PointDistances.h" line="77" column="14" bodyfile="/Users/jacklewis/Documents/work/year3/DMet/src/DMet/PointDistances.cpp" bodystart="109" bodyend="117" declfile="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/PointDistances.h" declline="77" declcolumn="14"/>
+        <location file="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/PointDistances.h" line="72" column="14" declfile="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/PointDistances.h" declline="72" declcolumn="14"/>
       </memberdef>
       <memberdef kind="function" id="namespace_d_met_1_1_point_distances_1aad2f7d57b852ba3101e7e7fe617405da" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -326,13 +311,13 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para>Retrieves Minkowski distance. Accepts vector of strings as inputs if higher precision than double is needed.</para>
+<para>Function that computes the distance between two points represented by their cartesian coordinated Uses Minkowski distance Uses precision 200 (∑|Xi−Yi|^p)^1/p</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>res</parametername>
 </parameternamelist>
 <parameterdescription>
-<para></para>
+<para>mpfr variable to store result </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -340,7 +325,7 @@
 <parametername>vector1</parametername>
 </parameternamelist>
 <parameterdescription>
-<para></para>
+<para>point 1 </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -348,7 +333,7 @@
 <parametername>vector2</parametername>
 </parameternamelist>
 <parameterdescription>
-<para></para>
+<para>point 2 </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -356,7 +341,7 @@
 <parametername>pvalue</parametername>
 </parameternamelist>
 <parameterdescription>
-<para></para>
+<para>pvalue </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -364,7 +349,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/PointDistances.h" line="80" column="14" bodyfile="/Users/jacklewis/Documents/work/year3/DMet/src/DMet/PointDistances.cpp" bodystart="131" bodyend="180" declfile="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/PointDistances.h" declline="80" declcolumn="14"/>
+        <location file="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/PointDistances.h" line="86" column="14" declfile="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/PointDistances.h" declline="86" declcolumn="14"/>
       </memberdef>
       <memberdef kind="function" id="namespace_d_met_1_1_point_distances_1a975ed9ad59552100fe3943d64de8cb23" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -390,10 +375,45 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
+<para>Calculates the minkowski distance between two points represented by their cartesian coordinates when the p value is either +inf or -inf. This is equivalent to finding the largest distance when p is +inf or finding the smallest distance when p is -inf.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>res</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>mpfr variable to store result </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>vector1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>point 1 </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>vector2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>point 2 </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>flag to determine if Infinity is positive or negative. For positive set to true. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/PointDistances.h" line="81" column="14" bodyfile="/Users/jacklewis/Documents/work/year3/DMet/src/DMet/PointDistances.cpp" bodystart="182" bodyend="214" declfile="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/PointDistances.h" declline="81" declcolumn="14"/>
+        <location file="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/PointDistances.h" line="98" column="14" declfile="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/PointDistances.h" declline="98" declcolumn="14"/>
       </memberdef>
       <memberdef kind="function" id="namespace_d_met_1_1_point_distances_1aee7e6b4dd1ce836faa08ee273f6f5919" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -415,10 +435,37 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
+<para>Function that computes the Manhattan distance between two points . Uses the implementation of Minkowski distance with a p value set as 1</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>res</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>mpfr variable to store result </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>vector1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>point 1 </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>vector2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>point 2 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/PointDistances.h" line="82" column="14" bodyfile="/Users/jacklewis/Documents/work/year3/DMet/src/DMet/PointDistances.cpp" bodystart="216" bodyend="218" declfile="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/PointDistances.h" declline="82" declcolumn="14"/>
+        <location file="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/PointDistances.h" line="108" column="14" declfile="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/PointDistances.h" declline="108" declcolumn="14"/>
       </memberdef>
       <memberdef kind="function" id="namespace_d_met_1_1_point_distances_1a3d754929133bc577ac5f283250012238" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -440,10 +487,37 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
+<para>Function that computes the Euclidean distance between 2 points represented as cartesian coordinates. Uses the implementation of Minkowski distance with a p value set as 2</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>res</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>mpfr variable to store result </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>vector1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>point 1 </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>vector2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>input vector 2 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/PointDistances.h" line="83" column="14" bodyfile="/Users/jacklewis/Documents/work/year3/DMet/src/DMet/PointDistances.cpp" bodystart="220" bodyend="222" declfile="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/PointDistances.h" declline="83" declcolumn="14"/>
+        <location file="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/PointDistances.h" line="118" column="14" declfile="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/PointDistances.h" declline="118" declcolumn="14"/>
       </memberdef>
       <memberdef kind="function" id="namespace_d_met_1_1_point_distances_1a4cdc45d2b39f9205b374b53526c4c48f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -465,10 +539,37 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
+<para>Function that computes the Chebyshev distance between 2 points represented as cartesian coordinates.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>res</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>mpfr variable to store result </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>vector1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>point 1 </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>vector2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>point 2 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/PointDistances.h" line="84" column="14" bodyfile="/Users/jacklewis/Documents/work/year3/DMet/src/DMet/PointDistances.cpp" bodystart="224" bodyend="232" declfile="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/PointDistances.h" declline="84" declcolumn="14"/>
+        <location file="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/PointDistances.h" line="127" column="14" declfile="/Users/jacklewis/Documents/work/year3/DMet/include/DMet/PointDistances.h" declline="127" declcolumn="14"/>
       </memberdef>
       </sectiondef>
     <briefdescription>

@@ -25,8 +25,10 @@ Follow this link to find out more about MPFR: https://www.mpfr.org/mpfr-current/
    DMet::getEuclidean(res,v1,v2);
 
    //Can print value using
+   mpfr_printf("Result %.5Re\n", mpfr_variable);
 
    //if it fits in a double can convert it
+   double d = mpfr_get_d(res, GMP_RNDN);
 
    //clear variables
    mpfr_clear(res);

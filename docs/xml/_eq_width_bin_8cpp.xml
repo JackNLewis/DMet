@@ -155,18 +155,18 @@
 <codeline lineno="112"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="113"><highlight class="normal"></highlight></codeline>
 <codeline lineno="114"><highlight class="normal"></highlight></codeline>
-<codeline lineno="115"><highlight class="normal">std::ostream<sp/>&amp;DMet::operator&lt;&lt;(std::ostream<sp/>&amp;out,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_d_met_1_1_eq_width_bin_1_1_bin" kindref="compound">DMet::EqWidthBin::Bin</ref><sp/>&amp;bin)<sp/>{</highlight></codeline>
-<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//print<sp/>all<sp/>the<sp/>ranges<sp/>of<sp/>the<sp/>bin</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>r<sp/>:<sp/>bin.<ref refid="struct_d_met_1_1_eq_width_bin_1_1_bin_1ac776059b3066ede32475282dea99d62c" kindref="member">range</ref>){</highlight></codeline>
-<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>out<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;[&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>r[0]<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;,&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>r[1]<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;]&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::flush;</highlight></codeline>
-<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/>out<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>bin.<ref refid="struct_d_met_1_1_eq_width_bin_1_1_bin_1a61c6ca4bacb356c0ee9a974805459339" kindref="member">values</ref>.size();</highlight></codeline>
-<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>out;</highlight></codeline>
-<codeline lineno="122"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight><highlight class="comment">//std::ostream<sp/>&amp;DMet::operator&lt;&lt;(std::ostream<sp/>&amp;out,<sp/>const<sp/>DMet::EqWidthBin::Bin<sp/>&amp;bin)<sp/>{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>//print<sp/>all<sp/>the<sp/>ranges<sp/>of<sp/>the<sp/>bin</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>for(auto<sp/>r<sp/>:<sp/>bin.range){</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>out<sp/>&lt;&lt;<sp/>&quot;[&quot;<sp/>&lt;&lt;<sp/>r[0]<sp/>&lt;&lt;<sp/>&quot;,&quot;<sp/>&lt;&lt;<sp/>r[1]<sp/>&lt;&lt;<sp/>&quot;]&quot;<sp/>&lt;&lt;<sp/>std::flush;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>out<sp/>&lt;&lt;<sp/>&quot;:<sp/>&quot;<sp/>&lt;&lt;<sp/>bin.values.size();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>return<sp/>out;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight><highlight class="comment">//}</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="123"><highlight class="normal"></highlight></codeline>
 <codeline lineno="124"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_d_met_1_1_eq_width_bin_1aa30b3de1214365b166dc14bf7520d3c6" kindref="member">DMet::EqWidthBin::clearBins</ref>()<sp/>{</highlight></codeline>
 <codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;bin<sp/>:<sp/>bins){</highlight></codeline>
-<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bin.<ref refid="struct_d_met_1_1_eq_width_bin_1_1_bin_1a61c6ca4bacb356c0ee9a974805459339" kindref="member">values</ref>.clear();</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bin.values.clear();</highlight></codeline>
 <codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="128"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="129"><highlight class="normal"></highlight></codeline>
@@ -174,8 +174,8 @@
 <codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;double&gt;<sp/>pdf;</highlight></codeline>
 <codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>count<sp/>=<sp/>0;</highlight></codeline>
 <codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;bin<sp/>:<sp/>bins){</highlight></codeline>
-<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pdf.push_back(bin.<ref refid="struct_d_met_1_1_eq_width_bin_1_1_bin_1a61c6ca4bacb356c0ee9a974805459339" kindref="member">values</ref>.size());</highlight></codeline>
-<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>count+=bin.<ref refid="struct_d_met_1_1_eq_width_bin_1_1_bin_1a61c6ca4bacb356c0ee9a974805459339" kindref="member">values</ref>.size();</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pdf.push_back(bin.values.size());</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>count+=bin.values.size();</highlight></codeline>
 <codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="137"><highlight class="normal"></highlight></codeline>
 <codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>&amp;d<sp/>:<sp/>pdf){</highlight></codeline>
@@ -185,11 +185,11 @@
 <codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>pdf;</highlight></codeline>
 <codeline lineno="143"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="144"><highlight class="normal"></highlight></codeline>
-<codeline lineno="145"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>DMet::EqWidthBin::printBins(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_d_met_1_1_eq_width_bin" kindref="compound">DMet::EqWidthBin</ref><sp/>&amp;bin)<sp/>{</highlight></codeline>
-<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>b<sp/>:<sp/>bin.<ref refid="class_d_met_1_1_eq_width_bin_1a1704cfef7cffaff6356616bdb8593283" kindref="member">bins</ref>){</highlight></codeline>
-<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/>b<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
-<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="149"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight><highlight class="comment">//void<sp/>DMet::EqWidthBin::printBins(const<sp/>DMet::EqWidthBin<sp/>&amp;bin)<sp/>{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>for(auto<sp/>b<sp/>:<sp/>bin.bins){</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/>b<sp/>&lt;&lt;<sp/>endl;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight><highlight class="comment">//}</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="150"><highlight class="normal"></highlight></codeline>
 <codeline lineno="151"><highlight class="normal"></highlight></codeline>
     </programlisting>

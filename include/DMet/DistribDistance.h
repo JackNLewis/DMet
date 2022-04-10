@@ -6,9 +6,13 @@
 #include <vector>
 using std::vector;
 
-namespace DMet { namespace Distrib{
+namespace DMet {
+    /*!
+     * Namespace for distribution distances
+     */
+    namespace Distrib{
 
-    /***
+    /*!
      * Computes the Kullback Leibler Divergence between two probability distributions.
      *
      * ∑ Xi log(Xi/Yi)
@@ -22,7 +26,7 @@ namespace DMet { namespace Distrib{
      */
     void KLDiv(mpfr_t &res, vector<double> &v1, vector<double> &v2, bool pdfCheck);
 
-    /***
+    /*!
      * Computes the Kullback Leibler Divergence between two probability distributions.
      *
      *  KL_Div = ∑ Xi log(Xi/Yi)
@@ -35,7 +39,7 @@ namespace DMet { namespace Distrib{
      */
     void KLDiv(mpfr_t &res, vector<double> &v1, vector<double> &v2);
 
-    /***
+    /*!
      * Computes the Kullback Leibler Divergence between two sets of n dimensional points. Data is first binned to generate
      * probability distributions then used to calculate KL divergence. Data is binned using equal width binning where each dimension
      * is split into k amount of bins with k representing the arity.
@@ -48,7 +52,7 @@ namespace DMet { namespace Distrib{
     void KLDiv(mpfr_t &res, vector<vector<double>> &v1, vector<vector<double>> &v2, int arity);
 
 
-    /***
+    /*!
      * Computes the Jensen Shannon Divergence between 2 probability distributions
      *
      * JS(P||Q) = 1/2KL_Div(P||M) + 1/2KL_Div(Q||M)
@@ -62,7 +66,7 @@ namespace DMet { namespace Distrib{
     void JensenShannon(mpfr_t &res, vector<double> &vector1, vector<double> &vector2);
 
 
-    /***
+    /*!
      * Computes the Jensen Shannon Distance from 2 vectors of point data.
      * The data is first binned using equal width binning into k bins per dimension where k is the arity.
      * The probability distribution is then retrieved the Jensen Shannon divergence is calculated.

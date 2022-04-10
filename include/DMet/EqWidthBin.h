@@ -39,8 +39,8 @@ namespace DMet {
 
         /*!
          * Method to set the ranges for every dimension given data
-         * @param data
-         * @return
+         * @param data vector of points
+         * @return vector representing the ranges for each dimension
          */
         vector<vector<double>> setRanges(vector<vector<double>> &data);
 
@@ -55,14 +55,14 @@ namespace DMet {
          * Assign the values from parameter data to the bins that have been generated.
          * Throws an error if the bins have not been generated.
          *
-         * @param data
+         * @param data vector of points
          */
         void assignBins(vector<vector<double>>& data);
 
         /*!
          * Assigns a single point to its correct bin
          *
-         * @param point
+         * @param point vector representing a single point
          */
         void assignPoint(vector<double>& point);
 
@@ -73,7 +73,8 @@ namespace DMet {
 
         /*!
          * Returns the probability density function of the binned values
-         * @return
+         *
+         * @return vector representing a proability density function
          */
         vector<double> getPDF();
 
