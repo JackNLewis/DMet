@@ -112,14 +112,14 @@ void DMet::EqWidthBin::assignPoint(vector<double> &point) {
 }
 
 
-std::ostream &DMet::operator<<(std::ostream &out, const DMet::EqWidthBin::Bin &bin) {
-    //print all the ranges of the bin
-    for(auto r : bin.range){
-        out << "[" << r[0] << "," << r[1] << "]" << std::flush;
-    }
-    out << ": " << bin.values.size();
-    return out;
-}
+//std::ostream &DMet::operator<<(std::ostream &out, const DMet::EqWidthBin::Bin &bin) {
+//    //print all the ranges of the bin
+//    for(auto r : bin.range){
+//        out << "[" << r[0] << "," << r[1] << "]" << std::flush;
+//    }
+//    out << ": " << bin.values.size();
+//    return out;
+//}
 
 void DMet::EqWidthBin::clearBins() {
     for(auto &bin : bins){
@@ -142,10 +142,10 @@ vector<double> DMet::EqWidthBin::getPDF() {
     return pdf;
 }
 
-void DMet::EqWidthBin::printBins(const DMet::EqWidthBin &bin) {
-    for(auto b : bin.bins){
-        cout << b << endl;
-    }
-}
+//void DMet::EqWidthBin::printBins(const DMet::EqWidthBin &bin) {
+//    for(auto b : bin.bins){
+//        cout << b << endl;
+//    }
+//}
 
 

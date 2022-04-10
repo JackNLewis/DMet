@@ -25,8 +25,6 @@ namespace DMet {
             /** Contains a list of the raw values for each dimension **/
             vector<vector<double>> values;
 
-            /** override operator << in order to print the bin on screen **/
-            friend std::ostream& operator<< (std::ostream& out, const Bin &point);
         };
 
         /**
@@ -49,7 +47,7 @@ namespace DMet {
         /*!
          * Generates the bins from the ranges for each dimension then creates the cartesian product of these bins
          *
-         * @param arity
+         * @param arity the number of bins per dimension
          */
         void generateBins(int arity);
 
@@ -62,7 +60,8 @@ namespace DMet {
         void assignBins(vector<vector<double>>& data);
 
         /*!
-         * Assingns a single point to its correct bin
+         * Assigns a single point to its correct bin
+         *
          * @param point
          */
         void assignPoint(vector<double>& point);
@@ -78,7 +77,7 @@ namespace DMet {
          */
         vector<double> getPDF();
 
-        void printBins(const DMet::EqWidthBin &bin);
+
     };
 }
 
